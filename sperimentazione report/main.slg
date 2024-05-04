@@ -1,13 +1,22 @@
 ;; This logfile was generated automatically by `xindy'
-;; at 04.05.2024  11:02:13
-;; Indexstyle: "D:\\repositoriesgithub\\sperimentazione-propulsori\\sperimentazione report\\Oyxx79TP9t", Rawindex: "D:\\repositoriesgithub\\sperimentazione-propulsori\\sperimentazione report\\SRC67w6rTB", Output: "main.syi"
+;; at 04.05.2024  15:08:12
+;; Indexstyle: "D:\\repositoriesgithub\\sperimentazione-propulsori\\sperimentazione report\\nUBbSdvIDR", Rawindex: "D:\\repositoriesgithub\\sperimentazione-propulsori\\sperimentazione report\\5mOETtptA0", Output: "main.syi"
 
 
 Building indexentry-tree:
 Hierdepth of index is :TREE
 
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 
 Forming letter-groups:
+Letter-group: "Ú" -> "T"
+Letter-group: "œ" -> "F"
+Letter-group: "œ" -> "F"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-other-runs: ("f") ("F") (BACKWARD FORWARD FORWARD) 1.
+sort-other-runs: ("f") ("F") (FORWARD FORWARD) 2.
+Letter-group: "œ" -> "F"
 sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 Letter-group: "Ú" -> "T"

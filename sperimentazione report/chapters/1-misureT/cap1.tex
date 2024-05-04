@@ -5,7 +5,7 @@ Si chiede di svolgere l'analisi statistica dei dati.
 \subsection{Risoluzione}
 Si riportano i risultati emersi dall'elaborazione dei dati sperimentali. I calcoli sono stati svolti mediante il software \textit{Matlab} e le funzioni built-in.
 \paragraph{Suddivisione in classi e istogramma}
-Entrambe le serie sono divise in 10 classi, di uguale ampiezza, costruite affinché non ci possa essere ambiguità nell'attribuzione dei valori: poiché le misure hanno 6 cifre decimali, gli estremi di classe sono definiti con 7 cifre decimali. L'estremo della prima classe viene scelto come il minimo valore di \glsxtrshort{symb:T} a cui viene sottratto 0.5e-7 \textsuperscript{o}C. Analogamente, l'estremo superiore dell'ultima classe viene calcolato sommando la stessa quantità al massimo valore di \glsxtrshort{symb:T} nella serie. I valori estremi delle due serie sono mostrati in Tab.\ref{tab:estremitemp}.
+Entrambe le serie sono divise in 10 classi, di uguale ampiezza, costruite affinché non ci possa essere ambiguità nell'attribuzione dei valori: poiché le misure hanno 6 cifre decimali, gli estremi di classe sono definiti con 7 cifre decimali. L'estremo della prima classe viene scelto come il minimo valore di \glsxtrshort{symb:T} a cui viene sottratto 0.5e-7 \textsuperscript{o}C. Analogamente, l'estremo superiore dell'ultima classe viene calcolato sommando la stessa quantità al massimo valore di \glsxtrshort{symb:T} nella serie. I valori estremi delle due serie sono mostrati in Tab.\ref{tab:estremitemp}, riportati integralmente per mettere in evidenza il numero di cifre decimali.
 \begin{table} [H]
 	\centering
 	\begin{tabular}{c|c|c}
@@ -41,4 +41,122 @@ Gli istogrammi relativi alle due serie sono mostrati in Fig.\ref{fig:istboth}.
 \caption{Istogrammi delle due serie}	
 \label{fig:istboth}
 \end{figure}
-AGGIUNGERE OSSERVAZIONI
+Si osserva come entrambe le distribuzioni di dati siano simili alla distribuzione gaussiana, mostrando tuttavia una evidente asimmetria. Quest'ultima è quantificabile dal coefficiente di skewness, riportato in Tab.%\ref{}.
+\paragraph{Calcolo delle frequenze relative e cumulate}
+Successivamente vengono riportate in Tab.\ref{tab:seriecorta} e Tab.\ref{tab:serielunga}
+le classi, il numero di valori in ciascuna di esse, le frequenze relative (\glsxtrshort{symb:f}) e frequenze cumulate normalizzate(\glsxtrshort{symb:F}).
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c|c}
+		\toprule
+		\toprule
+		\textbf{Classe}&\textbf{Estremi} &\textbf{Occorrenze}&\textbf{\glsxtrshort{symb:f}}&\textbf{\glsxtrshort{symb:F}}\\
+		\midrule
+		\midrule
+		\multirow{2}{*}{1}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\multirow{2}{*}{2}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\multirow{2}{*}{3}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\multirow{2}{*}{4}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\multirow{2}{*}{5}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\multirow{2}{*}{6}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\multirow{2}{*}{7}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\multirow{2}{*}{8}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\multirow{2}{*}{9}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\multirow{2}{*}{10}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\bottomrule
+		\bottomrule
+	\end{tabular}
+\caption{Risultati relativi alla serie corta}
+\label{tab:seriecorta}
+\end{table} 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c|c}
+		\toprule
+		\toprule
+		\textbf{Classe}&\textbf{Estremi} &\textbf{Occorrenze}&\textbf{\glsxtrshort{symb:f}}&\textbf{\glsxtrshort{symb:F}}\\
+		\midrule
+		\midrule
+		\multirow{2}{*}{1}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\multirow{2}{*}{2}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\multirow{2}{*}{3}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\multirow{2}{*}{4}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\multirow{2}{*}{5}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\multirow{2}{*}{6}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\multirow{2}{*}{7}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\multirow{2}{*}{8}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\multirow{2}{*}{9}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\multirow{2}{*}{10}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
+		&s74747&&&\\
+		\midrule
+		\bottomrule
+		\bottomrule
+	\end{tabular}
+	\caption{Risultati relativi alla serie lunga}
+	\label{tab:serielunga}
+\end{table} 
+
+
+\begin{figure}
+	
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{chapters/1-misureT/relshort}
+		\caption{Serie corta}
+		\label{fig:relshort}
+	\end{subfigure}%
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{chapters/1-misureT/rellong}
+		\caption{Serie lunga}
+		\label{fig:rellong}
+	\end{subfigure}
+	\caption{Frequenze relative delle diverse classi}
+	\label{fig:relboth}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{chapters/1-misureT/cumboth}
+	\caption{Frequenze cumulate normalizzate per entrambe le serie}
+	\label{fig:cumboth}
+\end{figure}

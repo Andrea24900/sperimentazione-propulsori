@@ -23,8 +23,14 @@
 \providecommand*\glsXpageXhyperemph[2]{\setentrycounter[#1]{page}\hyperemph{#2}}
 \providecommand*\glsXpageXglsignore[2]{\setentrycounter[#1]{page}\glsignore{#2}}
 \begin{theglossary}\glossaryheader
+\glsgroupheading{F}\relax\glsresetentrylist
+\glossentry{symb:F}{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{8}\delimN 
+\glsXpageXglsnumberformat{}{9}}}\relax\glsresetentrylist
+\glossentry{symb:f}{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{8}\delimN 
+\glsXpageXglsnumberformat{}{9}}}\glsgroupskip
 \glsgroupheading{T}\relax\glsresetentrylist
 \glossentry{symb:T}{\glossaryentrynumbers{\relax 
-\glsXpageXglsnumberformat{}{5}\delimN 
 \glsXpageXglsnumberformat{}{7}}}%
 \end{theglossary}\glossarypostamble
