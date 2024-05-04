@@ -1,2 +1,13 @@
-Warning: File 'main.syg' is empty.
-Have you used any entries defined in glossary 'symbolslist'?
+;; This logfile was generated automatically by `xindy'
+;; at 04.05.2024  11:02:13
+;; Indexstyle: "D:\\repositoriesgithub\\sperimentazione-propulsori\\sperimentazione report\\Oyxx79TP9t", Rawindex: "D:\\repositoriesgithub\\sperimentazione-propulsori\\sperimentazione report\\SRC67w6rTB", Output: "main.syi"
+
+
+Building indexentry-tree:
+Hierdepth of index is :TREE
+
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+
+Forming letter-groups:
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "Ú" -> "T"

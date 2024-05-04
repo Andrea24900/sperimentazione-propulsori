@@ -13,7 +13,7 @@
         {\end{longtable}}
 
     \renewcommand*{\glossaryheader}{%  Change the table header
-        \bfseries Variable  & \bfseries Description     & \bfseries Unit    \\
+        \bfseries Variabile  & \bfseries Descrizione     & \bfseries Unità    \\
         \addlinespace[2mm]
         \hline 
         \addlinespace[2mm]
@@ -26,7 +26,7 @@
         \addlinespace[2mm]}
 } 
 
-\newglossary[slg]{symbolslist}{syi}{syg}{List of Symbols} 
+\newglossary[slg]{symbolslist}{syi}{syg}{Lista dei simboli} 
 
 \glsaddkey{unit}{\glsentrytext{\glslabel}}{\glsentryunit}{\GLsentryunit}{\glsunit}{\Glsunit}{\GLSunit}
 
@@ -672,6 +672,12 @@
 	description={Wing dihedral},
 	unit={\si{deg}}
 }
+\newglossaryentry{symb:T}{sort={T},type=symbolslist,
+	name={\ensuremath{T}},
+	description={Temperatura},
+	unit={\textsuperscript{o} C}
+}
+
 
 %% VELOCITIES: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newglossaryentry{symb:v}{sort={v},type=symbolslist,

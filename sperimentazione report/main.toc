@@ -3,7 +3,11 @@
 \contentsline {section}{Abstract}{1}{table.caption.2}%
 \contentsline {section}{Elenco delle tabelle}{3}{section*.3}%
 \contentsline {section}{Elenco delle figure}{4}{section*.4}%
+\contentsline {section}{Lista dei simboli}{5}{section*.5}%
 \contentsline {section}{\numberline {1}Misure di temperatura mediante termocoppia}{7}{section.1}%
+\contentsline {paragraph}{Dati e richieste}{7}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Risoluzione}{7}{subsection.1.1}%
+\contentsline {paragraph}{Suddivisione in classi e istogramma}{7}{subsection.1.1}%
 \contentsline {section}{\numberline {2}Stima dell'errore sistematico}{8}{section.2}%
 \contentsline {section}{\numberline {3}Misura di portata mediante diaframma}{9}{section.3}%
 \contentsline {section}{\numberline {4}Perdite per irraggiamento}{10}{section.4}%
