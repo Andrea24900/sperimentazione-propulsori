@@ -1,0 +1,103 @@
+%---- packages: ---------------
+
+% \usepackage[LGR,T1]{fontenc} % per la codifica dei font
+%                              % T1 per i documenti in lingua inglese
+%                              % LGR consente la scrittura in greco
+% \usepackage[utf8]{inputenc} % usato per gestire l'input di caratteri utf8
+% \usepackage[english]{babel} % offre supporto per la localizzazione dei testi, formattazione e 
+%                             % convenzioni tipografiche specifiche per diverse lingue
+% \usepackage{substitutefont}
+% \usepackage{newtxtext}
+% \usepackage{newtxmath}
+% \substitutefont{LGR}{\rmdefault}{Tempora}
+\usepackage{siunitx}
+\usepackage{hyperref} % per collegamenti a siti
+
+\usepackage[            
+    nogroupskip,                
+    acronym,                
+    nomain,                     
+    nopostdot,                  
+    sort=standard,
+    nonumberlist,
+    automake,            
+    xindy,
+    stylemods={longbooktabs},
+]
+{glossaries-extra}
+
+
+\usepackage{amsmath}
+\usepackage{lipsum}
+\usepackage{parskip}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{geometry}
+\usepackage{bm}
+\usepackage{amsmath,amssymb} % per l'aggiunta di formule e simboli matematici
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{braket}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[style=numeric, backend=biber,defernumbers=true]{biblatex}
+\usepackage[bottom]{footmisc} % per le note a piè di pagina
+\usepackage{multirow} % per unire celle nelle tabelle
+\usepackage{eurosym} % per simbolo di euro fatto meglio
+\usepackage{gensymb} % per simbolo dei gradi
+\usepackage{textcomp}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{cleveref}
+\usepackage{tocloft}
+\usepackage{longtable}
+
+
+\setlength{\cfttabnumwidth}{3em}    % imposta spazio indice tabelle (es. 10.11)
+\setlength{\cftfignumwidth}{3em}
+
+\numberwithin{equation}{section}  % Imposta la numerazione delle equazioni con il numero della section
+\renewcommand\theequation{\thesection.\arabic{equation}}  % Imposta il formato (A.B) per la numerazione delle equazioni
+\numberwithin{table}{section}  % Numerazione delle tabelle con il numero della section
+\renewcommand\thetable{\thesection.\arabic{table}}  % Formato (A.B) per la numerazione delle tabelle
+
+\numberwithin{figure}{section}  % Numerazione delle figure con il numero della section
+\renewcommand\thefigure{\thesection.\arabic{figure}}  % Formato (A.B) per la numerazione delle figure
+
+\usepackage{appendix} % per inserire appendici
+
+\usepackage[table]{xcolor} % per colorare celle di tabelle
+
+\pagestyle{fancy}
+\fancyhf{} % Cancella tutti gli stili predefiniti
+\renewcommand{\headrulewidth}{0.4pt}
+% \renewcommand{\footrulewidth}{0.4pt}
+\fancyhead[L]{\slshape \rightmark}     % L: left / R: right / C: central
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{13.6pt}
+\addtolength{\topmargin}{-1.6pt}
+
+
+% PATH FOR IMPORTING IMAGES
+% \graphicspath{{chapters/}}
+
+% PACKAGE FOR ACRONYM LIST
+%\usepackage[acronyms, nonumberlist, nopostdot, toc]{glossaries}
+
+% PACKAGE FOR LISTS, OPTIONS
+\usepackage{array}
+\usepackage[nottoc,notbib]{tocbibind}
+
+% non toccare i margini
+\geometry{
+    top    = 2.5cm,  % Margine superiore
+    bottom = 2.5cm,  % Margine inferiore
+    left   = 2.5cm,  % Margine sinistro
+    right  = 2.5cm   % Margine destro
+}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+

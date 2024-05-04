@@ -1,0 +1,10 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {section}{Abstract}{1}{table.caption.2}%
+\contentsline {section}{Elenco delle tabelle}{3}{section*.3}%
+\contentsline {section}{Elenco delle figure}{4}{section*.4}%
+\contentsline {section}{\numberline {1}Misure di temperatura mediante termocoppia}{7}{section.1}%
+\contentsline {section}{\numberline {2}Stima dell'errore sistematico}{8}{section.2}%
+\contentsline {section}{\numberline {3}Misura di portata mediante diaframma}{9}{section.3}%
+\contentsline {section}{\numberline {4}Perdite per irraggiamento}{10}{section.4}%
+\contentsline {section}{\numberline {5}Misure al banco prova}{11}{section.5}%

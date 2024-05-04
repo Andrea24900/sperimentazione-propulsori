@@ -1,0 +1,741 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% N.B. QUESTA PARTE NON VA TOCCATA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% New style for list of symbols:
+
+\setlength{\glsdescwidth}{25cm} 
+
+\newglossarystyle{symbunitlong}{
+    \setglossarystyle{long3col}     % base this style on the list style
+
+    \renewenvironment{theglossary}{ % Change the table type --> 3 columns
+        \begin{longtable}{lp{0.5\glsdescwidth}>{\centering\arraybackslash}p{2cm}}}
+        {\end{longtable}}
+
+    \renewcommand*{\glossaryheader}{%  Change the table header
+        \bfseries Variable  & \bfseries Description     & \bfseries Unit    \\
+        \addlinespace[2mm]
+        \hline 
+        \addlinespace[2mm]
+        \endhead}
+
+    \renewcommand*{\glossentry}[2]{%  Change the displayed items
+        \glstarget{##1}{\glossentryname{##1}} %
+        & \glossentrydesc{##1}%     Description
+        & \glsunit{##1}  \tabularnewline 
+        \addlinespace[2mm]}
+} 
+
+\newglossary[slg]{symbolslist}{syi}{syg}{List of Symbols} 
+
+\glsaddkey{unit}{\glsentrytext{\glslabel}}{\glsentryunit}{\GLsentryunit}{\glsunit}{\Glsunit}{\GLSunit}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% HOW TO USE: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% symb: E' PER QUANDO LO SI RICHIAMA NEL DOCUMENTO
+% sort: E' PER METTERE LA LISTA DI SIMBOLI IN ORDINE ALFABETICO
+% type=symbolslist: LASCIATE COSI', NON VARIATELO
+% name, description, unit: COME INDICATE LA VOSTRA VARIABILE, USATE \ensuremath e \si
+
+
+%% GENERAL ORGANISATION: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% VENGONO LISTATI IN ORDINE ALFABETICO IN BASE ALL'UNITA' DI MISURA NELLE SEGUENTI CATEGORIE:
+
+% ACCELERATIONS ( m/s^2 )
+% COEFFICIENTS ( - )
+% COSTS ( € )
+% FORCES % WEIGHTS ( N )
+% HEIGHTS ( m )
+% LENGHTS ( m o km )
+% MASSES ( kg )
+% NUMBERS ( - )
+% powerS ( W )
+% RATES ( € / hr )
+% TIMES ( min o hr )
+% VARIOUS ( ... )
+% VELOCITIES ( m/s o km/h )
+
+% N.B. SE VOLETE AGGIUNGERE UNA CATEGORIA, METTETELA NEL POSTO GIUSTO! NON PENSATE A DOVE ANDRA' NEL PDF MA MANTENETE IN ORDINE QUI
+
+
+%% LISTA DEI SIMBOLI & VARIABILI: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% ACCELERATIONS: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossaryentry{symb:g}{sort={g},type=symbolslist,
+    name={\ensuremath{g}},
+    description={Gravity acceleration},
+    unit={\si{m/s^2}}
+}
+\newglossaryentry{symb:vdot}{sort={vdot},type=symbolslist,
+    name={\ensuremath{\dot{V}}},
+    description={Time derivative of speed},
+    unit={\si{m/s^2}}
+}
+\newglossaryentry{symb:acc}{sort={acc},type=symbolslist,
+    name={\ensuremath{A}},
+    description={Acceleration},
+    unit={\si{m/s^2}}
+}
+%% COEFFICIENTS: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossaryentry{symb:cl}{sort={cl},type=symbolslist,
+    name={\ensuremath{C_L}},
+    description={Lift coefficient},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:cd}{sort={cd},type=symbolslist,
+    name={\ensuremath{C_D}},
+    description={Drag coefficient},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:me}{sort={me},type=symbolslist,
+    name={\ensuremath{m_E}},
+    description={Empty fraction},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:mf}{sort={mf},type=symbolslist,
+    name={\ensuremath{m_F}},
+    description={Fuel fraction},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:mfused}{sort={mfused},type=symbolslist,
+    name={\ensuremath{m_{\textit{F,used}}}},
+    description={Fuel fraction used},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:mfphase}{sort={mfphase},type=symbolslist,
+    name={\ensuremath{m_{\textit{F,phase}}}},
+    description={Fuel fraction phase},
+    unit={\si{-}}
+}
+
+\newglossaryentry{symb:lond}{sort={lond},type=symbolslist,
+    name={\ensuremath{\frac{L}{D}}},
+    description={Lift-to-Drag ratio},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:etap}{sort={etap},type=symbolslist,
+    name={\ensuremath{\eta_p}},
+    description={Propeller efficiency},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:clmax}{sort={clmax},type=symbolslist,
+    name={\ensuremath{C_{L_{max}}}},
+    description={Maximum lift coefficient in a generic configuration},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:clmaxclean}{sort={clmaxclean},type=symbolslist,
+    name={\ensuremath{C_{L_{max,clean}}}},
+    description={Maximum lift coefficient, flaps: up},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:clmaxto}{sort={clmaxto},type=symbolslist,
+    name={\ensuremath{C_{L_{max,TO}}}},
+    description={Maximum lift coefficient, flaps: take-off configuration},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:clmaxl}{sort={clmaxl},type=symbolslist,
+    name={\ensuremath{C_{L_{max,L}}}},
+    description={Maximum lift coefficient, flaps: landing configuration},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:CLCR}{sort={CLCR},type=symbolslist,
+	name={\ensuremath{C_{L_{CR}}}},
+	description={Aircraft cruise lift coefficient},
+	unit={\si{-}}
+}
+\newglossaryentry{symb:CLCRW}{sort={CLCRW},type=symbolslist,
+	name={\ensuremath{C_{L_{{CR}_W}}}},
+	description={Wing cruise lift coefficient},
+	unit={\si{-}}
+}
+\newglossaryentry{symb:Cli}{sort={Cli},type=symbolslist,
+	name={\ensuremath{C_{l_i}}},
+	description={Wing airfoil lift coefficient},
+	unit={\si{-}}
+}
+\newglossaryentry{symb:Clmaxgross}{sort={Clmaxgross},type=symbolslist,
+	name={\ensuremath{C_{l_{max_{gross}}}}},
+	description={Wing airfoil gross maximum lift coefficient},
+	unit={\si{-}}
+}
+\newglossaryentry{symb:deltaclmaxhld}{sort={deltaclmaxhld},type=symbolslist,
+	name={\ensuremath{\Delta C_{l_{max_{HLD}}}}},
+	description={HLD extra lift at stall},
+	unit={\si{-}}
+}
+\newglossaryentry{symb:cfoverc}{sort={cfoverc},type=symbolslist,
+	name={\ensuremath{\frac{c_f}{c}}},
+	description={Flap to airfoil chord ratio},
+	unit={\si{-}}
+}
+\newglossaryentry{symb:deltaf}{sort={deltaf},type=symbolslist,
+	name={\ensuremath{\delta_f}},
+		description={Flap deflection},
+		unit={\si{-}}
+}
+\newglossaryentry{symb:ar}{sort={ar},type=symbolslist,
+    name={\ensuremath{AR}},
+    description={Aspect ratio},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:e}{sort={e},type=symbolslist,
+    name={\ensuremath{e}},
+    description={Oswald efficiency number},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:cd0}{sort={cd0},type=symbolslist,
+    name={\ensuremath{C_{D_0}}},
+    description={Zero-lift drag coefficient},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:cdi}{sort={cdi},type=symbolslist,
+    name={\ensuremath{C_{D_i}}},
+    description={Induced drag coefficient},
+    unit={\si{-}}
+}
+
+\newglossaryentry{symb:f}{sort={f},type=symbolslist,
+    name={\ensuremath{f}},
+    description={Equivalent parasite area},
+    unit={\si{m^2}}
+}
+\newglossaryentry{symb:swet}{sort={swet},type=symbolslist,
+    name={\ensuremath{S_{wet}}},
+    description={Wetted area},
+    unit={\si{m^2}}
+}
+\newglossaryentry{symb:cf}{sort={cf},type=symbolslist,
+    name={\ensuremath{c_{f}}},
+    description={Equivalent skin friction coefficient of an aeroplane},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:sigma}{sort={sigma},type=symbolslist,
+    name={\ensuremath{\sigma}},
+    description={Air density on the runway to the value of the ISA at sea level ratio},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:b}{sort={b},type=symbolslist,
+    name={\ensuremath{b}},
+    description={Wingspan},
+    unit={\si{m}}
+}
+\newglossaryentry{symb:lambda}{sort={lambda},type=symbolslist,
+	name={\ensuremath{\lambda}},
+	description={Taper ratio},
+	unit={\si{-}}
+}
+\newglossaryentry{symb:Lambda}{sort={Lambda},type=symbolslist,
+	name={\ensuremath{\Lambda}},
+	description={Sweep angle},
+	unit={\si{deg}}
+}
+\newglossaryentry{symb:Lambdac/4}{sort={Lambdac/4},type=symbolslist,
+	name={\ensuremath{\Lambda_{c/4}}},
+	description={Sweep angle at quarter chord},
+	unit={\si{deg}}
+}
+\newglossaryentry{symb:alphatwist}{sort={alphatwist},type=symbolslist,
+	name={\ensuremath{\alpha_{twist}}},
+	description={Twist angle},
+	unit={\si{deg}}
+}
+
+\newglossaryentry{symb:qdf}{sort={qdf},type=symbolslist,
+    name={\ensuremath{QDF}},
+    description={Quantity Discount Factor},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:cpi}{sort={cpi},type=symbolslist,
+    name={\ensuremath{CPI}},
+    description={Consumer Price Index},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:nu}{sort={nu},type=symbolslist,
+    name={\ensuremath{N_{U}}},
+    description={Number of unit produced in 5 years},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:np}{sort={np},type=symbolslist,
+    name={\ensuremath{N_{P}}},
+    description={Number of prototypes produced},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:ne}{sort={ne},type=symbolslist,
+    name={\ensuremath{N_{E}}},
+    description={Number of engines},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:nbe}{sort={nbe},type=symbolslist,
+    name={\ensuremath{N_{BE}}},
+    description={Number of units to break-even},
+    unit={\si{-}}
+}
+
+%% COSTS: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossaryentry{symb:ceng}{sort={costeng},type=symbolslist,
+    name={\ensuremath{C_{ENG}}},
+    description={Total cost of engineering},
+    unit={\euro}
+}
+\newglossaryentry{symb:ctlg}{sort={costtlg},type=symbolslist,
+    name={\ensuremath{C_{TLG}}},
+    description={Total cost of tooling},
+    unit={\euro}
+}
+\newglossaryentry{symb:cmfg}{sort={costmfg},type=symbolslist,
+    name={\ensuremath{C_{MFG}}},
+    description={Total cost of manufacturing},
+    unit={\euro}
+}
+\newglossaryentry{symb:cft}{sort={costft},type=symbolslist,
+    name={\ensuremath{C_{FT}}},
+    description={Total cost of flight test operations},
+    unit={\euro}
+}
+\newglossaryentry{symb:cqc}{sort={costqc},type=symbolslist,
+    name={\ensuremath{C_{QC}}},
+    description={Total cost of quality control},
+    unit={\euro}
+}
+\newglossaryentry{symb:cdev}{sort={costdev},type=symbolslist,
+    name={\ensuremath{C_{DEV}}},
+    description={Total cost of development support},
+    unit={\euro}
+}
+\newglossaryentry{symb:cmat}{sort={costmat},type=symbolslist,
+    name={\ensuremath{C_{MAT}}},
+    description={Total cost of materials},
+    unit={\euro}
+}
+\newglossaryentry{symb:ccert}{sort={costcert},type=symbolslist,
+    name={\ensuremath{C_{CERT}}},
+    description={Total cost of certification},
+    unit={\euro}
+}
+\newglossaryentry{symb:ctpe}{sort={costtpe},type=symbolslist,
+    name={\ensuremath{C_{TPE}}},
+    description={Total cost of turboprop engine},
+    unit={\euro}
+}
+\newglossaryentry{symb:cprop}{sort={costprop},type=symbolslist,
+    name={\ensuremath{C_{PROP}}},
+    description={Total cost of propeller},
+    unit={\euro}
+}
+\newglossaryentry{symb:csp}{sort={costsp},type=symbolslist,
+    name={\ensuremath{C_{SP}}},
+    description={Unit sales price},
+    unit={\euro}
+}
+\newglossaryentry{symb:cfx}{sort={costfx},type=symbolslist,
+    name={\ensuremath{C_{FX}}},
+    description={Total fixed costs},
+    unit={\euro}
+}
+\newglossaryentry{symb:cvar}{sort={costvar},type=symbolslist,
+    name={\ensuremath{C_{VAR}}},
+    description={Total variable costs},
+    unit={\euro}
+}
+\newglossaryentry{symb:cu}{sort={costu},type=symbolslist,
+    name={\ensuremath{C_{U}}},
+    description={Unit production cost},
+    unit={\euro}
+}
+\newglossaryentry{symb:cavio}{sort={costavio},type=symbolslist,
+    name={\ensuremath{C_{AVIO}}},
+    description={Cost of avionics},
+    unit={\euro}
+}
+\newglossaryentry{symb:clg}{sort={costlg},type=symbolslist,
+    name={\ensuremath{C_{LG}}},
+    description={Cost of retractable landing gear},
+    unit={\euro}
+}
+
+%% FORCES % WEIGHTS: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossaryentry{symb:w}{sort={w},type=symbolslist,
+    name={\ensuremath{W}},
+    description={Weight},
+    unit={\si{N}}
+}
+\newglossaryentry{symb:l}{sort={l},type=symbolslist,
+    name={\ensuremath{L}},
+    description={Lift},
+    unit={\si{N}}
+}
+\newglossaryentry{symb:d}{sort={d},type=symbolslist,
+    name={\ensuremath{D}},
+    description={Drag},
+    unit={\si{N}}
+}
+\newglossaryentry{symb:wto}{sort={wto},type=symbolslist,
+    name={\ensuremath{W_{TO}}},
+    description={Take-off weight},
+    unit={\si{N}}
+}
+\newglossaryentry{symb:wl}{sort={wl},type=symbolslist,
+    name={\ensuremath{W_L}},
+    description={Landing weight},
+    unit={\si{N}}
+}
+\newglossaryentry{symb:wcr}{sort={wcr},type=symbolslist,
+    name={\ensuremath{W_{CR}}},
+    description={Weight in cruise},
+    unit={\si{N}}
+}
+\newglossaryentry{symb:wavg}{sort={wavg},type=symbolslist,
+	name={\ensuremath{W_{avg}}},
+	description={Average weight in cruise},
+	unit={\si{N}}
+}
+%% HEIGHTS: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossaryentry{symb:h}{sort={h},type=symbolslist,
+    name={\ensuremath{h}},
+    description={Altitude},
+    unit={\si{m}}
+}
+\newglossaryentry{symb:hcr}{sort={hcr},type=symbolslist,
+    name={\ensuremath{h_{CR}}},
+    description={Cruise altitude},
+    unit={\si{m}}
+}
+\newglossaryentry{symb:H}{sort={H},type=symbolslist,
+    name={\ensuremath{H}},
+    description={Total altitude},
+    unit={\si{m}}
+}
+%% LENGHTS: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossaryentry{symb:stog}{sort={stog},type=symbolslist,
+    name={\ensuremath{S_{TOG}}},
+    description={Ground take-off distance},
+    unit={\si{m}}
+}
+\newglossaryentry{symb:sto}{sort={sto},type=symbolslist,
+    name={\ensuremath{S_{TO}}},
+    description={Take-off distance},
+    unit={\si{m}}
+}
+\newglossaryentry{symb:sl}{sort={sl},type=symbolslist,
+    name={\ensuremath{S_L}},
+    description={Landing distance},
+    unit={\si{m}}
+}
+\newglossaryentry{symb:slg}{sort={slg},type=symbolslist,
+    name={\ensuremath{S_{LG}}},
+    description={Ground landing distance},
+    unit={\si{m}}
+}
+\newglossaryentry{symb:rcr}{sort={rcr},type=symbolslist,
+    name={\ensuremath{R_{CR}}},
+    description={Range in cruise},
+    unit={\si{km}}
+}
+\newglossaryentry{symb:dp}{sort={dp},type=symbolslist,
+    name={\ensuremath{D_{P}}},
+    description={Propeller diameter},
+    unit={\si{m}}
+}
+
+%% MASSES: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossaryentry{symb:mmto}{sort={mmto},type=symbolslist,
+    name={\ensuremath{M_{MTO}}},
+    description={Maximum take-off mass},
+    unit={\si{kg}}
+}
+\newglossaryentry{symb:Me}{sort={Me},type=symbolslist,
+    name={\ensuremath{M_E}},
+    description={Empty mass},
+    unit={\si{kg}}
+}
+\newglossaryentry{symb:Mf}{sort={Mf},type=symbolslist,
+    name={\ensuremath{M_F}},
+    description={Fuel mass},
+    unit={\si{kg}}
+}
+\newglossaryentry{symb:Mcr}{sort={Mcr},type=symbolslist,
+    name={\ensuremath{M_{CR}}},
+    description={Crew mass},
+    unit={\si{kg}}
+}
+\newglossaryentry{symb:Mpl}{sort={Mpl},type=symbolslist,
+    name={\ensuremath{M_{PL}}},
+    description={Payload mass},
+    unit={\si{kg}}
+}
+\newglossaryentry{symb:Mk}{sort={Mk},type=symbolslist,
+    name={\ensuremath{M_K}},
+    description={Kit mass},
+    unit={\si{kg}}
+}
+\newglossaryentry{symb:ma}{sort={ma},type=symbolslist,
+    name={\ensuremath{M_{A}}},
+    description={Airframe mass},
+    unit={\si{kg}}
+}
+
+%% NUMBERS: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossaryentry{symb:epsilon}{sort={epsilon},type=symbolslist,
+    name={\ensuremath{\epsilon}},
+    description={Error function},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:aroskam}{sort={aroskam},type=symbolslist,
+    name={\ensuremath{A_{\textit{Roskam}}}},
+    description={A Roskam coefficient},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:broskam}{sort={broskam},type=symbolslist,
+    name={\ensuremath{B_{\textit{Roskam}}}},
+    description={B Roskam coefficient},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:araymer}{sort={araymer},type=symbolslist,
+    name={\ensuremath{A_{\textit{Raymer}}}},
+    description={A Raymer coefficient},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:craymer}{sort={craymer},type=symbolslist,
+    name={\ensuremath{C_{\textit{Raymer}}}},
+    description={C Raymer coefficient},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:fexp}{sort={fexp},type=symbolslist,
+    name={\ensuremath{F_{EXP}}},
+    description={Experience effectiveness factor},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:fcert}{sort={fcert},type=symbolslist,
+    name={\ensuremath{F_{CERT}}},
+    description={Factor related to certification},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:fflap}{sort={fflap},type=symbolslist,
+    name={\ensuremath{F_{FLAP}}},
+    description={Factor related to flap complexity},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:fcomp}{sort={fcomp},type=symbolslist,
+    name={\ensuremath{F_{COMP}}},
+    description={Factor related to the use of composite materials in the airframe},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:fcom}{sort={fcom},type=symbolslist,
+    name={\ensuremath{f_{comp}}},
+    description={Fraction of airframe made from composites},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:fpress}{sort={fpress},type=symbolslist,
+    name={\ensuremath{F_{PRESS}}},
+    description={Factor related to aircraft pressurisation},
+    unit={\si{-}}
+}
+\newglossaryentry{symb:ftaper}{sort={ftaper},type=symbolslist,
+    name={\ensuremath{F_{TAPER}}},
+    description={Factor related to tapered wing},
+    unit={\si{-}}
+}
+
+%% POWERS: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossaryentry{symb:pa}{sort={pa},type=symbolslist,
+    name={\ensuremath{P_A}},
+    description={Available power},
+    unit={\si{kW}}
+}
+\newglossaryentry{symb:pr}{sort={pr},type=symbolslist,
+    name={\ensuremath{P_R}},
+    description={Required power},
+    unit={\si{kW}}
+}
+\newglossaryentry{symb:ps}{sort={ps},type=symbolslist,
+    name={\ensuremath{P_S}},
+    description={Shaft power},
+    unit={\si{kW}}
+}
+\newglossaryentry{symb:psto}{sort={psto},type=symbolslist,
+    name={\ensuremath{P_{S,TO}}},
+    description={Shaft power in take-off},
+    unit={\si{kW}}
+}
+\newglossaryentry{symb:pe}{sort={pe},type=symbolslist,
+    name={\ensuremath{P_E}},
+    description={Equivalent power},
+    unit={\si{kW}}
+}
+
+%% RATES: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossaryentry{symb:reng}{sort={reng},type=symbolslist,
+    name={\ensuremath{R_{ENG}}},
+    description={Engineering rate},
+    unit={\euro /\si{hr}}
+}
+\newglossaryentry{symb:rtlg}{sort={rtlg},type=symbolslist,
+    name={\ensuremath{R_{TLG}}},
+    description={Tooling rate},
+    unit={\euro /\si{hr}}
+}
+\newglossaryentry{symb:rmfg}{sort={rmfg},type=symbolslist,
+    name={\ensuremath{R_{MFG}}},
+    description={Manufacturig rate},
+    unit={\euro /\si{hr}}
+}
+
+%% TIMES: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossaryentry{symb:elo}{sort={elo},type=symbolslist,
+    name={\ensuremath{E_{LO}}},
+    description={Endurance in loiter},
+    unit={\si{min}}
+}
+\newglossaryentry{symb:ttc}{sort={ttc},type=symbolslist,
+    name={\ensuremath{TTC}},
+    description={Time To Climb},
+    unit={\si{min}}
+}
+\newglossaryentry{symb:ttd}{sort={ttd},type=symbolslist,
+    name={\ensuremath{TTD}},
+    description={Time To Descent},
+    unit={\si{min}}
+}
+\newglossaryentry{symb:heng}{sort={heng},type=symbolslist,
+    name={\ensuremath{H_{ENG}}},
+    description={Number of engineering man-hours},
+    unit={\si{hr}}
+}
+\newglossaryentry{symb:htlg}{sort={htlg},type=symbolslist,
+    name={\ensuremath{H_{TLG}}},
+    description={Number of tooling man-hours},
+    unit={\si{hr}}
+}
+\newglossaryentry{symb:hmfg}{sort={hmfg},type=symbolslist,
+    name={\ensuremath{H_{MFG}}},
+    description={Number of manufacturing man-hours},
+    unit={\si{hr}}
+}
+
+%% VARIOUS: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossaryentry{symb:rho}{sort={r},type=symbolslist,
+    name={\ensuremath{\rho}},
+    description={Density},
+    unit={\si{kg/m^3}}
+}
+\newglossaryentry{symb:s}{sort={s},type=symbolslist,
+    name={\ensuremath{S}},
+    description={Wing surface},
+    unit={\si{m^2}}
+}
+\newglossaryentry{symb:cp}{sort={cp},type=symbolslist,
+    name={\ensuremath{c_p}},
+    description={Specific fuel consumption for propeller plane},
+    unit={\si{kg/(kW\cdot hr)}}
+}
+\newglossaryentry{symb:top23}{sort={top23},type=symbolslist,
+    name={\ensuremath{TOP_{23}}},
+    description={Take-off parameter},
+    unit={\si{N^2/(m^2\cdot W)}}
+}
+\newglossaryentry{symb:gamma}{sort={gamma},type=symbolslist,
+    name={\ensuremath{\gamma}},
+    description={Climb gradient},
+    unit={\si{rad}}
+}
+\newglossaryentry{symb:throttle}{sort={throttle},type=symbolslist,
+    name={\ensuremath{\%_{throttle}}},
+    description={Percentage throttle parameter},
+    unit={\si{\%}} 
+}
+\newglossaryentry{symb:kp}{sort={kp},type=symbolslist,
+    name={\ensuremath{K_P}},
+    description={Diameter factor},
+    unit={\si{m/kW\textsuperscript{0.25}}}
+}
+\newglossaryentry{symb:alpha0}{sort={alpha0},type=symbolslist,
+	name={\ensuremath{\alpha_0}},
+	description={Airfoil zero-lift angle},
+	unit={\si{deg}}
+}
+\newglossaryentry{symb:iw}{sort={iw},type=symbolslist,
+	name={\ensuremath{i_w}},
+	description={Wing setting angle},
+	unit={\si{deg}}
+}
+\newglossaryentry{symb:twist}{sort={twist},type=symbolslist,
+	name={\ensuremath{\alpha_{twist}}},
+	description={Wing twist angle},
+	unit={\si{deg}}
+}
+\newglossaryentry{symb:dihedral}{sort={dihedral},type=symbolslist,
+	name={\ensuremath{\Gamma}},
+	description={Wing dihedral},
+	unit={\si{deg}}
+}
+
+%% VELOCITIES: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossaryentry{symb:v}{sort={v},type=symbolslist,
+    name={\ensuremath{V}},
+    description={True airspeed},
+    unit={\si{m/s}}
+}
+\newglossaryentry{symb:vcr}{sort={vcr},type=symbolslist,
+    name={\ensuremath{V_{CR}}},
+    description={Cruise speed},
+    unit={\si{m/s}}
+}
+\newglossaryentry{symb:vlo}{sort={vlo},type=symbolslist,
+    name={\ensuremath{V_{LO}}},
+    description={Loiter speed},
+    unit={\si{m/s}}
+}
+\newglossaryentry{symb:vs}{sort={vs},type=symbolslist,
+    name={\ensuremath{V_S}},
+    description={Stall speed in a generic configuration},
+    unit={\si{m/s}}
+}
+\newglossaryentry{symb:vsclean}{sort={vsclean},type=symbolslist,
+    name={\ensuremath{V_{S,clean}}},
+    description={Stall speed, flaps: up},
+    unit={\si{m/s}}
+}
+\newglossaryentry{symb:vsto}{sort={vsto},type=symbolslist,
+    name={\ensuremath{V_{S,TO}}},
+    description={Stall speed, flaps: take-off configuration},
+    unit={\si{m/s}}
+}
+\newglossaryentry{symb:vso}{sort={vso},type=symbolslist,
+    name={\ensuremath{V_{SO}}},
+    description={Stall speed, flaps: landing configuration},
+    unit={\si{m/s}}
+}
+\newglossaryentry{symb:vmo}{sort={vmo},type=symbolslist,
+    name={\ensuremath{V_{MO}}},
+    description={Maximum operating limit speed},
+    unit={\si{m/s}}
+}
+\newglossaryentry{symb:vno}{sort={vno},type=symbolslist,
+    name={\ensuremath{V_{NO}}},
+    description={Maximum cruising speed for normal operations},
+    unit={\si{m/s}}
+}
+\newglossaryentry{symb:va}{sort={va},type=symbolslist,
+    name={\ensuremath{V_A}},
+    description={Approach speed},
+    unit={\si{m/s}}
+}
+\newglossaryentry{symb:vv}{sort={vv},type=symbolslist,
+    name={\ensuremath{V_V}},
+    description={Vertical velocity},
+    unit={\si{m/s}}
+}
+\newglossaryentry{symb:vcl}{sort={vcl},type=symbolslist,
+    name={\ensuremath{V_{CL}}},
+    description={Climb velocity},
+    unit={\si{m/s}}
+}
+\newglossaryentry{symb:vde}{sort={vde},type=symbolslist,
+    name={\ensuremath{V_{DE}}},
+    description={Descent velocity},
+    unit={\si{m/s}}
+}

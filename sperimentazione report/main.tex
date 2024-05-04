@@ -1,0 +1,80 @@
+
+%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+\usepackage{import}
+\usepackage[italian]{babel}
+\import{document settings/}{document settings}
+
+%% GLOSSARY CREATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\import{document settings/}{list_of_acronyms} % LISTA DELLE ABBREVIAZIONI
+\import{document settings/}{list_of_symbols} % LISTA DELLE VARIABILI E SIMBOLI MATEMATICI
+
+\makeglossaries
+\addbibresource{riferimenti.bib} % BIBLIOGRAFIA
+
+%% DOCUMENT INITIALISATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%\newpage
+%\thispagestyle{empty}
+%\mbox{}
+%\newpage
+\import{document settings/}{title} % TITLE PAGE
+\clearpage
+
+\import{chapters/0 - abstract_intro}{abstract}
+\clearpage
+\renewcommand{\contentsname}{Indice}
+\tableofcontents
+\clearpage
+
+\listoftables
+\clearpage
+
+\listoffigures
+\clearpage
+
+
+\printglossary[type=symbolslist, style=symbunitlong, toctitle={Lista dei simboli}]
+\clearpage
+
+\printglossary[title={Lista delle abbreviazioni} , toctitle={Abbreviations}, type=\acronymtype]
+\clearpage
+
+%% INSERT CHAPTERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%main body
+
+%\import{chapters/0 - abstract_intro}{intro}
+%\clearpage
+
+\import{chapters/1-misureT}{cap1}
+\clearpage
+\import{chapters/2-errsist}{errore}
+\clearpage
+\import{chapters/3-misuradiaframma}{ciclone}
+\clearpage
+\import{chapters/4-irraggiamento}{perdite}
+\clearpage
+\import{chapters/5-laboratorio}{lab}
+\clearpage
+
+
+
+
+
+
+
+%\begin{appendices}
+
+%\end{appendices}
+
+
+%%%%%%%%%%%%%%%%%%%%%% BIBLIOGRAPHY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\printbibliography[heading=bibintoc,type=book,title={Bibliografia}]
+
+\clearpage
+\printbibliography[heading=bibintoc,type=online,title={Sitografia}]
+
+\end{document}
+
+
