@@ -5,13 +5,13 @@ Si chiede di svolgere l'analisi statistica dei dati.
 \subsection{Risoluzione}
 Si riportano i risultati emersi dall'elaborazione dei dati sperimentali. I calcoli sono stati svolti mediante il software \textit{Matlab} e le funzioni built-in.
 \paragraph{Suddivisione in classi e istogramma}
-Entrambe le serie sono divise in 10 classi, di uguale ampiezza, costruite affinché non ci possa essere ambiguità nell'attribuzione dei valori: poiché le misure hanno 6 cifre decimali, gli estremi di classe sono definiti con 7 cifre decimali. L'estremo della prima classe viene scelto come il minimo valore di \glsxtrshort{symb:T} a cui viene sottratto 0.5e-7 \textsuperscript{o}C. Analogamente, l'estremo superiore dell'ultima classe viene calcolato sommando la stessa quantità al massimo valore di \glsxtrshort{symb:T} nella serie. I valori estremi delle due serie sono mostrati in Tab.\ref{tab:estremitemp}, riportati integralmente per mettere in evidenza il numero di cifre decimali.
+Entrambe le serie sono divise in 10 classi, di uguale ampiezza, costruite affinché non ci possa essere ambiguità nell'attribuzione dei valori: poiché le misure hanno 6 cifre decimali, gli estremi di classe sono definiti con 7 cifre decimali. L'estremo della prima classe viene scelto come il minimo valore di \gls{symb:T} a cui viene sottratto 0.5e-7 \textsuperscript{o}C. Analogamente, l'estremo superiore dell'ultima classe viene calcolato sommando la stessa quantità al massimo valore di \gls{symb:T} nella serie. I valori estremi delle due serie sono mostrati in Tab.\ref{tab:estremitemp}, riportati integralmente per mettere in evidenza il numero di cifre decimali.
 \begin{table} [H]
 	\centering
 	\begin{tabular}{c|c|c}
 		\toprule
 		\toprule
-		\textbf{Serie} & \textbf{T\textsubscript{min} [\textsuperscript{o}C]} &\textbf{T\textsubscript{max} [\textsuperscript{o}C]} \\
+		\textbf{Serie} & \textbf{\textit{T\textsubscript{MIN}} [\textsuperscript{o}C]} &\textbf{\textit{T\textsubscript{MAX}} [\textsuperscript{o}C]} \\
 		\midrule
 		\midrule
 		Corta & 953.745910 & 1193.110960\\
@@ -44,14 +44,14 @@ Gli istogrammi relativi alle due serie sono mostrati in Fig.\ref{fig:istboth}.
 Si osserva come entrambe le distribuzioni di dati siano simili alla distribuzione gaussiana, mostrando tuttavia una evidente asimmetria. Quest'ultima è quantificabile dal coefficiente di skewness, riportato in Tab.%\ref{}.
 \paragraph{Calcolo delle frequenze relative e cumulate}
 Successivamente vengono riportate in Tab.\ref{tab:seriecorta} e Tab.\ref{tab:serielunga}
-le classi, il numero di valori in ciascuna di esse, le frequenze relative (\glsxtrshort{symb:f}) e frequenze cumulate normalizzate(\glsxtrshort{symb:F}).
+le classi, il numero di valori in ciascuna di esse, le frequenze relative (\gls{symb:f}) e frequenze cumulate normalizzate(\gls{symb:F}).
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c|c|c|c|c}
 		\toprule
 		\toprule
-		\textbf{Classe}&\textbf{Estremi} &\textbf{Occorrenze}&\textbf{\glsxtrshort{symb:f}}&\textbf{\glsxtrshort{symb:F}}\\
+		\textbf{Classe}&\textbf{Estremi} &\textbf{Occorrenze}&\textbf{\textit{f}}&\textbf{\textit{F}}\\
 		\midrule
 		\midrule
 		\multirow{2}{*}{1}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
@@ -95,7 +95,7 @@ le classi, il numero di valori in ciascuna di esse, le frequenze relative (\glsx
 	\begin{tabular}{c|c|c|c|c}
 		\toprule
 		\toprule
-		\textbf{Classe}&\textbf{Estremi} &\textbf{Occorrenze}&\textbf{\glsxtrshort{symb:f}}&\textbf{\glsxtrshort{symb:F}}\\
+		\textbf{Classe}&\textbf{Estremi} &\textbf{Occorrenze}&\textbf{\textit{f}}&\textbf{\textit{F}}\\
 		\midrule
 		\midrule
 		\multirow{2}{*}{1}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
@@ -160,3 +160,62 @@ le classi, il numero di valori in ciascuna di esse, le frequenze relative (\glsx
 	\caption{Frequenze cumulate normalizzate per entrambe le serie}
 	\label{fig:cumboth}
 \end{figure}
+
+
+\paragraph{Calcolo degli indici statistici}
+L'analisi statistica dei dati viene svolta mediante il calcolo degli indici statistici relativi alle due serie di dati. In particolare, si riportano media (\gls{symb:Tmean}) e mediana (\gls{symb:Tmed}) delle due serie, nonché deviazione standard (\gls{symb:sigmaT}) e skewness (\gls{symb:skew}) delle distribuzioni. I risultati sono presentati in Tab.\ref{tab:indicistat}.
+
+\begin{table} [H]
+	\centering
+	\begin{tabular}{c|c|c}
+		\toprule
+		\toprule
+		\textbf{Indice} & \textbf{Serie corta}&\textbf{Serie lunga}\\
+		\midrule
+		\midrule
+		$\overline{T}$ [\textsuperscript{o}C]& 1082.8 & 1159.2\\
+		\midrule
+		$T_\textit{MEDIANA}$ [\textsuperscript{o}C]&1085.7&1152.4\\
+		\midrule
+		$\sigma_T$ [\textsuperscript{o}C]&39.147 & 77.841\\
+		\midrule
+		$SK$ & -0.27 & 0.40 \\
+		\bottomrule
+		\bottomrule
+	\end{tabular}
+\caption{Indici statistici delle due distribuzioni}
+\label{tab:indicistat}
+\end{table}
+
+\paragraph{Stima dell'errore statistico}
+Lo studio statistico delle due serie di dati si conclude con la stima dell'errore statistico (\gls{symb:Estat}).  Risulta necessario calcolare la deviazione standard del valore medio di temperatura (\gls{symb:sigmaTmean}) secondo:
+\begin{equation}
+	\sigma_{\overline{T}} = \frac{\sigma_{T}}{\sqrt{N}} 
+\end{equation}
+dove \gls{symb:N} è il numero di campioni di ciascuna serie.
+Infine, il valore di \gls{symb:Estat} si ottiene con:
+\begin{equation}
+	\epsilon_{\textit{STAT}}=\sigma_{\overline{T}}\,t_{\textit{95\%}}
+\end{equation}
+dove \gls{symb:t95} è ricavato dalla distribuzione t per un intervallo di confidenza al 95\% (dove \gls{symb:nu} = \gls{symb:N} - 1).
+\begin{table} [H]
+	\centering
+	\begin{tabular}{c|c|c}
+		\toprule
+		\toprule
+		\textbf{Indice} & \textbf{Serie corta}&\textbf{Serie lunga}\\
+		\midrule
+		\midrule
+		$t_{\textit{95\%}}$ &1.9614&1.9602\\
+		\midrule
+		$\nu$ & 1598 & 9998\\
+		\midrule
+		$\epsilon_{\textit{STAT}}$ [\textsuperscript{o}C]& 1.9202 & 1.5259\\
+		\bottomrule
+		\bottomrule
+	\end{tabular}
+	\caption{Errore statistico delle due distribuzioni}
+	\label{tab:errorestat}
+\end{table}
+
+COMMENTO CRITICO
