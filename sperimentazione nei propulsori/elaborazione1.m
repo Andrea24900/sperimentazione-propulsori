@@ -125,8 +125,10 @@ std_long=std(long_vector)
 t_95_short=tinv(0.975,length(short_vector)-1);
 t_95_long=tinv(0.975,length(long_vector)-1);
 
-err_stat_short=std_short/sqrt(length(short_vector))*t_95_short;
-err_stat_long=std_long/sqrt(length(long_vector))*t_95_long;
+sigmaTmean_short=std_short/sqrt(length(short_vector));
+sigmaTmean_long=std_long/sqrt(length(long_vector));
+err_stat_short=sigmaTmean_short*t_95_short;
+err_stat_long=sigmaTmean_long*t_95_long;
 
 save errori_stat.mat err_stat_short err_stat_long
 % %% Caratterizzazione temporale dei set

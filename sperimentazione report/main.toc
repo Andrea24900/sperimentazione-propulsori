@@ -9,9 +9,11 @@
 \contentsline {subsection}{\numberline {1.1}Risoluzione}{7}{subsection.1.1}%
 \contentsline {paragraph}{Suddivisione in classi e istogramma}{7}{subsection.1.1}%
 \contentsline {paragraph}{Calcolo delle frequenze relative e cumulate}{8}{figure.caption.7}%
-\contentsline {paragraph}{Calcolo degli indici statistici}{10}{figure.caption.11}%
-\contentsline {paragraph}{Stima dell'errore statistico}{10}{table.caption.12}%
-\contentsline {section}{\numberline {2}Stima dell'errore sistematico}{12}{section.2}%
-\contentsline {section}{\numberline {3}Misura di portata mediante diaframma}{13}{section.3}%
-\contentsline {section}{\numberline {4}Perdite per irraggiamento}{14}{section.4}%
-\contentsline {section}{\numberline {5}Misure al banco prova}{15}{section.5}%
+\contentsline {paragraph}{Calcolo degli indici statistici}{8}{figure.caption.9}%
+\contentsline {paragraph}{Stima dell'errore statistico}{8}{table.caption.10}%
+\contentsline {section}{\numberline {2}Stima dell'errore sistematico}{10}{section.2}%
+\contentsline {section}{\numberline {3}Misura di portata mediante diaframma}{11}{section.3}%
+\contentsline {section}{\numberline {4}Perdite per irraggiamento}{12}{section.4}%
+\contentsline {section}{\numberline {5}Misure al banco prova}{13}{section.5}%
+\contentsline {section}{\numberline {A}Risultati aggiuntivi dell'analisi statistica delle serie di dati}{14}{appendix.1.Alph1}%
+\contentsline {subsection}{\numberline {A.1}Classi, frequenze relative e cumulate normalizzate}{14}{subsection.1.Alph1.1}%

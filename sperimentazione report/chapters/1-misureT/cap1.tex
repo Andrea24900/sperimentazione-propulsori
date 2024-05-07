@@ -43,97 +43,9 @@ Gli istogrammi relativi alle due serie sono mostrati in Fig.\ref{fig:istboth}.
 \end{figure}
 Si osserva come entrambe le distribuzioni di dati siano simili alla distribuzione gaussiana, mostrando tuttavia una evidente asimmetria. Quest'ultima è quantificabile dal coefficiente di skewness, riportato in Tab.%\ref{}.
 \paragraph{Calcolo delle frequenze relative e cumulate}
-Successivamente vengono riportate in Tab.\ref{tab:seriecorta} e Tab.\ref{tab:serielunga}
-le classi, il numero di valori in ciascuna di esse, le frequenze relative (\gls{symb:f}) e frequenze cumulate normalizzate(\gls{symb:F}).
+Successivamente vengono riportate delle rappresentazioni grafiche 
+delle frequenze relative (\gls{symb:f}) e frequenze cumulate normalizzate(\gls{symb:F}) delle varie classi.
 
-\begin{table}[H]
-	\centering
-	\begin{tabular}{c|c|c|c|c}
-		\toprule
-		\toprule
-		\textbf{Classe}&\textbf{Estremi} &\textbf{Occorrenze}&\textbf{\textit{f}}&\textbf{\textit{F}}\\
-		\midrule
-		\midrule
-		\multirow{2}{*}{1}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\multirow{2}{*}{2}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\multirow{2}{*}{3}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\multirow{2}{*}{4}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\multirow{2}{*}{5}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\multirow{2}{*}{6}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\multirow{2}{*}{7}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\multirow{2}{*}{8}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\multirow{2}{*}{9}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\multirow{2}{*}{10}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\bottomrule
-		\bottomrule
-	\end{tabular}
-\caption{Risultati relativi alla serie corta}
-\label{tab:seriecorta}
-\end{table} 
-\begin{table}[H]
-	\centering
-	\begin{tabular}{c|c|c|c|c}
-		\toprule
-		\toprule
-		\textbf{Classe}&\textbf{Estremi} &\textbf{Occorrenze}&\textbf{\textit{f}}&\textbf{\textit{F}}\\
-		\midrule
-		\midrule
-		\multirow{2}{*}{1}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\multirow{2}{*}{2}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\multirow{2}{*}{3}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\multirow{2}{*}{4}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\multirow{2}{*}{5}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\multirow{2}{*}{6}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\multirow{2}{*}{7}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\multirow{2}{*}{8}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\multirow{2}{*}{9}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\multirow{2}{*}{10}&43535&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{} \\
-		&s74747&&&\\
-		\midrule
-		\bottomrule
-		\bottomrule
-	\end{tabular}
-	\caption{Risultati relativi alla serie lunga}
-	\label{tab:serielunga}
-\end{table} 
 
 
 \begin{figure}
@@ -190,14 +102,14 @@ L'analisi statistica dei dati viene svolta mediante il calcolo degli indici stat
 \paragraph{Stima dell'errore statistico}
 Lo studio statistico delle due serie di dati si conclude con la stima dell'errore statistico (\gls{symb:Estat}).  Risulta necessario calcolare la deviazione standard del valore medio di temperatura (\gls{symb:sigmaTmean}) secondo:
 \begin{equation}
-	\sigma_{\overline{T}} = \frac{\sigma_{T}}{\sqrt{N}} 
+	\sigma_{\overline{T}} = \frac{\sigma_{T}}{\sqrt{N}} \label{eq:sigmaTmean}
 \end{equation}
 dove \gls{symb:N} è il numero di campioni di ciascuna serie.
 Infine, il valore di \gls{symb:Estat} si ottiene con:
 \begin{equation}
 	\epsilon_{\textit{STAT}}=\sigma_{\overline{T}}\,t_{\textit{95\%}}
 \end{equation}
-dove \gls{symb:t95} è ricavato dalla distribuzione t per un intervallo di confidenza al 95\% (dove \gls{symb:nu} = \gls{symb:N} - 1).
+dove \gls{symb:t95} è ricavato dalla distribuzione t per un intervallo di confidenza al 95\% (dove \gls{symb:nu} = \gls{symb:N} - 1, dove 1 rappresenta il numero di gradi di libertà persi a seguito dell'introduzione di \gls{symb:Tmean}).
 \begin{table} [H]
 	\centering
 	\begin{tabular}{c|c|c}
@@ -210,7 +122,7 @@ dove \gls{symb:t95} è ricavato dalla distribuzione t per un intervallo di confi
 		\midrule
 		$\nu$ & 1598 & 9998\\
 		\midrule
-		$\epsilon_{\textit{STAT}}$ [\textsuperscript{o}C]& 1.9202 & 1.5259\\
+		$\epsilon_{\textit{STAT}}$  [\textsuperscript{o}C]& $\pm $1.9202 &  $ \pm$ 1.5259\\
 		\bottomrule
 		\bottomrule
 	\end{tabular}
@@ -218,4 +130,4 @@ dove \gls{symb:t95} è ricavato dalla distribuzione t per un intervallo di confi
 	\label{tab:errorestat}
 \end{table}
 
-COMMENTO CRITICO
+Da Tab.\ref{tab:errorestat} si nota come un numero elevato di campioni garantisca un errore statistico molto contenuto, che risulta minore di \gls{symb:sigmaT} di un ordine di grandezza. Questo risultato deriva dalla presenza di $\sqrt{N}$ in Eq.(\ref{eq:sigmaTmean}), il cui valore ammonta a $\sim$ 40 per la prima serie, a $\sim$ 100 per la seconda. Per quanto riguarda il valore di \gls{symb:t95} si osserva che tende al valore asintotico ($\nu \rightarrow \infty $) di 1.960 per entrambe le serie, quindi non c'è particolare differenza tra le due.

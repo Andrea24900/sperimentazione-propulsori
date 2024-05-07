@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.20)  6 MAY 2024 13:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.20)  7 MAY 2024 10:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1181,7 +1181,7 @@ italian.ldf    See the documentation concerning the babel-italian typesetting
 italian.ldf    on input line 15.
 
 (./document settings/title.tex
-<document settings/logo_polimi_nuovo.png, id=44, 342.5598pt x 100.2144pt>
+<document settings/logo_polimi_nuovo.png, id=52, 342.5598pt x 100.2144pt>
 File: document settings/logo_polimi_nuovo.png Graphic file (type png)
 <use document settings/logo_polimi_nuovo.png>
 Package pdftex.def Info: document settings/logo_polimi_nuovo.png  used on input
@@ -1245,13 +1245,13 @@ Overfull \hbox (25.83551pt too wide) in alignment at lines 25--56
 ] (./main.acr) [6
 
 ] (./chapters/1-misureT/cap1.tex
-<chapters/1-misureT/istogrammashort.png, id=139, 421.575pt x 316.18124pt>
+<chapters/1-misureT/istogrammashort.png, id=149, 421.575pt x 316.18124pt>
 File: chapters/1-misureT/istogrammashort.png Graphic file (type png)
 <use chapters/1-misureT/istogrammashort.png>
 Package pdftex.def Info: chapters/1-misureT/istogrammashort.png  used on input 
 line 31.
 (pdftex.def)             Requested size: 228.98618pt x 171.74365pt.
-<chapters/1-misureT/istogrammalong.png, id=140, 421.575pt x 316.18124pt>
+<chapters/1-misureT/istogrammalong.png, id=150, 421.575pt x 316.18124pt>
 File: chapters/1-misureT/istogrammalong.png Graphic file (type png)
 <use chapters/1-misureT/istogrammalong.png>
 Package pdftex.def Info: chapters/1-misureT/istogrammalong.png  used on input l
@@ -1260,49 +1260,51 @@ ine 37.
  [7
 
  <./chapters/1-misureT/istogrammashort.png (PNG copy)> <./chapters/1-misureT/is
-togrammalong.png (PNG copy)>] [8]
-<chapters/1-misureT/relshort.png, id=157, 421.575pt x 316.18124pt>
+togrammalong.png (PNG copy)>]
+<chapters/1-misureT/relshort.png, id=161, 421.575pt x 316.18124pt>
 File: chapters/1-misureT/relshort.png Graphic file (type png)
 <use chapters/1-misureT/relshort.png>
-Package pdftex.def Info: chapters/1-misureT/relshort.png  used on input line 14
-3.
+Package pdftex.def Info: chapters/1-misureT/relshort.png  used on input line 55
+.
 (pdftex.def)             Requested size: 236.01561pt x 177.01204pt.
-<chapters/1-misureT/rellong.png, id=158, 421.575pt x 316.18124pt>
+<chapters/1-misureT/rellong.png, id=162, 421.575pt x 316.18124pt>
 File: chapters/1-misureT/rellong.png Graphic file (type png)
 <use chapters/1-misureT/rellong.png>
-Package pdftex.def Info: chapters/1-misureT/rellong.png  used on input line 149
-.
+Package pdftex.def Info: chapters/1-misureT/rellong.png  used on input line 61.
+
 (pdftex.def)             Requested size: 236.01561pt x 177.01204pt.
-<chapters/1-misureT/cumboth.png, id=159, 421.575pt x 316.18124pt>
+<chapters/1-misureT/cumboth.png, id=163, 421.575pt x 316.18124pt>
 File: chapters/1-misureT/cumboth.png Graphic file (type png)
 <use chapters/1-misureT/cumboth.png>
-Package pdftex.def Info: chapters/1-misureT/cumboth.png  used on input line 159
-.
+Package pdftex.def Info: chapters/1-misureT/cumboth.png  used on input line 71.
+
 (pdftex.def)             Requested size: 330.42041pt x 247.82167pt.
- [9 <./chapters/1-misureT/relshort.png (PNG copy)> <./chapters/1-misureT/rellon
-g.png (PNG copy)>] [10 <./chapters/1-misureT/cumboth.png (PNG copy)>]) [11] (./
-chapters/2-errsist/errore.tex) [12
+ [8 <./chapters/1-misureT/relshort.png (PNG copy)> <./chapters/1-misureT/rellon
+g.png (PNG copy)>]) [9 <./chapters/1-misureT/cumboth.png (PNG copy)>]
+(./chapters/2-errsist/errore.tex) [10
 
 ]
-(./chapters/3-misuradiaframma/ciclone.tex) [13
+(./chapters/3-misuradiaframma/ciclone.tex) [11
 
 ]
-(./chapters/4-irraggiamento/perdite.tex) [14
+(./chapters/4-irraggiamento/perdite.tex) [12
 
-] (./chapters/5-laboratorio/lab.tex) [15
+] (./chapters/5-laboratorio/lab.tex) [13
 
-]
+] (./chapters/appendici/A1_frequenze.tex) [14
 
-Package biblatex Warning: Type 'book' not found on input line 72.
+] [15]
 
-
-LaTeX Warning: Empty bibliography on input line 72.
-
-
-Package biblatex Warning: Type 'online' not found on input line 75.
+Package biblatex Warning: Type 'book' not found on input line 73.
 
 
-LaTeX Warning: Empty bibliography on input line 75.
+LaTeX Warning: Empty bibliography on input line 73.
+
+
+Package biblatex Warning: Type 'online' not found on input line 76.
+
+
+LaTeX Warning: Empty bibliography on input line 76.
 
 (./main.aux)
  ***********
@@ -1310,16 +1312,16 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4888F8DF49972EF21910C07C26A234DC;1662.
+(rerunfilecheck)             Checksum: BB17ED0822DF85D81140AC7975D02AEA;2390.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35262 strings out of 474171
- 679565 string characters out of 5747753
- 1958542 words of memory out of 5000000
- 57032 multiletter control sequences out of 15000+600000
+ 35280 strings out of 474171
+ 680098 string characters out of 5747753
+ 1957542 words of memory out of 5000000
+ 57043 multiletter control sequences out of 15000+600000
  570140 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,15n,127p,2400b,1414s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1339,10 +1341,10 @@ s/type1/public/amsfonts/cm/cmr8.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1
 ic/amsfonts/cm/cmsy10.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmti10.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti8.pfb>
-Output written on main.pdf (16 pages, 253842 bytes).
+Output written on main.pdf (16 pages, 258288 bytes).
 PDF statistics:
- 270 PDF objects out of 1000 (max. 8388607)
- 218 compressed objects within 3 object streams
- 50 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 283 PDF objects out of 1000 (max. 8388607)
+ 231 compressed objects within 3 object streams
+ 52 named destinations out of 1000 (max. 500000)
+ 127 words of extra memory for PDF output out of 10000 (max. 10000000)
 
