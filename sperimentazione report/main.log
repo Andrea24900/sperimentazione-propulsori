@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.20)  7 MAY 2024 10:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.20)  8 MAY 2024 10:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1311,8 +1311,15 @@ LaTeX Warning: Empty bibliography on input line 76.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BB17ED0822DF85D81140AC7975D02AEA;2390.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: BB17ED0822DF85D81140AC7975D02AEA;2390
+(rerunfilecheck)             After:  98259F4A06AE27C6003D2FC67B4DC148;2443.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
@@ -1341,7 +1348,7 @@ s/type1/public/amsfonts/cm/cmr8.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1
 ic/amsfonts/cm/cmsy10.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmti10.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti8.pfb>
-Output written on main.pdf (16 pages, 258288 bytes).
+Output written on main.pdf (16 pages, 258281 bytes).
 PDF statistics:
  283 PDF objects out of 1000 (max. 8388607)
  231 compressed objects within 3 object streams
