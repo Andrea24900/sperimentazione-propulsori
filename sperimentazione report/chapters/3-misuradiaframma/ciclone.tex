@@ -61,9 +61,9 @@ Si riporta un riassunto sintetico dei dati del problema, convertiti in unità de
 			\midrule
 			$p_2$ & 4.053e5 Pa\\
 			\midrule
-			$T$ & 300 K\\
+			$T_2$ & 300 K\\
 			\midrule
-			$\gamma$ & 1.4 \\
+			$\gamma $ & 1.4 \\
 			\midrule
 			$q_{\textit{vN}}$ & 96 Nm\textsuperscript{3}/h	\\
 			\midrule
@@ -74,8 +74,30 @@ Si riporta un riassunto sintetico dei dati del problema, convertiti in unità de
 \end{table}
 Al fine di convertire la portata volumetrica normalizzata in una portata massica si adotta la seguente espressione: 
 \begin{equation}
-	q_m = q_{\textit{vN}}\, \rho_n / 3600 
+	q_m = q_{\textit{vN}}\, \rho_N / 3600 
 \end{equation}
 con \gls{symb:rho}\textsubscript{N} = 1.293 kg/m\textsuperscript{3} la densità dell'aria a 273.15 K e 101325 Pa.
 
 \paragraph{Svolgimento}
+La Norma fornisce una serie di equazioni da utilizzare per la misura di portata massica, al cui interno sono definite delle quantità calcolate secondo la Norma stessa. Le equazioni risolventi del problema sono le seguenti:
+\begin{equation}
+	q_m=\frac{C}{\sqrt{1-\beta^4}}\, \epsilon_2 \,\frac{\pi}{4} \, d^2 \, \sqrt{2\Delta p \rho_2} \label{eq:portatamassica}
+\end{equation}
+\begin{equation}
+	\epsilon_1= 1 - (0.41+0.35\beta^4) \, \frac{\Delta p}{\kappa p_1} \label{eq:epsilon1}
+\end{equation}
+\begin{equation}
+	\epsilon_2=\epsilon_1 \, \sqrt{1+\frac{\Delta p}{p_2}} \label{eq:epsilon2}
+\end{equation}
+Le quantità qui presenti sono definite come:
+\begin{itemize}
+	\item \gls{symb:C} è ottenuto mediante opportuna espressione (Eq.);
+	\item \gls{symb:beta} $ = d/D$;
+	\item \gls{symb:rho}\textsubscript{2} $= p_2 / (RT_2) $, entrambe note, con $ R = 287 $ J/(kgK) per l'aria secca;
+	\item $\kappa = \gamma = 1.4 $.
+\end{itemize}
+\gls{symb:C} viene calcolato con la seguente espressione:
+\begin{equation}
+	C=0.5959+0.0312\beta^{2.1}-0.1840\beta^8+0.0029\beta^{2.5} (10^6/Re_D)^{0.75}+0.0390L_1\beta^4(1-\beta^4)^{-1}-0.0337L_2'\beta^3 \label{eq:C}
+\end{equation}
+dove le quantità $L_1,\,L_2'$ sono calcolate in base alla Norma, mentre 
