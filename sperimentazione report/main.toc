@@ -12,8 +12,13 @@
 \contentsline {paragraph}{Calcolo degli indici statistici}{8}{figure.caption.9}%
 \contentsline {paragraph}{Stima dell'errore statistico}{8}{table.caption.10}%
 \contentsline {section}{\numberline {2}Stima dell'errore sistematico}{10}{section.2}%
-\contentsline {section}{\numberline {3}Misura di portata mediante diaframma}{11}{section.3}%
-\contentsline {section}{\numberline {4}Perdite per irraggiamento}{12}{section.4}%
-\contentsline {section}{\numberline {5}Misure al banco prova}{13}{section.5}%
-\contentsline {section}{\numberline {A}Risultati aggiuntivi dell'analisi statistica delle serie di dati}{14}{appendix.1.Alph1}%
-\contentsline {subsection}{\numberline {A.1}Classi, frequenze relative e frequenze cumulate normalizzate}{14}{subsection.1.Alph1.1}%
+\contentsline {section}{\numberline {3}Perdite per irraggiamento}{11}{section.3}%
+\contentsline {section}{\numberline {4}Misura di portata mediante diaframma}{12}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Presentazione del banco prova, dati e richieste}{12}{subsection.4.1}%
+\contentsline {paragraph}{Richieste}{13}{figure.caption.13}%
+\contentsline {subsection}{\numberline {4.2}Risoluzione}{13}{subsection.4.2}%
+\contentsline {paragraph}{Ipotesi risolutive}{13}{subsection.4.2}%
+\contentsline {paragraph}{Riassunto dei dati e conversioni}{13}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Misure al banco prova}{14}{section.5}%
+\contentsline {section}{\numberline {A}Risultati aggiuntivi dell'analisi statistica delle serie di dati}{15}{appendix.1.Alph1}%
+\contentsline {subsection}{\numberline {A.1}Classi, frequenze relative e frequenze cumulate normalizzate}{15}{subsection.1.Alph1.1}%
