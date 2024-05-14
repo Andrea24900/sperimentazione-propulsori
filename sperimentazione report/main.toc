@@ -23,3 +23,4 @@
 \contentsline {section}{\numberline {5}Misure al banco prova}{15}{section.5}%
 \contentsline {section}{\numberline {A}Risultati aggiuntivi dell'analisi statistica delle serie di dati}{16}{appendix.1.Alph1}%
 \contentsline {subsection}{\numberline {A.1}Classi, frequenze relative e frequenze cumulate normalizzate}{16}{subsection.1.Alph1.1}%
+\contentsline {section}{Bibliografia}{18}{table.caption.17}%
