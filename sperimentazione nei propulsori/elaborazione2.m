@@ -110,8 +110,15 @@ ordine_migliore_soluzione=vettore_errori_sistematici(indice,2);
 
 errore_sist_short=migliore_soluzione;
 
+%% Ricalcolo legge metrologica best case
+j=indice;
+tensione_cal_short=tensione_cal(9-j:12+j);
+temperatura_cal_short=temperatura_cal(9-j:12+j);
+coefficienti_short=polyfit(tensione_cal_short,temperatura_cal_short,ordine_migliore_soluzione);
+
 %% Propagazione degli errori
 
-err_tot_short=sqrt(errore_sist_short^2+err_stat_short^2);
+err_tot_short_NOQUANT=sqrt(errore_sist_short^2+err_stat_short^2);
 
-save errori_sist.mat errore_sist_short
+save errore_sist_short.mat errore_sist_short coefficienti_short...
+    tensione_cal_short temperatura_cal_short err_tot_short_NOQUANT

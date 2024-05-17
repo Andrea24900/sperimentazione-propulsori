@@ -108,8 +108,14 @@ ordine_migliore_soluzione=vettore_errori_sistematici(indice,2);
 
 errore_sist_long=migliore_soluzione;
 
+%% COefficienti
+j=indice;
+tensione_cal_long=tensione_cal(8-j:17+j);
+temperatura_cal_long=temperatura_cal(8-j:17+j);
+coefficienti_long=polyfit(tensione_cal_long,temperatura_cal_long,ordine_migliore_soluzione);
+
 %% Propagazione degli errori
 
-err_tot_short=sqrt(errore_sist_long^2+err_stat_long^2);
+err_tot_long_NOQUANT=sqrt(errore_sist_long^2+err_stat_long^2);
 
-save errori_sist.mat errore_sist_long
+save errore_sist_long.mat errore_sist_long coefficienti_long tensione_cal_long temperatura_cal_long err_tot_long_NOQUANT
