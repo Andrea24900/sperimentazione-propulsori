@@ -7,8 +7,6 @@ fontsize=13;
 
 load errori_stat.mat
 
-% Max value of long dataset: 1449.917970  
-% Min value of long dataset: 931.352290 
 
 %% Tabella di calibrazione statica
 
@@ -27,13 +25,14 @@ ylabel('$T$ [$^o$C]','Interpreter','latex','FontSize',fontsize)
 ordine_max=4;
 
 
-for j=1:8
+for j=1:4
 
-    %% 5 tentativi di legge interpolante per dataset corto
-    % Min value of short dataset: 953.745910->valore 950
-    % Max value of short dataset: 1193.110960->1200
-    tensione_cal_short=tensione_cal(9-j:12+j);
-    temperatura_cal_short=temperatura_cal(9-j:12+j);
+    %% 4 tentativi di legge interpolante per dataset lungo
+    % Max value of long dataset: 1449.917970 -> 1450 -> 18 
+    % Min value of long dataset: 931.352290 -> 900 -> 7
+
+    tensione_cal_short=tensione_cal(8-j:17+j);
+    temperatura_cal_short=temperatura_cal(8-j:17+j);
     % legge lineare 
     coefficienti_1_short=polyfit(tensione_cal_short,temperatura_cal_short,1);
     % legge quadratica
@@ -42,8 +41,7 @@ for j=1:8
     coefficienti_3_short=polyfit(tensione_cal_short,temperatura_cal_short,3);
     % legge quartica
     coefficienti_4_short=polyfit(tensione_cal_short,temperatura_cal_short,4);
-    % legge quinto ordine
-    %coefficienti_5_short=polyfit(tensione_cal_short,temperatura_cal_short,5);
+   
     %valutare le tensioni di calibrazione con le 4 leggi
     stima_T_short=zeros(length(temperatura_cal_short),ordine_max);
     
@@ -51,7 +49,7 @@ for j=1:8
     stima_T_short(:,2)=polyval(coefficienti_2_short,tensione_cal_short);
     stima_T_short(:,3)=polyval(coefficienti_3_short,tensione_cal_short);
     stima_T_short(:,4)=polyval(coefficienti_4_short,tensione_cal_short);
-    %stima_T_short(:,5)=polyval(coefficienti_5_short,tensione_cal_short);
+   
     
     errore_T_short=zeros(size(stima_T_short));
     errore_T_short_quadratico=zeros(size(stima_T_short));
@@ -108,10 +106,10 @@ end
 ordine_migliore_soluzione=vettore_errori_sistematici(indice,2);
 
 
-errore_sist_short=migliore_soluzione;
+errore_sist_long=migliore_soluzione;
 
 %% Propagazione degli errori
 
-err_tot_short=sqrt(errore_sist_short^2+err_stat_short^2);
+err_tot_short=sqrt(errore_sist_long^2+err_stat_long^2);
 
-save errori_sist.mat errore_sist_short
+save errori_sist.mat errore_sist_long
