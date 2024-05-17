@@ -91,6 +91,7 @@ La Norma fornisce una serie di equazioni da utilizzare per la misura di portata 
 \end{equation}
 Le quantità qui presenti, il cui valore calcolato è riportato in Tab.\ref{tab:valoriC}, sono definite come:
 \begin{itemize}
+	\item $\Delta p = p_1-p_2$;
 	\item \gls{symb:C} ottenuto mediante Eq.(\ref{eq:C});
 	\item \gls{symb:beta} $ = d/D$;
 	\item \gls{symb:rho}\textsubscript{2} $= p_2 / (RT_2) $, entrambe note, con $ R = 287 $ J/(kgK) per l'aria secca;
@@ -107,7 +108,7 @@ dove:
 	\item \gls{symb:red} $=4q_m/(\pi \mu D)$;
 	\item \gls{symb:mu} a 300 K ottenuta mediante interpolazione dei dati tabulati da Ref.\cite{Cengel}. 
 \end{itemize} 
-\begin{table}
+\begin{table}[H]
 	\centering
 	\begin{tabular}{c|c}
 		\toprule
@@ -126,7 +127,11 @@ dove:
 		$Re_D$ & 5.362e+4\\
 		\midrule
 		$\mu$ & 1.945e-5 Pa$\cdot$s\\
+		\bottomrule
+		\bottomrule
 	\end{tabular}
 \caption{Valori numerici delle quantità di Eq.(\ref{eq:C})}
 \label{tab:valoriC}
 \end{table}
+
+Lo scopo dello svolgimento è determinare \gls{symb:p}\textsubscript{1}: a questo fine è possibile riscrivere le Eq.(\ref{eq:portatamassica}), (\ref{eq:epsilon1}) e (\ref{eq:epsilon2}) in funzione di $p_1$, unica incognita del problema. 
