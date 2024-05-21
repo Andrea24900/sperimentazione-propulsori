@@ -58,3 +58,5 @@
 (indexentry :tkey (("red" "\\glossentry{symb:red}") ) :locref "{}{14}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("mu" "\\glossentry{symb:mu}") ) :locref "{}{14}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("p" "\\glossentry{symb:p}") ) :locref "{}{14}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("p" "\\glossentry{symb:p}") ) :locref "{}{15}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("p" "\\glossentry{symb:p}") ) :locref "{}{15}" :attr "pageglsnumberformat" ) 

@@ -20,7 +20,8 @@
 \contentsline {paragraph}{Ipotesi risolutive}{13}{subsection.4.2}%
 \contentsline {paragraph}{Riassunto dei dati e conversioni}{13}{subsection.4.2}%
 \contentsline {paragraph}{Svolgimento}{13}{equation.4.1}%
-\contentsline {section}{\numberline {5}Misure al banco prova}{15}{section.5}%
-\contentsline {section}{\numberline {A}Risultati aggiuntivi dell'analisi statistica delle serie di dati}{16}{appendix.1.Alph1}%
-\contentsline {subsection}{\numberline {A.1}Classi, frequenze relative e frequenze cumulate normalizzate}{16}{subsection.1.Alph1.1}%
-\contentsline {section}{Bibliografia}{18}{table.caption.17}%
+\contentsline {paragraph}{Risultati}{15}{equation.4.8}%
+\contentsline {section}{\numberline {5}Misure al banco prova}{16}{section.5}%
+\contentsline {section}{\numberline {A}Risultati aggiuntivi dell'analisi statistica delle serie di dati}{17}{appendix.1.Alph1}%
+\contentsline {subsection}{\numberline {A.1}Classi, frequenze relative e frequenze cumulate normalizzate}{17}{subsection.1.Alph1.1}%
+\contentsline {section}{Bibliografia}{19}{table.caption.17}%

@@ -135,3 +135,23 @@ dove:
 \end{table}
 
 Lo scopo dello svolgimento è determinare \gls{symb:p}\textsubscript{1}: a questo fine è possibile riscrivere le Eq.(\ref{eq:portatamassica}), (\ref{eq:epsilon1}) e (\ref{eq:epsilon2}) in funzione di $p_1$, unica incognita del problema. 
+Il risultato è:
+\begin{equation}
+	q_m-C_2(1-C_1+C_1 \frac{p_2}{p_1}) \sqrt{p_1^2-p_1 p_2} \label{eq:finaleq}
+\end{equation}
+dove $ C_1,\, C_2$ sono costanti ottenute rielaborando le equazioni e che assumono le seguenti espressioni:
+\begin{equation}
+	C_1 = \frac{0.41 + 0.35 \beta^4}{\gamma}
+\end{equation}
+
+\begin{equation}
+		C_2 = \frac{C}{\sqrt{1-\beta^2}} \frac{\pi}{4} d^2 \sqrt{\frac{2 \rho_2}{p_2}}
+\end{equation}
+Definendo Eq.(\ref{eq:finaleq}) come $\varepsilon (p_1) $, è possibile utilizzare il metodo di Newton-Raphson (implementato in \textit{fzero} di Matlab) per trovare \gls{symb:p}\textsubscript{1}. Sono utilizzate le tolleranze standard di Matlab. La condizione iniziale è $p_1 = 5e5$. Si osserva che il dominio della soluzione prevede $p_1 \geqslant p_2 \vee p_1 > 0$. Questo è coerente con la fisica del problema, che prevede una perdita di carico in corrispondenza del diaframma. 
+
+\paragraph{Risultati}
+La risoluzione del problema numerico porta a determinare un valore di \gls{symb:p}\textsubscript{1} pari a 460340 Pa, mentre il valore di $\Delta p$ a cavallo del diaframma ammonta a 55039 Pa. 
+
+Affinchè Eq.(\ref{eq:epsilon1}) sia valida è necessario che $p_2/p_1 \geqslant 0.75 $: calcolando questo rapporto con la soluzione ottenuta si ottiene circa 0.87, quindi la condizione richiesta è verificata.
+
+Per misurare la pressione a cavallo del diaframma è possibile utilizzare un manometro differenziale per gas. Una possibile scelta è il manometro differenziale \textit{RS PRO RS DT}, con campo di misura da -2 bar a 2 bar.
