@@ -26,7 +26,7 @@
         \addlinespace[2mm]}
 } 
 
-\newglossary[slg]{symbolslist}{syi}{syg}{Lista dei simboli} 
+\newglossary[slg]{symbolslist}{syi}{syg}{Elenco dei simboli} 
 
 \glsaddkey{unit}{\glsentrytext{\glslabel}}{\glsentryunit}{\GLsentryunit}{\glsunit}{\Glsunit}{\GLSunit}
 
@@ -106,8 +106,17 @@
 	description={Frequenza cumulata normalizzata},
 	unit={\si{-}}
 }
-
-
+%%%%%%%%%%%%%%%%% TASK 2
+\newglossaryentry{symb:sigmaeps}{sort={sigmaeps},type=symbolslist,
+	name={\ensuremath{\sigma_{\varepsilon}}},
+	description={Errore di regressione},
+	unit={\si{\textsuperscript{o}C}}
+}
+\newglossaryentry{symb:errsist}{sort={errsist},type=symbolslist,
+	name={\ensuremath{\epsilon_{\textit{SIST}}}},
+	description={Errore sistematico dello strumento},
+	unit={\si{\textsuperscript{o}C}}
+}
 %%%%% TASK 3
 \newglossaryentry{symb:D}{sort={D},type=symbolslist,
 	name={\ensuremath{D}},

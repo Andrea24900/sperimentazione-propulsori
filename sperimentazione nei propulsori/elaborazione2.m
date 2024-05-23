@@ -109,7 +109,7 @@ ordine_migliore_soluzione=vettore_errori_sistematici(indice,2);
 
 
 errore_sist_short=migliore_soluzione;
-
+pause
 %% Ricalcolo legge metrologica best case
 j=indice;
 tensione_cal_short=tensione_cal(9-j:12+j);

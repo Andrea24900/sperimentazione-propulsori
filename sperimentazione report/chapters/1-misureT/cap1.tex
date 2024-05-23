@@ -1,4 +1,4 @@
-\section{Misure di temperatura mediante termocoppia}
+\section{Misure di temperatura mediante termocoppia} \label{sez:misureT}
 \paragraph{Dati e richieste}
 Vengono fornite due serie di misure di temperatura allo scarico di una camera di combustione, eseguite mediante termocoppia di tipo B. La prima è costituita da 1599 valori ("Serie corta"), la seconda da 9999 ("Serie lunga"). Entrambe le serie sono campionate con una frequenza di campionamento di 100 Hz e vengono fornite mediante file testuale (.txt).\\
 Si chiede di svolgere l'analisi statistica dei dati.
@@ -25,7 +25,7 @@ Entrambe le serie sono divise in 10 classi, di uguale ampiezza, costruite affinc
 \end{table}
 Gli istogrammi relativi alle due serie sono mostrati in Fig.\ref{fig:istboth}.
 \begin{figure} [H]
-	
+	\centering
 	\begin{subfigure}{0.49\textwidth}
 		\centering
 		\includegraphics[width=0.99\linewidth]{chapters/1-misureT/istogrammashort}
@@ -42,14 +42,15 @@ Gli istogrammi relativi alle due serie sono mostrati in Fig.\ref{fig:istboth}.
 \label{fig:istboth}
 \end{figure}
 Si osserva come entrambe le distribuzioni di dati siano simili alla distribuzione gaussiana, mostrando tuttavia una evidente asimmetria. Quest'ultima è quantificabile dal coefficiente di skewness, riportato in Tab.\ref{tab:indicistat}.
+
 \paragraph{Calcolo delle frequenze relative e cumulate}
 Successivamente vengono riportate delle rappresentazioni grafiche 
-delle frequenze relative (\gls{symb:f}) e frequenze cumulate normalizzate(\gls{symb:F}) delle varie classi.
+delle frequenze relative (\gls{symb:f}), in Fig.\ref{fig:relboth}, e delle frequenze cumulate normalizzate(\gls{symb:F}) delle varie classi, in Fig. \ref{fig:cumboth}.
 
 
 
 \begin{figure}
-	
+	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{chapters/1-misureT/relshort}
