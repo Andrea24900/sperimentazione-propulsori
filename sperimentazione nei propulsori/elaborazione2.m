@@ -18,12 +18,12 @@ temperatura_cal=[400;600;700;750;800;850;900;950;1000;1050;1100;1150;1200;1250;.
     1300;1350;1400;1450;1500;1550;1600];
 
 %legge di calibrazione
-figure(1)
+cal_law=figure(1);
 plot(tensione_cal,temperatura_cal,'-*','linewidth',linewidth)
 grid on
 xlabel('$V$ [mV]','Interpreter','latex','FontSize',fontsize)
 ylabel('$T$ [$^o$C]','Interpreter','latex','FontSize',fontsize)
-
+exportgraphics(cal_law,'calibration.png','Resolution',600)
 ordine_max=4;
 
 
@@ -34,6 +34,8 @@ for j=1:8
     % Max value of short dataset: 1193.110960->1200
     tensione_cal_short=tensione_cal(9-j:12+j);
     temperatura_cal_short=temperatura_cal(9-j:12+j);
+    primo_valore=temperatura_cal_short(1);
+    ultimo_valore=temperatura_cal_short(end);
     % legge lineare 
     coefficienti_1_short=polyfit(tensione_cal_short,temperatura_cal_short,1);
     % legge quadratica
@@ -59,20 +61,7 @@ for j=1:8
     for i=1:ordine_max
     errore_T_short(:,i)=stima_T_short(:,i)-temperatura_cal_short;
     errore_T_short_quadratico(:,i)=errore_T_short(:,i).^2;
-    %errore_T_short_quadratico_relFS(:,i)=errore_T_short_quadratico(:,i)./(max(temperatura_cal_short)^2)*100;
-    end
-    % figure(2)
-    % plot(tensione_cal_short,errore_T_short_quadratico_relFS(:,1),'-*','LineWidth',linewidth)
-    % grid on
-    % hold on
-    % for i=2:4
-    % plot(tensione_cal_short,errore_T_short_quadratico_relFS(:,i),'-*','LineWidth',linewidth)
-    % end
-    % legend('Ordine 1','Ordine 2','Ordine 3','Ordine 4','interpreter','latex','fontsize',fontsize)
-    % xlabel('$V$ [mV]','Interpreter','latex','FontSize',fontsize)
-    % ylabel('$e^2_{\%FS}$','Interpreter','latex','FontSize',fontsize)
-    
-    for i=1:ordine_max
+
         stima_errore_int(i)=sqrt(sum(errore_T_short_quadratico(:,i))/(length(temperatura_cal_short)-(i+1)));
         %scelta di t95 per i 4 casi
     
@@ -84,7 +73,7 @@ for j=1:8
     
     [errore_sistematico_minimo,ordine_polinomio]=min(errore_sistematico);
     
-    vettore_errori_sistematici(j,:)=[errore_sistematico_minimo,ordine_polinomio];
+    vettore_errori_sistematici(j,:)=[errore_sistematico_minimo,ordine_polinomio,primo_valore,ultimo_valore];
     
     % Calcolo di R^2 per tutti gli ordini
     
@@ -102,14 +91,31 @@ for j=1:8
     end
     Rsquare_matrix(j,:)=R_square_vector;
 end
-
 [migliore_soluzione,indice]=min(vettore_errori_sistematici(:,1));
 
 ordine_migliore_soluzione=vettore_errori_sistematici(indice,2);
 
 
 errore_sist_short=migliore_soluzione;
-pause
+
+err_min_fig=figure(2);
+yyaxis left
+plot(vettore_errori_sistematici(:,1),'*','LineWidth',linewidth)
+grid on
+hold on
+best=plot(3,migliore_soluzione,'square','LineWidth',1.5,'color',[0.4660 0.6740 0.1880],'MarkerSize',12);
+x_axis={'950-1200','900-1250','850-1300','800-1350','750-1400','700-1450','600-1500','400-1550'};
+xticklabels(x_axis)
+xlabel('Intervalli di dati di calibrazione $[^oC]$','Interpreter','latex')
+ylabel('$\epsilon_{\textit{SIST}} \,[^oC]$','Interpreter','latex')
+yyaxis right
+plot(vettore_errori_sistematici(:,2),'o','LineWidth',linewidth)
+set(gca,'ylim',[0 5])
+set(gca,'YTick',0:5)
+ylabel('Ordine del modello con minimo $\epsilon_{\textit{SIST}}$','Interpreter','latex')
+legend(best,'Minimo $\epsilon_{\textit{SIST}}$','interpreter','latex','fontsize',fontsize)
+exportgraphics(err_min_fig,'err_sist_short.png','Resolution',600)
+
 %% Ricalcolo legge metrologica best case
 j=indice;
 tensione_cal_short=tensione_cal(9-j:12+j);

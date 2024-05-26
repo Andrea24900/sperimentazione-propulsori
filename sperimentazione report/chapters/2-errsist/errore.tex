@@ -35,17 +35,18 @@ Viene fornita la tabella di calibrazione statica di una termocoppia di tipo B, r
 \caption{Tabella di calibrazione statica}
 \label{tab:calibrazione statica}
 \end{table}
-
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{"chapters/2-errsist/serie calibrazione"}
+	\includegraphics[width=0.7\linewidth]{"../sperimentazione nei propulsori/calibration"}
 	\caption{Serie di dati della tabella di calibrazione statica}
-	\label{fig:serie-calibrazione}
+\label{fig:serie-calibrazione}
 \end{figure}
+
+
 
 \paragraph{Introduzione alla risoluzione}
 Dalla rappresentazione di Fig.\ref{fig:serie-calibrazione} si nota che i dati sono caratterizzati da un andamento non lineare sull'intero campo di misura, mentre a partire da circa 6 mV si ha un andamento quasi lineare.
-Di conseguenza, l'adozione di una legge di regressione non lineare, eventualmente di quarto ordine, potrebbe essere una scelta valida. Tuttavia, dato il ridotto numero di punti del problema, è opportuno delinare una strategia risolutiva che valuti più aspetti al fine di trovare la migliore soluzione. 
+Di conseguenza, l'adozione di una legge di regressione non lineare appare ottimale per fornire un errore ridotto. Tuttavia la scelta del campo di misura è impattata da altri fattori, pertanto è opportuno delineare una strategia risolutiva che valuti più aspetti al fine di trovare la migliore soluzione. 
 
 
 Si consideri la quantità \gls{symb:sigmaeps}, ossia l'errore di regressione, definita come:
@@ -59,7 +60,7 @@ dove:
 	\item $N$ indica il numero di coppie di dati usati per determinare i coefficienti di regressione. 
 	\item $G$ indica il numero di coefficienti di regressione (vale $G = O + 1$, dove con $O$ si indica l'ordine del modello di regressione).
 \end{itemize}
-Utilizzare un numero elevato di punti permette di ridurre questo errore (aumento di $N$), così come un modello di ordine superiore riduce la somma degli scarti quadratici (numeratore della frazione), ma a parità di $N$ provoca la riduzione del denominatore con conseguente aumento dell'errore. 
+Utilizzare un numero elevato di punti permette di ridurre questo errore (aumento di $N$), così come un modello di ordine superiore ($G$ maggiore) riduce la somma degli scarti quadratici (numeratore della frazione), ma a parità di $N$ provoca la riduzione del denominatore con conseguente aumento dell'errore. 
 
 Si evidenzia anche che il calcolo dell'errore sistematico (\gls{symb:errsist}) prevede di moltiplicare \gls{symb:sigmaeps} per la \gls{symb:t95} relativa al numero di gradi di libertà \gls{symb:nu}, ottenibile mediante $ \nu = N - G $ (il numero di gradi di libertà persi è pari al numero di coefficienti di regressione). A seguito di questa operazione si nota che la scelta di un numero limitato di punti per la regressione (N basso), associata a un modello di ordine alto, porta a \gls{symb:nu} molto bassi che comportano un significativo aumento di \gls{symb:errsist}.
 
@@ -70,6 +71,41 @@ Poiché le due serie di dati presentano estremi differenti, lo studio viene prop
 \subsection{Risoluzione per serie corta}
 Si presenta lo studio di ottimo per la prima serie di dati, svolto con le stesse modalità anche per la seconda. Il punto di partenza sono gli estremi della serie di dati, ossia la minima e massima \gls{symb:T} misurata, che assumono rispettivamente il valore di 953 \textsuperscript{o}C e di 1193 \textsuperscript{o}C. Da Tab.\ref{tab:calibrazione statica} si ricava che il minimo intervallo di dati su cui svolgere la regressione va da 950 \textsuperscript{o}C a 1200 \textsuperscript{o}C. A ogni iterazione questo secondo intervallo viene ampliato di un valore a sinistra dell'estremo inferiore e a destra dell'estremo superiore. Il più ampio intervallo possibile va da 400 \textsuperscript{o}C a 1550 \textsuperscript{o}C. 
 
-Per ogni intervallo di dati di calibrazione sono determinati i coefficienti di regressione dal primo al quarto ordine (mediante funzione \textit{polyfit} di Matlab), poi vengono calcolate le stime $\tilde{y_i}$ per tutti gli ordini; successivamente si calcolano i $\sigma_{\varepsilon}$ e infine i valori di \gls{symb:errsist}. Per ogni interazione viene selezionato l'ordine del polinomio interpolante che garantisce il minimo \gls{symb:errsist}; dopo aver ripetuto l'analisi per tutti gli intervalli si individua il miglior errore sistematico globale. 
+Per ogni intervallo di dati di calibrazione sono determinati i coefficienti di regressione dal primo al quarto ordine (mediante funzione \textit{polyfit} di Matlab), poi vengono calcolate le stime $\tilde{y_i}$ per tutti gli ordini; successivamente si calcolano i $\sigma_{\varepsilon}$ e, infine, i valori di \gls{symb:errsist}. Per ogni iterazione viene selezionato l'ordine del polinomio interpolante che garantisce il minimo \gls{symb:errsist}; dopo aver ripetuto l'analisi per tutti gli intervalli si individua il miglior errore sistematico globale. 
 
+L'analisi si conclude con l'indicazione del valore di \gls{symb:Rsquare}, che rappresenta il grado di adattamento del modello ai dati sperimentali; segue la stima dell'errore totale (\gls{symb:errtot}) del processo di misura, ottenuta mediante: 
+\begin{equation}
+	\epsilon_{\textit{TOT}}=\sqrt{\epsilon_{\textit{STAT}}^2+\epsilon_{\textit{SIST}}^2}
+\end{equation}
 
+Lo svolgimento del processo porta a determinare i seguenti errori sistematici, rappresentati in Fig.\ref{fig:errsistshort}: tra di essi viene indicato il minimo errore globale. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"../sperimentazione nei propulsori/err_sist_short"}
+	\caption{Risultati del processo di ottimizzazione}
+	\label{fig:errsistshort}
+\end{figure}
+In Tab.\ref{tab:risshort} si riportano inoltre tutti i risultati associati alla migliore soluzione. 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c}
+		\toprule
+		\toprule
+		\textbf{Risultato} & \textbf{Valore} \\
+		\midrule
+		\midrule
+		\gls{symb:errsist}& \\
+		\midrule
+		Ordine & 4 \\
+		\midrule
+		\gls{symb:Rsquare} & \\
+		\midrule
+		\gls{symb:errstat} serie & \\
+		\midrule
+		\gls{symb:errtot} & \\
+		\bottomrule
+		\bottomrule
+	\end{tabular}
+\caption{Risultati serie corta}
+\label{tab:risshort}
+\end{table}

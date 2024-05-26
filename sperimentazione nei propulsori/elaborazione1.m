@@ -39,18 +39,18 @@ classes_long=linspace((min_long-0.5e-7),(max_long+0.5e-7),n_classes+1)';
 
 %%  Suddivisione dati nelle classi mediante istogramma
 
-figure(1)
+hist_short=figure(1);
 h_short=histogram(short_vector,classes_short);
 xlabel("$T\, [^oC]$","Interpreter","latex","FontSize",fontsize)
 ylabel("Occorrenze","Interpreter","latex","FontSize",fontsize)
 %title("Serie corta",'interpreter','latex',"FontSize",fontsize)
-
-figure(2)
+exportgraphics(hist_short,'istogrammashort.png','Resolution',600)
+hist_long=figure(2);
 h_long=histogram(long_vector,classes_long);
 xlabel("$T\, [^oC]$","Interpreter","latex","FontSize",fontsize)
 ylabel("Occorrenze","Interpreter","latex","FontSize",fontsize)
 %title("Serie lunga",'interpreter','latex',"FontSize",fontsize)
-
+exportgraphics(hist_long,'istogrammalong.png','Resolution',600)
 %% Conteggio dati nelle classi
 
 N_short=histcounts(short_vector,classes_short)';
@@ -63,20 +63,17 @@ rel_freq_short=N_short/length(short_vector);
 
 rel_freq_long=N_long/length(long_vector);
 
-figure(3)
-plot(rel_freq_short,'*','LineWidth',linewidth);
+rel_freq=figure(3);
+plot(rel_freq_short,'-*','LineWidth',linewidth);
 grid on
+hold on
+plot(rel_freq_long,'-o','LineWidth',linewidth);
 xlabel("$Classi$","Interpreter","latex","FontSize",fontsize)
 ylabel("$f$","Interpreter","latex","FontSize",fontsize)
-%title("Frequenze relative per la serie corta",'interpreter','latex',"FontSize",fontsize)
+legend('Serie corta','Serie lunga','interpreter','latex','fontsize',fontsize)
 
-figure(4)
-plot(rel_freq_long,'*','LineWidth',linewidth);
-grid on
-xlabel("$Classi$","Interpreter","latex","FontSize",fontsize)
-ylabel("$f$","Interpreter","latex","FontSize",fontsize)
 %title("Frequenze relative per la serie corta",'interpreter','latex',"FontSize",fontsize)
-
+exportgraphics(rel_freq,'relboth.png','Resolution',600)
 %% Calcolo frequenze cumulate
 
 cum_freq_short=zeros(n_classes,1);
@@ -87,7 +84,7 @@ for i=1:n_classes
     cum_freq_long(i)=sum(rel_freq_long(1:i));
 end
 
-figure(5)
+cum_both=figure(5);
 plot(cum_freq_short,'*-','LineWidth',linewidth)
 grid on
 hold on
@@ -96,7 +93,7 @@ xlabel("$Classi$","Interpreter","latex","FontSize",fontsize)
 ylabel("$F$","Interpreter","latex","FontSize",fontsize)
 %title("Frequenze cumulate per entrambe le serie",'interpreter','latex',"FontSize",fontsize)
 legend("Serie corta","Serie lunga",'interpreter','latex',"FontSize",fontsize,'location','southeast')
-
+exportgraphics(cum_both,'cumboth.png','Resolution',600)
 cum_freq_rel_short=100*cum_freq_short/length(short_vector);
 cum_freq_rel_long=100*cum_freq_long/length(long_vector);
 
