@@ -81,11 +81,15 @@ L'analisi si conclude con l'indicazione del valore di \gls{symb:Rsquare}, che ra
 Lo svolgimento del processo porta a determinare i seguenti errori sistematici, rappresentati in Fig.\ref{fig:errsistshort}: tra di essi viene indicato il minimo errore globale. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{"../sperimentazione nei propulsori/err_sist_short"}
+	\includegraphics[width=0.6\linewidth]{"../sperimentazione nei propulsori/err_sist_short"}
 	\caption{Risultati del processo di ottimizzazione}
 	\label{fig:errsistshort}
 \end{figure}
-In Tab.\ref{tab:risshort} si riportano inoltre tutti i risultati associati alla migliore soluzione. 
+In Tab.\ref{tab:risshort} si riportano i risultati associati alla migliore soluzione; segue la rappresentazione della legge di calibrazione del quarto ordine (Fig.\ref{fig:shortlaw}) e i coefficienti (Tab.\ref{tab:coefficienti_short}).
+La legge è nella forma:
+\begin{equation}
+	y = ax^4+bx^3+cx^2+dx+e
+\end{equation}
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c|c}
@@ -94,18 +98,143 @@ In Tab.\ref{tab:risshort} si riportano inoltre tutti i risultati associati alla 
 		\textbf{Risultato} & \textbf{Valore} \\
 		\midrule
 		\midrule
-		\gls{symb:errsist}& \\
+		\gls{symb:errsist}& 0.1134 \textsuperscript{o}C\\
+		\midrule
+		\gls{symb:errsist} come \% F.S. & 0.0087 \%\\
 		\midrule
 		Ordine & 4 \\
 		\midrule
-		\gls{symb:Rsquare} & \\
+		Intervallo & 850-1300 \textsuperscript{o}C\\
 		\midrule
-		\gls{symb:errstat} serie & \\
+		\gls{symb:Rsquare} & $\sim$ 1\\
 		\midrule
-		\gls{symb:errtot} & \\
+		\gls{symb:errstat} serie & 1.9202 \textsuperscript{o}C \\
+		\midrule
+		\gls{symb:errtot} & 1.9236 \textsuperscript{o}C \\
 		\bottomrule
 		\bottomrule
 	\end{tabular}
 \caption{Risultati serie corta}
 \label{tab:risshort}
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{"../sperimentazione nei propulsori/short_law"}
+	\caption{Curva di calibrazione statica}
+	\label{fig:shortlaw}
+\end{figure}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c}
+		\toprule
+		\toprule
+		\textbf{Coefficiente} & \textbf{Valore} \\
+		\midrule
+		\midrule
+		a & -0.0715		\\
+		\midrule
+		b & 1.9853\\
+		\midrule
+		c &	-23.2057 \\
+		\midrule
+		d & 226.6665\\
+		\midrule
+		e & 260.2018\\
+		\bottomrule
+		\bottomrule
+	\end{tabular}
+\caption{Coefficienti della legge di calibrazione}
+\label{tab:coefficienti_short}
+\end{table}
+
+
+Da questi risultati si osserva che l'errore sistematico è molto ridotto grazie all'adozione di un modello di ordine elevato. Si sottolinea, inoltre, come l'adozione di un campo di dati di calibrazione più ampio sia deleterio per l'errore sistematico anche con modelli di ordine elevato a causa dell'aumento dell'errore di interpolazione. 
+
+Infine, si riporta una rappresentazione (Fig.\ref{fig:errsistshortesempio}) dell'errore sistematico per i vari ordini di modello usando l'intervallo ottimale di dati di calibrazione. Questa rappresentazione è particolarmente significativa in quanto si riscontra che, nonostante il lieve incremento del valore di \gls{symb:t95}, la soluzione migliore resta quella del quarto ordine. 
+
+
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{"../sperimentazione nei propulsori/err_sist_short_best"}
+\caption{Errore sistematico della soluzione ottimale per vari ordini di regressione}
+	\label{fig:errsistshortesempio}
+\end{figure}
+
+
+Questo effetto è determinante nella penalizzazione della soluzione con intervallo 950-1200 \textsuperscript{o}C, il cui errore di regressione è molto basso, ma viene moltiplicato per \gls{symb:t95} elevato, con un risultato molto deleterio sull'errore sistematico. 
+
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{"../sperimentazione nei propulsori/err_sist_short_test"}
+	\caption{Confronto errori per la serie 950-1200 \textsuperscript{o}C}
+	\label{fig:errsistshorttest}
+\end{figure}
+
+\subsection{Risoluzione per la serie lunga}
+Si impiega una strategia analoga per caratterizzare la serie lunga. Quest'ultima presenta una limitata possibilità di ottimizzazione in quanto l'intervallo di temperatura da misurare è da 931 \textsuperscript{o}C a 1449 \textsuperscript{o}C:  questi valori comportano l'utilizzo di gran parte della tabella di calibrazione statica. Poiché l'analisi svolta è analoga alla precedente, vengono riportati soltanto i risultati. Si osserva che l'errore sistematico è ridotto e ha un impatto limitato sull'errore totale; inoltre, la legge di regressione che fornisce il miglior risultato è ancora quella del quarto ordine. 
+
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{"../sperimentazione nei propulsori/err_sist_long"}
+	\caption{Risultati del processo di ottimizzazione}
+	\label{fig:errsistlong}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{"../sperimentazione nei propulsori/long_law"}
+	\caption{Curva di calibrazione statica}
+	\label{fig:longlaw}
+\end{figure}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c}
+		\toprule
+		\toprule
+		\textbf{Risultato} & \textbf{Valore} \\
+		\midrule
+		\midrule
+		\gls{symb:errsist}& 0.2436 \textsuperscript{o}C\\
+		\midrule
+		\gls{symb:errsist} come \% F.S. & 0.017 \%\\
+		\midrule
+		Ordine & 4 \\
+		\midrule
+		Intervallo & 900-1450 \textsuperscript{o}C\\
+		\midrule
+		\gls{symb:Rsquare} & $\sim$ 1\\
+		\midrule
+		\gls{symb:errstat} serie & 1.5259 \textsuperscript{o}C \\
+		\midrule
+		\gls{symb:errtot} & 1.5452 \textsuperscript{o}C \\
+		\bottomrule
+		\bottomrule
+	\end{tabular}
+	\caption{Risultati serie lunga}
+	\label{tab:rislong}
+\end{table}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c}
+		\toprule
+		\toprule
+		\textbf{Coefficiente} & \textbf{Valore} \\
+		\midrule
+		\midrule
+		a & -0.0120		\\
+		\midrule
+		b & 0.5696\\
+		\midrule
+		c &	-10.8105 \\
+		\midrule
+		d & 179.4108\\
+		\midrule
+		e & 326.3550\\
+		\bottomrule
+		\bottomrule
+	\end{tabular}
+	\caption{Coefficienti della legge di calibrazione}
+	\label{tab:coefficienti_long}
 \end{table}

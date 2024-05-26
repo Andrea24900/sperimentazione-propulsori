@@ -17,17 +17,17 @@ tensione_cal=[0.786;1.791;2.431;2.784;3.158;3.551;3.963;4.395;4.844;5.311;5.793;
 temperatura_cal=[400;600;700;750;800;850;900;950;1000;1050;1100;1150;1200;1250;...
     1300;1350;1400;1450;1500;1550;1600];
 
-% legge di calibrazione
-% cal_law=figure(1);
-% plot(tensione_cal,temperatura_cal,'-*','linewidth',linewidth)
-% grid on
-% xlabel('$V$ [mV]','Interpreter','latex','FontSize',fontsize)
-% ylabel('$T$ [$^o$C]','Interpreter','latex','FontSize',fontsize)
-% exportgraphics(cal_law,'calibration.png','Resolution',600)
+%legge di calibrazione
+cal_law=figure(1);
+plot(tensione_cal,temperatura_cal,'-*','linewidth',linewidth)
+grid on
+xlabel('$V$ [mV]','Interpreter','latex','FontSize',fontsize)
+ylabel('$T$ [$^o$C]','Interpreter','latex','FontSize',fontsize)
+exportgraphics(cal_law,'calibration.png','Resolution',600)
 ordine_max=4;
 
 
-for j=1:8
+for j=1
 
     %% 5 tentativi di legge interpolante per dataset corto
     % Min value of short dataset: 953.745910->valore 950
@@ -98,23 +98,24 @@ ordine_migliore_soluzione=vettore_errori_sistematici(indice,2);
 
 errore_sist_short=migliore_soluzione;
 
-% err_min_fig=figure(2);
-% yyaxis left
-% plot(vettore_errori_sistematici(:,1),'*','LineWidth',linewidth)
-% grid on
-% hold on
-% best=plot(3,migliore_soluzione,'square','LineWidth',1.5,'color',[0.4660 0.6740 0.1880],'MarkerSize',12);
-% x_axis={'950-1200','900-1250','850-1300','800-1350','750-1400','700-1450','600-1500','400-1550'};
-% xticklabels(x_axis)
-% xlabel('Intervalli di dati di calibrazione $[^oC]$','Interpreter','latex')
-% ylabel('$\epsilon_{\textit{SIST}} \,[^oC]$','Interpreter','latex')
-% yyaxis right
-% plot(vettore_errori_sistematici(:,2),'o','LineWidth',linewidth)
-% set(gca,'ylim',[0 5])
-% set(gca,'YTick',0:5)
-% ylabel('Ordine del modello con minimo $\epsilon_{\textit{SIST}}$','Interpreter','latex')
-% legend(best,'Minimo $\epsilon_{\textit{SIST}}$','interpreter','latex','fontsize',fontsize)
-% exportgraphics(err_min_fig,'err_sist_short.png','Resolution',600)
+err_min_fig=figure(2);
+
+sist=plot(errore_sistematico,'*','LineWidth',linewidth);
+yyaxis left
+grid on
+hold on
+
+best=plot(stima_errore_int,'x','LineWidth',1.5,'color',[0.4660 0.6740 0.1880],'MarkerSize',12);
+set(gca,'XLim',[0 5])
+set(gca,'xTick',0:5)
+xlabel('Ordine del modello','Interpreter','latex','fontsize',fontsize)
+ylabel('Errore $[^oC]$','Interpreter','latex','fontsize',fontsize)
+yyaxis right
+plot(t95,'o','LineWidth',linewidth)
+
+ylabel('$t_{\textit{95}}$','Interpreter','latex','fontsize',fontsize)
+legend([best sist],'Errore di regressione','Errore sistematico','interpreter','latex','fontsize',fontsize,'location','east')
+exportgraphics(err_min_fig,'err_sist_short_test.png','Resolution',600)
 
 %% Ricalcolo legge metrologica best case
 j=indice;
@@ -122,13 +123,6 @@ tensione_cal_short=tensione_cal(9-j:12+j);
 temperatura_cal_short=temperatura_cal(9-j:12+j);
 coefficienti_short=polyfit(tensione_cal_short,temperatura_cal_short,ordine_migliore_soluzione);
 
-legge_short=figure(3);
-plot(tensione_cal_short,temperatura_cal_short,'LineWidth',linewidth)
-grid on
-xlabel('$V$ [mV]','Interpreter','latex','FontSize',fontsize)
-ylabel('$T$ [$^o$C]','Interpreter','latex','FontSize',fontsize)
-
-exportgraphics(legge_short,'short_law.png','Resolution',600)
 %% Propagazione degli errori
 
 err_tot_short_NOQUANT=sqrt(errore_sist_short^2+err_stat_short^2);

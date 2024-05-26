@@ -15,16 +15,17 @@
 \contentsline {paragraph}{Dati e richieste}{10}{section.2}%
 \contentsline {paragraph}{Introduzione alla risoluzione}{10}{figure.caption.13}%
 \contentsline {subsection}{\numberline {2.1}Risoluzione per serie corta}{12}{subsection.2.1}%
-\contentsline {section}{\numberline {3}Perdite per irraggiamento}{14}{section.3}%
-\contentsline {section}{\numberline {4}Misura di portata mediante diaframma}{15}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Presentazione del banco prova, dati e richieste}{15}{subsection.4.1}%
-\contentsline {paragraph}{Richieste}{16}{figure.caption.17}%
-\contentsline {subsection}{\numberline {4.2}Risoluzione}{16}{subsection.4.2}%
-\contentsline {paragraph}{Ipotesi risolutive}{16}{subsection.4.2}%
-\contentsline {paragraph}{Riassunto dei dati e conversioni}{16}{subsection.4.2}%
-\contentsline {paragraph}{Svolgimento}{16}{equation.4.1}%
-\contentsline {paragraph}{Risultati}{18}{equation.4.8}%
-\contentsline {section}{\numberline {5}Misure al banco prova}{19}{section.5}%
-\contentsline {section}{\numberline {A}Risultati aggiuntivi dell'analisi statistica delle serie di dati}{20}{appendix.1.Alph1}%
-\contentsline {subsection}{\numberline {A.1}Classi, frequenze relative e frequenze cumulate normalizzate}{20}{subsection.1.Alph1.1}%
-\contentsline {section}{Bibliografia}{22}{table.caption.21}%
+\contentsline {subsection}{\numberline {2.2}Risoluzione per la serie lunga}{14}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Perdite per irraggiamento}{17}{section.3}%
+\contentsline {section}{\numberline {4}Misura di portata mediante diaframma}{18}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Presentazione del banco prova, dati e richieste}{18}{subsection.4.1}%
+\contentsline {paragraph}{Richieste}{19}{figure.caption.25}%
+\contentsline {subsection}{\numberline {4.2}Risoluzione}{19}{subsection.4.2}%
+\contentsline {paragraph}{Ipotesi risolutive}{19}{subsection.4.2}%
+\contentsline {paragraph}{Riassunto dei dati e conversioni}{19}{subsection.4.2}%
+\contentsline {paragraph}{Svolgimento}{19}{equation.4.1}%
+\contentsline {paragraph}{Risultati}{21}{equation.4.8}%
+\contentsline {section}{\numberline {5}Misure al banco prova}{22}{section.5}%
+\contentsline {section}{\numberline {A}Risultati aggiuntivi dell'analisi statistica delle serie di dati}{23}{appendix.1.Alph1}%
+\contentsline {subsection}{\numberline {A.1}Classi, frequenze relative e frequenze cumulate normalizzate}{23}{subsection.1.Alph1.1}%
+\contentsline {section}{Bibliografia}{25}{table.caption.29}%

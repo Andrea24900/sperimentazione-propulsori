@@ -15,12 +15,12 @@ tensione_cal=[0.786;1.791;2.431;2.784;3.158;3.551;3.963;4.395;4.844;5.311;5.793;
 temperatura_cal=[400;600;700;750;800;850;900;950;1000;1050;1100;1150;1200;1250;...
     1300;1350;1400;1450;1500;1550;1600];
 
-%legge di calibrazione
-figure(1)
-plot(tensione_cal,temperatura_cal,'-*','linewidth',linewidth)
-grid on
-xlabel('$V$ [mV]','Interpreter','latex','FontSize',fontsize)
-ylabel('$T$ [$^o$C]','Interpreter','latex','FontSize',fontsize)
+% %legge di calibrazione
+% figure(1)
+% plot(tensione_cal,temperatura_cal,'-*','linewidth',linewidth)
+% grid on
+% xlabel('$V$ [mV]','Interpreter','latex','FontSize',fontsize)
+% ylabel('$T$ [$^o$C]','Interpreter','latex','FontSize',fontsize)
 
 ordine_max=4;
 
@@ -107,13 +107,35 @@ ordine_migliore_soluzione=vettore_errori_sistematici(indice,2);
 
 
 errore_sist_long=migliore_soluzione;
-
+% err_min_fig=figure(2);
+% yyaxis left
+% plot(vettore_errori_sistematici(:,1),'*','LineWidth',linewidth)
+% grid on
+% hold on
+% best=plot(1,migliore_soluzione,'square','LineWidth',1.5,'color',[0.4660 0.6740 0.1880],'MarkerSize',12);
+% x_axis={'900-1450','','850-1500','','800-1550','','750-1600'};
+% xticklabels(x_axis)
+% xlabel('Intervalli di dati di calibrazione $[^oC]$','Interpreter','latex')
+% ylabel('$\epsilon_{\textit{SIST}} \,[^oC]$','Interpreter','latex')
+% yyaxis right
+% plot(vettore_errori_sistematici(:,2),'o','LineWidth',linewidth)
+% set(gca,'ylim',[0 5])
+% set(gca,'YTick',0:5)
+% ylabel('Ordine del modello con minimo $\epsilon_{\textit{SIST}}$','Interpreter','latex')
+% legend(best,'Minimo $\epsilon_{\textit{SIST}}$','interpreter','latex','fontsize',fontsize)
+% exportgraphics(err_min_fig,'err_sist_long.png','Resolution',600)
 %% COefficienti
 j=indice;
 tensione_cal_long=tensione_cal(8-j:17+j);
 temperatura_cal_long=temperatura_cal(8-j:17+j);
 coefficienti_long=polyfit(tensione_cal_long,temperatura_cal_long,ordine_migliore_soluzione);
+legge_long=figure(3);
+plot(tensione_cal_short,temperatura_cal_short,'LineWidth',linewidth)
+grid on
+xlabel('$V$ [mV]','Interpreter','latex','FontSize',fontsize)
+ylabel('$T$ [$^o$C]','Interpreter','latex','FontSize',fontsize)
 
+exportgraphics(legge_long,'long_law.png','Resolution',600)
 %% Propagazione degli errori
 
 err_tot_long_NOQUANT=sqrt(errore_sist_long^2+err_stat_long^2);
