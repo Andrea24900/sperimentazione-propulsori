@@ -24,19 +24,155 @@ Per quanto riguarda \gls{symb:qm}, essa è ottenuta dalla portata misurata media
 
 Per il calcolo di \gls{symb:mdot}\textsubscript{\textit{TEORICA}} è possibile utilizzare il teorema di Bernoulli e determinare \gls{symb:V}\textsubscript{\textit{TEORICA}} mediante: 
 \begin{equation}
-	V_{\textit{TEORICA}} = \sqrt{\frac{2\Delta p}{\rho}}
+	V_{\textit{TEORICA}} = \sqrt{\frac{2\Delta p}{\rho}} \label{eq:velocità}
 \end{equation}
 per poi trovare \gls{symb:mdot}\textsubscript{\textit{TEORICA}} mediante:
 \begin{equation}
-	\dot{m}_{\textit{TEORICA}}=\rho	V_{\textit{TEORICA}} A
+	\dot{m}_{\textit{TEORICA}}=\rho	V_{\textit{TEORICA}} A \label{eq:portata}
 \end{equation}
 
 
-\subsection{Ipotesi}
+\paragraph{Ipotesi}
 Lo svolgimento della misura richiede l'assunzione di alcune ipotesi, alcune delle quali sono poi verificate a seguito della misura stessa. 
 
 \begin{itemize}
 	\item Assunzione di profilo di velocità uniforme nella sezione di efflusso.
-	\item Effetti di viscosità trascurabili e flusso incompribile (per la validità del teorema di Bernoulli).
+	\item Effetti di viscosità trascurabili e flusso incomprimibile (per la validità del teorema di Bernoulli).
 	\item Gas naturale considerabile come puro metano, nonché come gas perfetto.
 \end{itemize}
+
+\subsection{Presentazione dei valori misurati}
+A seguito delle misure sono rilevati i valori riportati in Tab.\ref{tab:dati}, a cui è associata la conversione nelle unità di misura opportune. In particolare, per convertire $q_{NM}$ in \gls{symb:qm} si utilizza la seguente relazione: $q_M=q_{NM} \rho_N /6e4$, dove 6e4 è un fattore di conversione per passare da Nl/min a kg/s, mentre $\rho_N$ è ottenuto a 1 atm e 273 K tramite $\rho_N = p/(RT) = 0.7142$ kg/m\textsuperscript{3}. Il valore di \gls{symb:R} è pari a quello per il metano, che ammonta a 520 J/(kgK).
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c|c|c|c}
+		\toprule
+		\toprule
+		\textbf{Misura}& \textbf{q\textsubscript{MN} [Nl/min]}  & \textbf{q\textsubscript{M} [kg/s]}& \textbf{$\Delta$p [mbar]}  & \textbf{$\Delta$p [Pa]} & \textbf{T [°C]}  & \textbf{T [K] } \\
+	\midrule
+	\midrule
+1  & 7  &8.33e-05 	& 0.5 & 50   & 32.1 & 305.1 \\
+		\midrule
+		2  & 9  &1.07e-04& 1.8 & 180  & 32.1 & 305.1 \\\midrule
+		3  & 10 &1.19e-04& 3.6 & 360  & 32.0   & 305.0   \\\midrule
+		4  & 11 &1.31e-04& 4.4 & 440  & 31.9 & 304.9 \\\midrule
+		5  & 12 &1.43e-04& 5.5 & 550  & 31.8 & 304.8 \\\midrule
+		6  & 14 &1.67e-04& 7.8 & 780  & 31.7 & 304.7 \\\midrule
+		7  & 15 &1.79e-04& 9.5 & 950  & 31.7 & 304.7 \\\midrule
+		8  & 16 &1.90e-04& 11.3 & 1130 & 31.6 & 304.6 \\\midrule
+		9  & 17 &2.02e-04& 12.8 & 1280 & 31.6 & 304.6 \\\midrule
+		10 & 18 &2.14e-04& 14.2 & 1420 & 31.5 & 304.5 \\\midrule
+		11 & 19 &2.26e-04& 15.9 & 1590 & 31.5 & 304.5 \\\midrule
+		12 & 20 &2.38e-04& 17.5 & 1750 & 31.5 & 304.5 \\
+		\bottomrule
+		\bottomrule
+	\end{tabular}
+	\caption{Grandezze misurate e conversioni}
+	\label{tab:dati}
+\end{table}
+
+Successivamente vengono calcolate le seguenti quantità:
+\begin{itemize}
+	\item \gls{symb:rho} mediante l'ipotesi di gas perfetto ($\rho = p/(RT)$); il valore di \gls{symb:p} è ottenuto tramite $p=p_{\textit{AMB}}+\Delta p$.
+	\item \gls{symb:V}\textsubscript{\textit{TEORICA}} mediante Eq.(\ref{eq:velocità}).
+	\item \gls{symb:mdot}\textsubscript{\textit{TEORICA}} tramite Eq.(\ref{eq:portata}).
+\end{itemize}
+
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c}
+		\toprule
+		\toprule
+		\textbf{Misura} & \textbf{$\bm{\rho}$ [kg/m\textsuperscript{3}]} & \textbf{V\textsubscript{\textit{TEORICA}} [m/s]} 
+		& \textbf{$\bm{\dot{m}}$ [kg/s]}  \\
+		\midrule
+		\midrule
+		1 & 0.635 & 12.6 & 4.56e-05 \\
+		\midrule
+		2 & 0.636 & 23.8 & 8.66e-05 \\
+		\midrule
+		3 & 0.637 & 33.6 & 1.23e-04 \\
+		\midrule
+		4 & 0.638 & 37.1 & 1.36e-04 \\
+		\midrule
+		5 & 0.639 & 41.5 & 1.52e-04 \\
+		\midrule
+		6 & 0.640 & 49.4 & 1.81e-04 \\
+		\midrule
+		7 & 0.641 & 54.4 & 2.00e-04 \\
+		\midrule
+		8 & 0.643 & 59.3 & 2.18e-04 \\
+		\midrule
+		9 & 0.644 & 63.1 & 2.32e-04 \\
+		\midrule
+		10 & 0.645 & 66.4 & 2.45e-04 \\
+		\midrule
+		11 & 0.646 & 70.2 & 2.59e-04 \\
+		\midrule
+		12 & 0.647 & 73.6 & 2.72e-04 \\
+		\bottomrule
+		\bottomrule
+	\end{tabular}
+	\caption{Calcoli intermedi}
+	\label{tab:calcoli_intermedi}
+\end{table}
+
+Da questi valori è possibile ottenere una stima del valore di \gls{symb:cd} per ciascuna misura. Si presentano anche i grafici che rappresentano la dipendenza di \gls{symb:cd} dalle tre misure al fine di evidenziare eventuali dipendenze ed errori.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c}
+		\toprule
+		\toprule
+		\textbf{Misura} & \textbf{C\textsubscript{D}} \\
+		\midrule
+		\midrule
+		1  & 1.827 \\
+		\midrule
+		2  & 1.237 \\
+		\midrule
+		3  & 0.971 \\
+		\midrule
+		4  & 0.965 \\
+		\midrule
+		5  & 0.941 \\
+		\midrule
+		6  & 0.921 \\
+		\midrule
+		7  & 0.893 \\
+		\midrule
+		8  & 0.873 \\
+		\midrule
+		9  & 0.871 \\
+		\midrule
+		10 & 0.875 \\
+		\midrule
+		11 & 0.872 \\
+		\midrule
+		12 & 0.874 \\
+		\bottomrule
+		\bottomrule
+	\end{tabular}
+	\caption{Valori di C\textsubscript{D} per ciascuna misura}
+	\label{tab:valori_cd}
+\end{table}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{"chapters/5-laboratorio/tabellaqmcd"}
+	\caption{Dipendenza di \gls{symb:cd} da \gls{symb:qm}}
+	\label{fig:tabellaqmcd}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{"chapters/5-laboratorio/tabelladeltapcd"}
+	\caption{Dipendenza di \gls{symb:cd} da $\Delta p$}
+	\label{fig:tabelladeltapcd}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{"chapters/5-laboratorio/tabellaTcd"}
+	\caption{Dipendenza di \gls{symb:cd} da \gls{symb:T}}
+	\label{fig:tabellatcd}
+\end{figure}
