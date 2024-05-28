@@ -25,7 +25,9 @@
 \contentsline {paragraph}{Riassunto dei dati e conversioni}{19}{subsection.4.2}%
 \contentsline {paragraph}{Svolgimento}{19}{equation.4.1}%
 \contentsline {paragraph}{Risultati}{21}{equation.4.8}%
-\contentsline {section}{\numberline {5}Misure al banco prova}{22}{section.5}%
+\contentsline {section}{\numberline {5}Misura di C\textsubscript {D} al banco prova}{22}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Presentazione del banco prova, dati e richieste}{22}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Ipotesi}{22}{subsection.5.2}%
 \contentsline {section}{\numberline {A}Risultati aggiuntivi dell'analisi statistica delle serie di dati}{23}{appendix.1.Alph1}%
 \contentsline {subsection}{\numberline {A.1}Classi, frequenze relative e frequenze cumulate normalizzate}{23}{subsection.1.Alph1.1}%
 \contentsline {section}{Bibliografia}{25}{table.caption.29}%

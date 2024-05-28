@@ -1,1 +1,42 @@
-\section{Misure al banco prova}
+\section{Misura di C\textsubscript{D} al banco prova}
+
+\subsection{Presentazione del banco prova, dati e richieste}
+Viene realizzato un banco prova per misure di temperatura mediante termocoppia. Tale banco è alimentato da gas naturale, che passa per un misuratore di portata a galleggiante, raggiunge una camera di stanca dove se ne misura la temperatura, poi viene accelerato da un ugello in un eiettore, che fornisce la portata d'aria per permettere la combustione. Un misuratore di pressione differenziale è inserito tra camera di stanca e ambiente esterno. Infine la miscela è combusta in un bruciatore. 
+
+Si richiede di misurare il coefficiente di efflusso (\gls{symb:cd}) dell'ugello utilizzando le misure a disposizione, di studiare l'andamento rispetto alla portata reale e al variare della pressione differenziale; infine, studiare l'andamento al variare di \gls{symb:ma} e \gls{symb:re}.
+
+Gli strumenti di misura a disposizione sono i seguenti:
+\begin{itemize}
+	\item Misuratore di portata a galleggiante con scala graduata in Nl/min (condizioni normali $T_N$ = 273 K, $P_N$ = 1 atm);
+	\item Barometro differenziale digitale in mbar;
+	\item Termometro digitale in \textsuperscript{o}C.
+\end{itemize}
+
+Il diametro dell'ugello (\gls{symb:Du}) è pari a 2.7 mm. La pressione ambiente (\gls{symb:pamb}) ammonta a 100600 Pa.
+
+La procedura per definire \gls{symb:cd} parte dalla definizione del coefficiente di efflusso:
+\begin{equation}
+	C_D=\frac{\dot{m}_\textit{REALE}}{\dot{m}_\textit{TEORICA}}
+\end{equation}
+dove $\dot{m}_\textit{REALE} = q_M$, mentre $\dot{m}_\textit{TEORICA}$ viene ottenuta mediante alcune assunzioni. 
+
+Per quanto riguarda \gls{symb:qm}, essa è ottenuta dalla portata misurata mediante galleggiante usando $q_M=q_{MN} \rho_N$.
+
+Per il calcolo di \gls{symb:mdot}\textsubscript{\textit{TEORICA}} è possibile utilizzare il teorema di Bernoulli e determinare \gls{symb:V}\textsubscript{\textit{TEORICA}} mediante: 
+\begin{equation}
+	V_{\textit{TEORICA}} = \sqrt{\frac{2\Delta p}{\rho}}
+\end{equation}
+per poi trovare \gls{symb:mdot}\textsubscript{\textit{TEORICA}} mediante:
+\begin{equation}
+	\dot{m}_{\textit{TEORICA}}=\rho	V_{\textit{TEORICA}} A
+\end{equation}
+
+
+\subsection{Ipotesi}
+Lo svolgimento della misura richiede l'assunzione di alcune ipotesi, alcune delle quali sono poi verificate a seguito della misura stessa. 
+
+\begin{itemize}
+	\item Assunzione di profilo di velocità uniforme nella sezione di efflusso.
+	\item Effetti di viscosità trascurabili e flusso incompribile (per la validità del teorema di Bernoulli).
+	\item Gas naturale considerabile come puro metano, nonché come gas perfetto.
+\end{itemize}
