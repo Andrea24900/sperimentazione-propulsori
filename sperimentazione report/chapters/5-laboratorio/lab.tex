@@ -183,20 +183,30 @@ Si nota anche che l'utilizzo di una pressione ambiente non standard ha un impatt
 Infine, la variazione di \gls{symb:T} misurata non porta a variazioni significative di \gls{symb:cd}. Gli unici valori anomali corrispondono alle prime due misure, affette da significativo errore. 
 
 \subsection{Dipendenza da Reynolds e Mach}
+Si riportano dei grafici rappresentanti la dipendenza di \gls{symb:cd} dal numero di Reynolds (Fig.\ref{fig:dipendenzare}) e dal numero di Mach (Fig.\ref{fig:dipendenzama}). 
+Al fine di calcolare il valore di \gls{symb:mu} al variare di \gls{symb:T} viene utilizzata la legge di Sutherland nella forma:
+\begin{equation}
+	\mu=\mu_{\textit{REF}}(\frac{T}{T_{\textit{REF}}})^{1.5}
+\end{equation}
+con $\mu_{\textit{REF}}$ = 1.03e-5 Pa\,s e $T_{\textit{REF}}$ = 273 K.
+La variazione di \gls{symb:mu} è molto limitata in quanto \gls{symb:T} mantiene approssimativamente lo stesso valore per tutte le misure. 
 
-
-
-
-
-\begin{figure}
+\begin{figure} [H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{chapters/5-laboratorio/dipendenzaRe}
 	\caption{Dipendenza di \gls{symb:cd} da \gls{symb:re}}
 	\label{fig:dipendenzare}
 \end{figure}
-\begin{figure}
+\begin{figure} [H]
 	\centering
-	\includegraphics[width=0.5\linewidth]{chapters/5-laboratorio/dipendenzaMa}
+	\includegraphics[width=0.5\linewidth]{chapters/5-laboratorio/dipendenzama}
 	\caption{Dipendenza di \gls{symb:cd} da \gls{symb:ma}}
 	\label{fig:dipendenzama}
 \end{figure}
+
+Dai grafici è possibile osservare che: 
+\begin{itemize}
+	\item i primi valori di \gls{symb:cd} non sono significativi;
+	\item \gls{symb:re} varia tra 3000 e 9000; ne deriva che il flusso nell'ugello è turbolento e valgono le ipotesi di profilo di velocità uniforme e di assenza di effetti viscosi significativi;
+	\item \gls{symb:ma} è sempre ridotto, pertanto vale l'ipotesi di flusso incomprimibile.
+\end{itemize}

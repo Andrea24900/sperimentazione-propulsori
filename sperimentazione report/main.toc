@@ -30,6 +30,6 @@
 \contentsline {paragraph}{Ipotesi}{22}{equation.5.3}%
 \contentsline {subsection}{\numberline {5.2}Presentazione dei valori misurati}{23}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Dipendenza da Reynolds e Mach}{26}{subsection.5.3}%
-\contentsline {section}{\numberline {A}Risultati aggiuntivi dell'analisi statistica delle serie di dati}{27}{appendix.1.Alph1}%
-\contentsline {subsection}{\numberline {A.1}Classi, frequenze relative e frequenze cumulate normalizzate}{27}{subsection.1.Alph1.1}%
-\contentsline {section}{Bibliografia}{29}{table.caption.37}%
+\contentsline {section}{\numberline {A}Risultati aggiuntivi dell'analisi statistica delle serie di dati}{28}{appendix.1.Alph1}%
+\contentsline {subsection}{\numberline {A.1}Classi, frequenze relative e frequenze cumulate normalizzate}{28}{subsection.1.Alph1.1}%
+\contentsline {section}{Bibliografia}{30}{table.caption.37}%
