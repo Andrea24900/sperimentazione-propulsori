@@ -241,7 +241,7 @@ Andando a paragonare gli errori sistematici si nota che non è raggiunto il live
 \end{table}
 
 \clearpage
-\subsection{Stima dell'errore di quantizzazione e totale}
+\section{Stima dell'errore di quantizzazione e totale}
 Sono fornite informazioni riguardanti l'unità di acquisizione dati utilizzata per le due serie di misure di temperatura. Si richiede di valutare l'errore di quantizzazione e di stimare l'errore totale (statistico-sistematico-quantizzazione).
 
 Il sistema di acquisizione dati prevede che il segnale in tensione in uscita dalla termocoppia venga amplificato di 100 volte e sia acquisito con un convertitore A/D a 12 bit, campo 0-10 V.
@@ -249,11 +249,11 @@ Il sistema di acquisizione dati prevede che il segnale in tensione in uscita dal
 \paragraph{Risoluzione}
 Per un convertitore A/D a 12 bit ($n_{bit}$) con campo di misura 0-10 V ($\Delta V$) l'errore di quantizzazione (in V) può essere stimato con: 
 \begin{equation}
-	\epsilon_{\textit{QUANT,TENS}} = \frac{1}{2} \frac{\Delta V}{2^{n_{bit}}}
+	\epsilon_{\textit{QUANT,V}} = \frac{1}{2} \frac{\Delta V}{2^{n_{bit}}}
 \end{equation}
-Utilizzando questa espressione e passando ai mV si ottiene un valore di $	\epsilon_{\textit{QUANT,TENS}} $ pari a 1.221 mV. 
+Utilizzando questa espressione e passando alla tensione (\gls{symb:tens}) in mV si ottiene un valore di $	\epsilon_{\textit{QUANT,V}} $ pari a 1.221 mV. 
 
-A questo valore è possibile applicare una prima correzione legata al fattore di amplificazione 100. POi risulta necessario andare a trasformare questo valore in un errore in temperatura al fine di combinarlo con le altre sorgenti di errore. 
+A questo valore è possibile applicare una prima correzione legata al fattore di amplificazione 100. Poi risulta necessario andare a trasformare questo valore in un errore in temperatura al fine di combinarlo con le altre sorgenti di errore. 
 Per svolgere questi passaggi è necessario utilizzare la propagazione degli errori. Sia dato un errore $e_x$ associato a una misura $x^\star$. Si abbia una legge del tipo $y=f(x)$. Allora è possibile determinare $e_y$ come:
 \begin{equation}
 	e_y = \left. \frac{dy}{dx} \right\vert _{x=x^\star} \, e_x
@@ -276,7 +276,7 @@ la cui derivata è:
 \begin{equation}
 	\frac{dT}{dV} = 4aV^3+3bV^2+2cV+d
 \end{equation}
-Esistono vari approcci per individuare un valore di tensione atto a propagare l'errore da V a T. in prima analisi si sceglie di utilizzare un metodo conservativo: pertanto si assume come tensione il fondoscala (in tensione) delle due diverse leggi di calibrazione. Questi valori sono i più elevati misurabili dalle leggi di calibrazione, pertanto ad essi è associato il massimo fattore di propagazione.
+Esistono vari approcci per individuare un valore di tensione atto a propagare l'errore da V a T. in prima analisi si sceglie di utilizzare un metodo conservativo: pertanto si assume come tensione il fondo scala (in tensione) delle due diverse leggi di calibrazione. Questi valori sono i più elevati misurabili dalle leggi di calibrazione, pertanto ad essi è associato il massimo fattore di propagazione.
 I valori utilizzati e i risultati sono riportati in Tab.\ref{tab:valorierisultati}.
 \begin{table}[H]
 \centering
@@ -311,17 +311,19 @@ Per concludere l'analisi dell'errore di misura è possibile stimare l'errore tot
 \begin{equation}
 	\epsilon_{\textit{TOT}}=\sqrt{\epsilon_{\textit{STAT}}^2+\epsilon_{\textit{SIST}}^2+\epsilon_{\textit{QUANT}}^2}
 \end{equation}
-I risultati sono riportati in Tab. \ref{tab:risultatitot}, corredati dai risultati senza errore di quantizzazione per confronto, nonché dal valore di \gls{symb:errtot} relativo al fondoscala (indicato in Tab.\ref{tab:valorierisultati}).
+I risultati sono riportati in Tab.\ref{tab:risultatitot}, corredati dai risultati senza errore di quantizzazione per confronto, nonché dal valore di \gls{symb:errtot} relativo al fondo scala (indicato in Tab.\ref{tab:valorierisultati}).
 \begin{table}[H]
 	\centering
-	\begin{tabular}{c|c|c|c}
+	\begin{tabular}{c|c|c}
 		\toprule
 		\toprule
-	\textbf{Serie} & $\bm{\epsilon_{\textit{TOT}}}$ \textbf{[\textsuperscript{o}C]} & $\bm{\epsilon_{\textit{TOT}}}$ \textbf{senza} $\bm{\epsilon_{\textit{QUANT}}}$ \textbf{[\textsuperscript{o}C]}&  $\bm{\epsilon_{\textit{TOT}}\, \% \,F.S.}$ \\
+		& \textbf{Serie corta} & \textbf{Serie lunga} \\
 		\midrule
-		Corta & 2.221 & 1.924 & 0.17 \%\\
+		$\epsilon_{\textit{TOT}}$ [\textsuperscript{o}C] & 2.221 & 1.875 \\
 		\midrule
-		Lunga & 1.875 &  1.545 & 0.13 \%\\
+		$\epsilon_{\textit{TOT}}$ senza $\epsilon_{\textit{QUANT}}$ [\textsuperscript{o}C] & 1.924 & 1.545 \\
+		\midrule
+		$\epsilon_{\textit{TOT}\, \% \, F.S.}$ & 0.17 \% & 0.13 \% \\
 		\bottomrule
 		\bottomrule
 	\end{tabular}
@@ -329,15 +331,16 @@ I risultati sono riportati in Tab. \ref{tab:risultatitot}, corredati dai risulta
 	\label{tab:risultatitot}
 \end{table}
 Da queste stime si osserva che ancora una volta la sorgente principale di errore è rappresentata da \gls{symb:errstat}. L'errore di quantizzazione assume un impatto moderato, portando a un aumento di circa 0.3 \textsuperscript{o}C.
-Risulta necessario osservare che questo risultato è ottenuto con una ipotesi conservativa, pertanto variando il valore di tensione scelto per la stima dell'errore di quantizzazione è possibile ridurre l'errore totale. Per esempio, se fossero noti i valori di tensione misurata per le due serie, sarebbe possbile utilizzare la tensione associata alla temperatura media delle due serie. Tale riduzione sarebbe moderata, pressochè impercettibile rispetto al fondoscala. 
+
+Risulta necessario osservare che questo risultato è ottenuto con una ipotesi apparentemente conservativa, pertanto variando il valore di tensione scelto per la stima dell'errore di quantizzazione è possibile variare l'errore totale. Per esempio, se fossero noti i valori di tensione misurata per le due serie, sarebbe possibile utilizzare la tensione associata alla temperatura media delle due serie.
 
 Al fine di valutare questa possibile soluzione si procede come indicato:
 \begin{itemize}
-	\item la legge di calibrazione statica viene utilizzata come un'equazione per ottenere la tensione associata al valore medio di temperatura;
+	\item la legge di calibrazione statica viene utilizzata come un'equazione per ottenere la tensione associata al valore medio di temperatura (mediante inversione numerica con \textit{fsolve});
 	\item il fattore di propagazione viene calcolato con questo valore di tensione. 
 \end{itemize} 
 
-Si riportano in Tab.\ref{tab:alternativa} i risultati di questa procedura. 
+Si riportano in Tab.\ref{tab:alternativa} i risultati di questa procedura. Il valore di $\Delta \epsilon_{\textit{TOT,\%}}$ è riferito alla stima precedente (Tab.\ref{tab:risultatitot}).
 
 \begin{table}[H]
 	\centering
@@ -346,19 +349,28 @@ Si riportano in Tab.\ref{tab:alternativa} i risultati di questa procedura.
 		\toprule
 		& \textbf{Serie corta} & \textbf{Serie lunga}\\
 		\midrule
-		\gls{symb:Tmean} [\textsuperscript{o}C]&  & \\
+		\gls{symb:Tmean} [\textsuperscript{o}C]& 1082.8 & 1159.2\\
 		\midrule
-		$V_{\overline{T}} $& & \\
+		$V_{\overline{T}} $ [mV]& 5.626 & 6.382 \\
 		\midrule
-		$\epsilon_{\textit{QUANT}}$ [\textsuperscript{o}C]& & \\
+		$\epsilon_{\textit{QUANT}}$ [\textsuperscript{o}C]& 1.259 & 1.203 \\
 		\midrule
-		
-		$\epsilon_{\textit{TOT}}$ [\textsuperscript{o}C]& & \\
+		$\epsilon_{\textit{TOT}}$ [\textsuperscript{o}C]& 2.299 & 1.958\\
 		\midrule
-		$\Delta \epsilon_{\textit{TOT,\%}}$ da stima precedente & & \\
+		$\Delta \epsilon_{\textit{TOT,\%}}$  & + 3.5 \% & + 4.5 \% \\
 		\bottomrule
 		\bottomrule
 	\end{tabular}
 	\caption{Risultati della procedura alternativa}
 	\label{tab:alternativa}
 \end{table}
+La procedura illustrata permette di osservare che l'utilizzo del valore di tensione corrispondente a \gls{symb:Tmean} aumenta l'errore totale. Questo accade perché il gradiente di $T(V)$ è maggiore in corrispondenza di $V_{\overline{T}}$. Si riporta in grafico (Fig.\ref{fig:confronto}) l'andamento di tale funzione per la serie corta. Lo stesso fenomeno accade per la serie lunga. 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth]{"../sperimentazione nei propulsori/confronto"}
+	\caption{Confronto tra gradiente e legge di calibrazione}
+	\label{fig:confronto}
+\end{figure}
+
+In conclusione, il massimo errore di quantizzazione si ha quando la tensione è al fondo scala inferiore. L'utilizzo di un valore corrispondente a $V_{\overline{T}}$
+permette di avere una stima più realistica dell'errore totale. In proporzione al fondo scala superiore l'errore totale risulta molto ridotto con entrambi i metodi. 

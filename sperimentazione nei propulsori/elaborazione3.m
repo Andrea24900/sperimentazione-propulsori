@@ -67,8 +67,53 @@ err_tot_short=sqrt(err_quant_short^2+errore_sist_short^2+err_stat_short^2);
 err_tot_long=sqrt(err_quant_long^2+errore_sist_long^2+err_stat_long^2);
 
 %% Soluzione alternativa per quantizzazione
+T_mean_short = mean(short_vector);
+T_mean_long = mean(long_vector);
+
+inverted_short=@(V) T_mean_short-(coefficienti_short(1).*V.^4+coefficienti_short(2).*V.^3+...
+    coefficienti_short(3).*V.^2+coefficienti_short(4).*V+coefficienti_short(5));
+
+inverted_long=@(V) T_mean_long-(coefficienti_long(1).*V.^4+coefficienti_long(2).*V.^3+...
+    coefficienti_long(3).*V.^2+coefficienti_long(4).*V+coefficienti_long(5));
+
+V_0_short=5.79;
+
+V_0_long=6.29;
+
+V_short=fzero(inverted_short,V_0_short);
+V_long=fzero(inverted_long,V_0_long);
+
+err_quant_short_alt=derivata_legge_short(V_short)*err_quant_mV/100;
+err_quant_long_alt=derivata_legge_long(V_long)*err_quant_mV/100;
+
+%% Calcolo errore totale alt
+err_tot_short_alt=sqrt(err_quant_short_alt^2+errore_sist_short^2+err_stat_short^2);
+
+err_tot_long_alt=sqrt(err_quant_long_alt^2+errore_sist_long^2+err_stat_long^2);
+
+diff_short=(err_tot_short_alt-err_tot_short)/err_tot_short*100;
+diff_long=(err_tot_long_alt-err_tot_long)/err_tot_long*100;
+tensione_vect=linspace (3,8,100);
 
 
+plot_confronto=figure(10);
+yyaxis left
+met_1=plot(tensione_FS_short,derivata_legge_short(tensione_FS_short),'o','color','green','LineWidth',linewidth,'MarkerSize',8);
+
+grid on
+hold on 
+
+
+met_2=plot(V_short,derivata_legge_short(V_short),'square','LineWidth',linewidth,'Color','red','MarkerSize',8);
+
+plot(tensione_vect,derivata_legge_short(tensione_vect),'-','lineWidth',linewidth,'MarkerSize',12); 
+xlabel('$V$ [mV]','FontSize',fontsize,'Interpreter','latex')
+ylabel('$dT/dV$ [$^o$C/mV]','FontSize',fontsize,'Interpreter','latex')
+yyaxis right 
+plot(tensione_vect,-inverted_short(tensione_vect)+T_mean_short,'lineWidth',linewidth)
+ylabel('$T(V)$ [$^o$C]','FontSize',fontsize,'Interpreter','latex')
+legend('$dT/dV$ 1$^o$ metodo','$dT/dV$ 2$^o$ metodo','interpreter','latex','fontsize',fontsize,'location','north')
+exportgraphics(plot_confronto,'confronto.png','Resolution',600)
 
 %% Calcolo perdite irraggiamento
 
