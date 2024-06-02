@@ -1,4 +1,4 @@
-\section{Stima dell'errore sistematico}
+\section{Individuazione legge calibrazione statica e stima dell'errore sistematico} \label{sec:legge}
 
 \paragraph{Dati e richieste}
 Viene fornita la tabella di calibrazione statica di una termocoppia di tipo B, riportata in Tab. \ref{tab:calibrazione statica}. Si chiede di ricavare la relazione temperatura misurata-tensione mediante analisi di regressione, di determinare l'errore associato a tale processo, nonché il grado di adattamento del modello ai dati sperimentali. Infine si richiede di determinare l'errore totale associato alle misure di temperatura delle due serie di Sez.\ref{sez:misureT}.
@@ -173,7 +173,8 @@ Questo effetto è determinante nella penalizzazione della soluzione con interval
 \end{figure}
 
 \subsection{Risoluzione per la serie lunga}
-Si impiega una strategia analoga per caratterizzare la serie lunga. Quest'ultima presenta una limitata possibilità di ottimizzazione in quanto l'intervallo di temperatura da misurare è da 931 \textsuperscript{o}C a 1449 \textsuperscript{o}C:  questi valori comportano l'utilizzo di gran parte della tabella di calibrazione statica. Poiché l'analisi svolta è analoga alla precedente, vengono riportati soltanto i risultati. Si osserva che l'errore sistematico è ridotto e ha un impatto limitato sull'errore totale; inoltre, la legge di regressione che fornisce il miglior risultato è ancora quella del quarto ordine. 
+Si impiega una strategia analoga per caratterizzare la serie lunga. Quest'ultima presenta una limitata possibilità di ottimizzazione in quanto l'intervallo di temperatura da misurare è da 931 \textsuperscript{o}C a 1449 \textsuperscript{o}C: questi valori comportano l'utilizzo di gran parte della tabella di calibrazione statica. Poiché l'analisi svolta è analoga alla precedente, vengono riportati soltanto i risultati. Analogamente a prima, si osserva che l'errore sistematico ha un impatto molto limitato sull'errore totale, dominato ancora una volta dall'errore statistico.
+Andando a paragonare gli errori sistematici si nota che non è raggiunto il livello di ottimalità del campo di misura adottato per la serie corta di dati.  La legge di regressione che fornisce il miglior risultato è ancora quella del quarto ordine. 
 
 \begin{figure} [H]
 	\centering
@@ -237,4 +238,127 @@ Si impiega una strategia analoga per caratterizzare la serie lunga. Quest'ultima
 	\end{tabular}
 	\caption{Coefficienti della legge di calibrazione}
 	\label{tab:coefficienti_long}
+\end{table}
+
+\clearpage
+\subsection{Stima dell'errore di quantizzazione e totale}
+Sono fornite informazioni riguardanti l'unità di acquisizione dati utilizzata per le due serie di misure di temperatura. Si richiede di valutare l'errore di quantizzazione e di stimare l'errore totale (statistico-sistematico-quantizzazione).
+
+Il sistema di acquisizione dati prevede che il segnale in tensione in uscita dalla termocoppia venga amplificato di 100 volte e sia acquisito con un convertitore A/D a 12 bit, campo 0-10 V.
+
+\paragraph{Risoluzione}
+Per un convertitore A/D a 12 bit ($n_{bit}$) con campo di misura 0-10 V ($\Delta V$) l'errore di quantizzazione (in V) può essere stimato con: 
+\begin{equation}
+	\epsilon_{\textit{QUANT,TENS}} = \frac{1}{2} \frac{\Delta V}{2^{n_{bit}}}
+\end{equation}
+Utilizzando questa espressione e passando ai mV si ottiene un valore di $	\epsilon_{\textit{QUANT,TENS}} $ pari a 1.221 mV. 
+
+A questo valore è possibile applicare una prima correzione legata al fattore di amplificazione 100. POi risulta necessario andare a trasformare questo valore in un errore in temperatura al fine di combinarlo con le altre sorgenti di errore. 
+Per svolgere questi passaggi è necessario utilizzare la propagazione degli errori. Sia dato un errore $e_x$ associato a una misura $x^\star$. Si abbia una legge del tipo $y=f(x)$. Allora è possibile determinare $e_y$ come:
+\begin{equation}
+	e_y = \left. \frac{dy}{dx} \right\vert _{x=x^\star} \, e_x
+\end{equation}
+Per quanto concerne l'amplificazione, la legge è lineare nella forma:
+\begin{equation}
+	V_{A/D} = 100\, V_{OUT}
+\end{equation}
+Dove $V_{A/D}$ è la tensione post amplificazione, mentre $V_{OUT}$ è la tensione in uscita dalla termocoppia. Invertendo la relazione e applicando la propagazione si trova che:
+\begin{equation}
+	\epsilon_{\textit{V}} = \frac{\epsilon_{\textit{QUANT}}}{100}
+\end{equation}
+L'errore $\epsilon_{\textit{V}}$ ammonta a 1.221e-2 mV.
+
+Nel caso in esame la relazione che lega temperatura e tensione è la legge di calibrazione statica, determinata separatamente per le due serie di dati in Sez.\ref{sec:legge}. Poiché tale legge è non lineare, la derivata presenta una dipendenza dal valore puntuale di tensione. La legge di calibrazione è:
+\begin{equation}
+	T = aV^4 + bV^3+cV^2+dV+e
+\end{equation}
+la cui derivata è: 
+\begin{equation}
+	\frac{dT}{dV} = 4aV^3+3bV^2+2cV+d
+\end{equation}
+Esistono vari approcci per individuare un valore di tensione atto a propagare l'errore da V a T. in prima analisi si sceglie di utilizzare un metodo conservativo: pertanto si assume come tensione il fondoscala (in tensione) delle due diverse leggi di calibrazione. Questi valori sono i più elevati misurabili dalle leggi di calibrazione, pertanto ad essi è associato il massimo fattore di propagazione.
+I valori utilizzati e i risultati sono riportati in Tab.\ref{tab:valorierisultati}.
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c}
+	\toprule
+	\toprule
+	\textbf{Grandezza} & \textbf{Valore} \\
+	\midrule
+	FS per serie corta & 7.8660 mV\\
+	associato a T & 1300 \textsuperscript{o}C\\
+	\midrule
+	Fattore di propagazione & 90.98 \textsuperscript{o}C/mV\\
+	\midrule
+	\gls{symb:errquant} & 1.111 \textsuperscript{o}C\\
+	\midrule
+	\midrule
+	FS per serie lunga & 9.5490 mV\\
+	associato a T & 1450 \textsuperscript{o}C\\
+	\midrule
+	Fattore di propagazione & 77.67 \textsuperscript{o}C/mV\\
+	\midrule
+	\gls{symb:errquant} & 1.062 \textsuperscript{o}C\\
+	
+	\bottomrule
+	\bottomrule
+\end{tabular}
+\caption{Valori significativi e risultati}
+\label{tab:valorierisultati}
+\end{table}
+
+Per concludere l'analisi dell'errore di misura è possibile stimare l'errore totale per le due serie mediante:
+\begin{equation}
+	\epsilon_{\textit{TOT}}=\sqrt{\epsilon_{\textit{STAT}}^2+\epsilon_{\textit{SIST}}^2+\epsilon_{\textit{QUANT}}^2}
+\end{equation}
+I risultati sono riportati in Tab. \ref{tab:risultatitot}, corredati dai risultati senza errore di quantizzazione per confronto, nonché dal valore di \gls{symb:errtot} relativo al fondoscala (indicato in Tab.\ref{tab:valorierisultati}).
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c}
+		\toprule
+		\toprule
+	\textbf{Serie} & $\bm{\epsilon_{\textit{TOT}}}$ \textbf{[\textsuperscript{o}C]} & $\bm{\epsilon_{\textit{TOT}}}$ \textbf{senza} $\bm{\epsilon_{\textit{QUANT}}}$ \textbf{[\textsuperscript{o}C]}&  $\bm{\epsilon_{\textit{TOT}}\, \% \,F.S.}$ \\
+		\midrule
+		Corta & 2.221 & 1.924 & 0.17 \%\\
+		\midrule
+		Lunga & 1.875 &  1.545 & 0.13 \%\\
+		\bottomrule
+		\bottomrule
+	\end{tabular}
+	\caption{Errore totale legato alle due misure}
+	\label{tab:risultatitot}
+\end{table}
+Da queste stime si osserva che ancora una volta la sorgente principale di errore è rappresentata da \gls{symb:errstat}. L'errore di quantizzazione assume un impatto moderato, portando a un aumento di circa 0.3 \textsuperscript{o}C.
+Risulta necessario osservare che questo risultato è ottenuto con una ipotesi conservativa, pertanto variando il valore di tensione scelto per la stima dell'errore di quantizzazione è possibile ridurre l'errore totale. Per esempio, se fossero noti i valori di tensione misurata per le due serie, sarebbe possbile utilizzare la tensione associata alla temperatura media delle due serie. Tale riduzione sarebbe moderata, pressochè impercettibile rispetto al fondoscala. 
+
+Al fine di valutare questa possibile soluzione si procede come indicato:
+\begin{itemize}
+	\item la legge di calibrazione statica viene utilizzata come un'equazione per ottenere la tensione associata al valore medio di temperatura;
+	\item il fattore di propagazione viene calcolato con questo valore di tensione. 
+\end{itemize} 
+
+Si riportano in Tab.\ref{tab:alternativa} i risultati di questa procedura. 
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c}
+		\toprule
+		\toprule
+		& \textbf{Serie corta} & \textbf{Serie lunga}\\
+		\midrule
+		\gls{symb:Tmean} [\textsuperscript{o}C]&  & \\
+		\midrule
+		$V_{\overline{T}} $& & \\
+		\midrule
+		$\epsilon_{\textit{QUANT}}$ [\textsuperscript{o}C]& & \\
+		\midrule
+		
+		$\epsilon_{\textit{TOT}}$ [\textsuperscript{o}C]& & \\
+		\midrule
+		$\Delta \epsilon_{\textit{TOT,\%}}$ da stima precedente & & \\
+		\bottomrule
+		\bottomrule
+	\end{tabular}
+	\caption{Risultati della procedura alternativa}
+	\label{tab:alternativa}
 \end{table}

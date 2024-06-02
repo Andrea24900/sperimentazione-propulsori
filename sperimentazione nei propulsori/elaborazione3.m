@@ -66,6 +66,10 @@ err_tot_short=sqrt(err_quant_short^2+errore_sist_short^2+err_stat_short^2);
 
 err_tot_long=sqrt(err_quant_long^2+errore_sist_long^2+err_stat_long^2);
 
+%% Soluzione alternativa per quantizzazione
+
+
+
 %% Calcolo perdite irraggiamento
 
 

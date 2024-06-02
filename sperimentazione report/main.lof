@@ -10,10 +10,11 @@
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Confronto errori per la serie 950-1200 \textsuperscript {o}C}}{14}{figure.caption.19}%
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Risultati del processo di ottimizzazione}}{15}{figure.caption.20}%
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Curva di calibrazione statica}}{15}{figure.caption.21}%
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Schema del banco prova}}{18}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Schema del diaframma (Fonte: UNI EN ISO 5167-1 Figura 5)}}{18}{figure.caption.25}%
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Dipendenza di \gls {symb:cd} da \gls {symb:qm}}}{25}{figure.caption.31}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Dipendenza di \gls {symb:cd} da $\Delta p$}}{25}{figure.caption.32}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Dipendenza di \gls {symb:cd} da \gls {symb:T}}}{25}{figure.caption.33}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Dipendenza di \gls {symb:cd} da \gls {symb:re}}}{26}{figure.caption.34}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Dipendenza di \gls {symb:cd} da \gls {symb:ma}}}{26}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Schema del banco prova}}{21}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Schema del diaframma (Fonte: UNI EN ISO 5167-1 Figura 5)}}{21}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Scheda tecnica del manometro}}{24}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Dipendenza di \gls {symb:cd} da $q_M$}}{28}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Dipendenza di \gls {symb:cd} da $\Delta p$}}{28}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Dipendenza di \gls {symb:cd} da \gls {symb:T}}}{28}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Dipendenza di \gls {symb:cd} da \gls {symb:re}}}{29}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Dipendenza di \gls {symb:cd} da \gls {symb:ma}}}{29}{figure.caption.39}%
