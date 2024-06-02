@@ -12,7 +12,7 @@ Gli strumenti di misura a disposizione sono i seguenti:
 	\item Termometro digitale in \textsuperscript{o}C.
 \end{itemize}
 
-Il diametro dell'ugello (\gls{symb:Du}) è pari a 2.7 mm. La pressione ambiente (\gls{symb:pamb}) ammonta a 100600 Pa.
+Il diametro dell'ugello (\gls{symb:Du}) è pari a 2.7 mm. La pressione ambiente (\gls{symb:pamb}) ammonta a 100600 Pa al momento della misura.
 
 La procedura per definire \gls{symb:cd} parte dalla definizione del coefficiente di efflusso:
 \begin{equation}
@@ -20,7 +20,7 @@ La procedura per definire \gls{symb:cd} parte dalla definizione del coefficiente
 \end{equation}
 dove $\dot{m}_\textit{REALE} = q_M$, mentre $\dot{m}_\textit{TEORICA}$ viene ottenuta mediante alcune assunzioni. 
 
-Per quanto riguarda \gls{symb:qm}, essa è ottenuta dalla portata misurata mediante galleggiante usando $q_M=q_{MN} \rho_N$.
+Per quanto riguarda $q_M$, essa è ottenuta dalla portata misurata mediante galleggiante usando $q_M=q_{MN} \rho_N$.
 
 Per il calcolo di \gls{symb:mdot}\textsubscript{\textit{TEORICA}} è possibile utilizzare il teorema di Bernoulli e determinare \gls{symb:V}\textsubscript{\textit{TEORICA}} mediante: 
 \begin{equation}
@@ -74,7 +74,7 @@ A seguito delle misure sono rilevati i valori riportati in Tab.\ref{tab:dati}, a
 
 Successivamente vengono calcolate le seguenti quantità:
 \begin{itemize}
-	\item \gls{symb:rho} mediante l'ipotesi di gas perfetto ($\rho = p/(RT)$); il valore di \gls{symb:p} è ottenuto tramite $p=p_{\textit{AMB}}+\Delta p$.
+	\item \gls{symb:rho} mediante l'ipotesi di gas perfetto ($\rho = p/(RT)$); il valore di \gls{symb:p} è ottenuto tramite $p=p_{\textit{AMB}}+\Delta p$, questa relazione è valida in quanto l'ugello scarica il flusso esattamente a pressione ambiente. 
 	\item \gls{symb:V}\textsubscript{\textit{TEORICA}} mediante Eq.(\ref{eq:velocità}).
 	\item \gls{symb:mdot}\textsubscript{\textit{TEORICA}} tramite Eq.(\ref{eq:portata}).
 \end{itemize}
@@ -160,7 +160,7 @@ Da questi valori è possibile ottenere una stima del valore di \gls{symb:cd} per
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\linewidth]{"chapters/5-laboratorio/tabellaqmcd"}
-	\caption{Dipendenza di \gls{symb:cd} da \gls{symb:qm}}
+	\caption{Dipendenza di \gls{symb:cd} da $q_M$}
 	\label{fig:tabellaqmcd}
 \end{figure}
 \begin{figure}
