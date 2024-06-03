@@ -46,8 +46,8 @@ err_quant_mV=err_quant_V*1000; %in mV
 %derivata di sensibilità: l'errore di quantizzazione in temperatura risulta
 %conservativo
 
-tensione_FS_short=tensione_cal_short(end);
-tensione_FS_long=tensione_cal_long(end);
+tensione_FS_short=tensione_cal_short(1);
+tensione_FS_long=tensione_cal_long(1);
 
 % le due leggi sono del quarto ordine y=ax^4+bx^3+cx^2+dx+e
 % la derivata è y'=4ax^3+3bx^2+2cx+d

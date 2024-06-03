@@ -276,7 +276,7 @@ la cui derivata è:
 \begin{equation}
 	\frac{dT}{dV} = 4aV^3+3bV^2+2cV+d
 \end{equation}
-Esistono vari approcci per individuare un valore di tensione atto a propagare l'errore da V a T. in prima analisi si sceglie di utilizzare un metodo conservativo: pertanto si assume come tensione il fondo scala (in tensione) delle due diverse leggi di calibrazione. Questi valori sono i più elevati misurabili dalle leggi di calibrazione, pertanto ad essi è associato il massimo fattore di propagazione.
+Esistono vari approcci per individuare un valore di tensione atto a propagare l'errore da V a T. In prima analisi si sceglie di utilizzare un metodo conservativo: pertanto si assume come tensione il fondo scala inferiore (in tensione) delle due diverse leggi di calibrazione. Osservando l'andamento del gradiente di entrambe le leggi di calibrazione statica, si nota che questo è massimo nel fondo scala inferiore. Si osservi Fig.\ref{fig:confronto} per la rappresentazione del gradiente confrontato con la legge di calibrazione statica. 
 I valori utilizzati e i risultati sono riportati in Tab.\ref{tab:valorierisultati}.
 \begin{table}[H]
 \centering
@@ -285,20 +285,20 @@ I valori utilizzati e i risultati sono riportati in Tab.\ref{tab:valorierisultat
 	\toprule
 	\textbf{Grandezza} & \textbf{Valore} \\
 	\midrule
-	FS per serie corta & 7.8660 mV\\
-	associato a T & 1300 \textsuperscript{o}C\\
+	F.S. inferiore per serie corta & 3.551 mV\\
+	associato a T & 850 \textsuperscript{o}C\\
 	\midrule
-	Fattore di propagazione & 90.98 \textsuperscript{o}C/mV\\
+	Fattore di propagazione & 124.2 \textsuperscript{o}C/mV\\
 	\midrule
-	\gls{symb:errquant} & 1.111 \textsuperscript{o}C\\
+	\gls{symb:errquant} & 1.516 \textsuperscript{o}C\\
 	\midrule
 	\midrule
-	FS per serie lunga & 9.5490 mV\\
-	associato a T & 1450 \textsuperscript{o}C\\
+	F.S. inferiore per serie lunga & 3.963 mV\\
+	associato a T & 900 \textsuperscript{o}C\\
 	\midrule
-	Fattore di propagazione & 77.67 \textsuperscript{o}C/mV\\
+	Fattore di propagazione & 117.6 \textsuperscript{o}C/mV\\
 	\midrule
-	\gls{symb:errquant} & 1.062 \textsuperscript{o}C\\
+	\gls{symb:errquant} & 1.435 \textsuperscript{o}C\\
 	
 	\bottomrule
 	\bottomrule
@@ -319,20 +319,20 @@ I risultati sono riportati in Tab.\ref{tab:risultatitot}, corredati dai risultat
 		\toprule
 		& \textbf{Serie corta} & \textbf{Serie lunga} \\
 		\midrule
-		$\epsilon_{\textit{TOT}}$ [\textsuperscript{o}C] & 2.221 & 1.875 \\
+		$\epsilon_{\textit{TOT}}$ [\textsuperscript{o}C] & 2.449 & 2.109 \\
 		\midrule
 		$\epsilon_{\textit{TOT}}$ senza $\epsilon_{\textit{QUANT}}$ [\textsuperscript{o}C] & 1.924 & 1.545 \\
 		\midrule
-		$\epsilon_{\textit{TOT}\, \% \, F.S.}$ & 0.17 \% & 0.13 \% \\
+		$\epsilon_{\textit{TOT}\, \% \, F.S.}$ & 0.2 \% & 0.15 \% \\
 		\bottomrule
 		\bottomrule
 	\end{tabular}
 	\caption{Errore totale legato alle due misure}
 	\label{tab:risultatitot}
 \end{table}
-Da queste stime si osserva che ancora una volta la sorgente principale di errore è rappresentata da \gls{symb:errstat}. L'errore di quantizzazione assume un impatto moderato, portando a un aumento di circa 0.3 \textsuperscript{o}C.
+Da queste stime si osserva che ancora una volta la sorgente principale di errore è rappresentata da \gls{symb:errstat}. L'errore di quantizzazione assume un impatto significativo, portando a un aumento di circa 0.6 \textsuperscript{o}C.
 
-Risulta necessario osservare che questo risultato è ottenuto con una ipotesi apparentemente conservativa, pertanto variando il valore di tensione scelto per la stima dell'errore di quantizzazione è possibile variare l'errore totale. Per esempio, se fossero noti i valori di tensione misurata per le due serie, sarebbe possibile utilizzare la tensione associata alla temperatura media delle due serie.
+Risulta necessario osservare che questo risultato è ottenuto con una ipotesi conservativa, pertanto una migliore scelta del valore di tensione, utilizzato per la stima dell'errore di quantizzazione, porta a una stima più accurata dell'errore totale. Per esempio, se fossero noti i valori di tensione misurata per le due serie, sarebbe possibile utilizzare la tensione associata alla temperatura media delle due serie.
 
 Al fine di valutare questa possibile soluzione si procede come indicato:
 \begin{itemize}
@@ -357,14 +357,14 @@ Si riportano in Tab.\ref{tab:alternativa} i risultati di questa procedura. Il va
 		\midrule
 		$\epsilon_{\textit{TOT}}$ [\textsuperscript{o}C]& 2.299 & 1.958\\
 		\midrule
-		$\Delta \epsilon_{\textit{TOT,\%}}$  & + 3.5 \% & + 4.5 \% \\
+		$\Delta \epsilon_{\textit{TOT,\%}}$  & - 6 \% & - 7 \% \\
 		\bottomrule
 		\bottomrule
 	\end{tabular}
 	\caption{Risultati della procedura alternativa}
 	\label{tab:alternativa}
 \end{table}
-La procedura illustrata permette di osservare che l'utilizzo del valore di tensione corrispondente a \gls{symb:Tmean} aumenta l'errore totale. Questo accade perché il gradiente di $T(V)$ è maggiore in corrispondenza di $V_{\overline{T}}$. Si riporta in grafico (Fig.\ref{fig:confronto}) l'andamento di tale funzione per la serie corta. Lo stesso fenomeno accade per la serie lunga. 
+La procedura illustrata permette di osservare che l'utilizzo del valore di tensione corrispondente a \gls{symb:Tmean} diminuisce l'errore totale. Questo accade perché il gradiente di $T(V)$ è maggiore in corrispondenza di $V_{\overline{T}}$. Si riporta in grafico (Fig.\ref{fig:confronto}) l'andamento di tale funzione per la serie corta. Lo stesso fenomeno accade per la serie lunga. 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.6\linewidth]{"../sperimentazione nei propulsori/confronto"}
@@ -373,4 +373,4 @@ La procedura illustrata permette di osservare che l'utilizzo del valore di tensi
 \end{figure}
 
 In conclusione, il massimo errore di quantizzazione si ha quando la tensione è al fondo scala inferiore. L'utilizzo di un valore corrispondente a $V_{\overline{T}}$
-permette di avere una stima più realistica dell'errore totale. In proporzione al fondo scala superiore l'errore totale risulta molto ridotto con entrambi i metodi. 
+permette di avere una stima più realistica dell'errore totale. In proporzione al fondo scala superiore (delle leggi di calibrazione statica) l'errore totale risulta molto ridotto con entrambi i metodi. 
