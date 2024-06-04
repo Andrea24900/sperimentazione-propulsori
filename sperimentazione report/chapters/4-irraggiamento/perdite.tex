@@ -84,12 +84,75 @@ La risoluzione del problema prevede di utilizzare Eq.(\ref{eq:deltaT}) per calco
 Tale processo viene ripetuto analogamente per serie corta e serie lunga di dati. 
 Le proprietà dell'aria vengono ottenute per interpolazione lineare dei dati in App.\ref{app:aria}.
 
-In Tab. si riportano integralmente i calcoli impiegati per raggiungere il risultato relativo alla serie corta con una velocità di 1 m/s. 
+
+\paragraph{Risultati a 1 m/s}
+In Tab.\ref{tab:calcolishort1} si riportano integralmente i calcoli impiegati per raggiungere il risultato relativo alla serie corta con una velocità di 1 m/s. 
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c|c|c|c|c|c}
+		\toprule
+		\toprule
+		\textbf{Iterazione} & $\bm{T_{\textit{GAS}}}$ [K]& $\bm{k}$ [W/(mK)] & $\bm{\nu}$ [m\textsuperscript{2}/s] & $\bm{Re}$ & $\bm{C}$ & $\bm{n}$ & $\bm{h}$ [W/m\textsuperscript{2}] & $\bm{\Delta T_{\textit{ITER}} \%}$\\
+		\midrule
+		\midrule
+		0 & 1500 & 0.0946 & 2.29e-4 & 1.53 & 0.8 & 0.384 & 254.44 & - \\
+		\midrule
+		1 & 1506 & 0.0949 & 2.31e-4 & 1.52 & 0.8 & 0.384 & 254.67 & 0.41 \% \\
+		\midrule
+		2 & 1506 & & &  &  &  &  &  -0.009 \% \\
+		\bottomrule
+		\bottomrule	
+	\end{tabular}
+	\caption{Risultati per la serie corta}
+	\label{tab:calcolishort1}
+\end{table}
+
+In Tab.\ref{tab:risultatishort1} vengono riportati sinteticamente i risultati relativi alla serie lunga di dati, sempre a 1 m/s.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c}
+		\toprule
+		\toprule
+		& $\bm{T}$ [K]\\
+		\midrule
+		\midrule
+		\gls{symb:Tg} & 1356 \\
+		\midrule
+		\gls{symb:Tgas} & 1506 \\
+		\midrule
+		$\Delta T_{\textit{RAD}}$ & 150 \\
+		\bottomrule
+		\bottomrule	
+	\end{tabular}
+	\caption{Calcoli per la serie corta}
+	\label{tab:risultatishort1}
+\end{table}
 
 
 
-In Tab. vengono riportati sinteticamente i risultati relativi alla serie lunga di dati, sempre a 1 m/s.
+In Tab.\ref{tab:risultatilong1} vengono riportati sinteticamente i risultati relativi alla serie lunga di dati, sempre a 1 m/s.
 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c}
+		\toprule
+		\toprule
+		         & $\bm{T}$ [K]\\
+		\midrule
+		\midrule
+		\gls{symb:Tg} & 1432 \\
+		\midrule
+		\gls{symb:Tgas} & 1616 \\
+		\midrule
+		$\Delta T_{\textit{RAD}}$ & 184 \\
+		\bottomrule
+		\bottomrule	
+	\end{tabular}
+\caption{Risultati per la serie lunga}
+\label{tab:risultatilong1}
+\end{table}
 
-Si osserva che in entrambi i casi non si esce dall'intervallo di \gls{symb:re} per cui è valida la correlazione fornita. Inoltre si nota che le perdite radiative sono più significative quando la temperatura del giunto caldo è più alta. 
+Si osserva che in entrambi i casi non si esce dall'intervallo di \gls{symb:re} per cui è valida la correlazione fornita. Inoltre si nota che le perdite radiative sono più significative quando la temperatura del giunto caldo è più alta. Si pone l'attenzione sull'elevato errore dovuto alle ingenti perdite per radiazione, che è di due ordini di grandezza superiore all'errore totale legato alla misura. 
 
