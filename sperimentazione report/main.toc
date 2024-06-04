@@ -38,4 +38,5 @@
 \contentsline {subsection}{\numberline {6.3}Dipendenza da Reynolds e Mach}{30}{subsection.6.3}%
 \contentsline {section}{\numberline {A}Risultati aggiuntivi dell'analisi statistica delle serie di dati}{32}{appendix.1.Alph1}%
 \contentsline {subsection}{\numberline {A.1}Classi, frequenze relative e frequenze cumulate normalizzate}{32}{subsection.1.Alph1.1}%
-\contentsline {section}{Bibliografia}{34}{table.caption.43}%
+\contentsline {section}{\numberline {B}Proprietà dell'aria}{34}{appendix.1.Alph2}%
+\contentsline {section}{Bibliografia}{35}{appendix.1.Alph2}%

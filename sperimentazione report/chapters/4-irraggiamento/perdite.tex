@@ -16,7 +16,7 @@ dove compaiono le seguenti quantità:
 
 Mediante tale equazione è immediato individuare le perdite radiative della termocoppia come:
 \begin{equation}
-	\Delta T_{\textit{RAD}} = T_{\textit{GAS}} -T_G = \sigma \varepsilon (T_G^4-T_A^4) / h
+	\Delta T_{\textit{RAD}} = T_{\textit{GAS}} -T_G = \sigma \varepsilon (T_G^4-T_A^4) / h \label{eq:deltaT}
 \end{equation}
 
 L'utilizzo di questa formula richiede la stima di \gls{symb:emissivita} e \gls{symb:h}: per la prima si fornisce un valore, mentre per la seconda viene fornita una correlazione semi-empirica nella forma:
@@ -80,3 +80,16 @@ Si adottano le seguenti ipotesi:
 Si chiede di stimare le perdite radiative alla velocità fornita e quindi la temperatura del gas. Si ripeta la stima per \gls{symb:Vg} pari a 50 m/s. 
 
 \subsection{Risoluzione}
+La risoluzione del problema prevede di utilizzare Eq.(\ref{eq:deltaT}) per calcolare \gls{symb:Tgas}, da cui poi si ricava $\Delta T_{\textit{RAD}}$. Poiché \gls{symb:h} dipende da \gls{symb:Tgas} attraverso \gls{symb:re}, \gls{symb:Pr} e altre grandezze, si risolve il problema iterativamente a partire da un valore ragionevole di \gls{symb:Tgas}. Con tale valore si determinano le proprietà dell'aria e si trova un valore di \gls{symb:h}, che a sua volta permette di determinare il valore aggiornato di \gls{symb:Tgas}. Si arresta il processo quando due iterazioni successive differiscono di meno di 1 K.
+Tale processo viene ripetuto analogamente per serie corta e serie lunga di dati. 
+Le proprietà dell'aria vengono ottenute per interpolazione lineare dei dati in App.\ref{app:aria}.
+
+In Tab. si riportano integralmente i calcoli impiegati per raggiungere il risultato relativo alla serie corta con una velocità di 1 m/s. 
+
+
+
+In Tab. vengono riportati sinteticamente i risultati relativi alla serie lunga di dati, sempre a 1 m/s.
+
+
+Si osserva che in entrambi i casi non si esce dall'intervallo di \gls{symb:re} per cui è valida la correlazione fornita. Inoltre si nota che le perdite radiative sono più significative quando la temperatura del giunto caldo è più alta. 
+
