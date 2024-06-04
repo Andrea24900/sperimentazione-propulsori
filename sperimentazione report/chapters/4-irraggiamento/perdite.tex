@@ -82,7 +82,7 @@ Si chiede di stimare le perdite radiative alla velocità fornita e quindi la tem
 \subsection{Risoluzione}
 La risoluzione del problema prevede di utilizzare Eq.(\ref{eq:deltaT}) per calcolare \gls{symb:Tgas}, da cui poi si ricava $\Delta T_{\textit{RAD}}$. Poiché \gls{symb:h} dipende da \gls{symb:Tgas} attraverso \gls{symb:re}, \gls{symb:Pr} e altre grandezze, si risolve il problema iterativamente a partire da un valore ragionevole di \gls{symb:Tgas}. Con tale valore si determinano le proprietà dell'aria e si trova un valore di \gls{symb:h}, che a sua volta permette di determinare il valore aggiornato di \gls{symb:Tgas}. Si arresta il processo quando due iterazioni successive differiscono di meno di 1 K.
 Tale processo viene ripetuto analogamente per serie corta e serie lunga di dati. 
-Le proprietà dell'aria vengono ottenute per interpolazione lineare dei dati in App.\ref{app:aria}.
+Le proprietà dell'aria vengono ottenute per interpolazione lineare dei dati nella tabella fornita. 
 
 
 \paragraph{Risultati a 1 m/s}
@@ -156,3 +156,133 @@ In Tab.\ref{tab:risultatilong1} vengono riportati sinteticamente i risultati rel
 
 Si osserva che in entrambi i casi non si esce dall'intervallo di \gls{symb:re} per cui è valida la correlazione fornita. Inoltre si nota che le perdite radiative sono più significative quando la temperatura del giunto caldo è più alta. Si pone l'attenzione sull'elevato errore dovuto alle ingenti perdite per radiazione, che è di due ordini di grandezza superiore all'errore totale legato alla misura. 
 
+\paragraph{Risultati a 50 m/s}
+Lo stesso procedimento è seguito per individuare \gls{symb:Tgas} nel flusso a 50 m/s. Andando a utilizzare un valore iniziale di 1400 K, scelto inferiore al risultato a 1 m/s di 1506 K in quanto ci si attende che la convezione forzata sia agevolata dal flusso ad alta velocità. Utilizzando tale temperatura è calcolato un valore di \gls{symb:re} di 87 per la serie corta. La correlazione utilizzata inizialmente non è più valida. Un risultato analogo si ottiene con la serie lunga, in cui la temperatura iniziale è imposta a 1470 K e il \gls{symb:re} è pari a 80.
+
+Si sceglie di sostituirla con la seguente correlazione (Hilpert), valida per cilindri immersi in flussi (in direzione ortogonale al corpo) con \gls{symb:re} da 40 a 4000:
+\begin{equation}
+	Nu = 0.68 Re^{0.466}Pr^{1/3}
+\end{equation}
+
+
+
+A ogni iterazione è necessario verificare che si rimanga nel campo di validità della correlazione. Quest'ultima richiede di individuare la temperatura di film (\gls{symb:Tf}), ottenuta mediante la relazione: 
+\begin{equation}
+	T_F=\frac{T_G+T_{\textit{GAS}}}{2}
+\end{equation}
+
+Si riportano soltanto i risultati ottenuti per la serie corta, in Tab.\ref{tab:risultatishort50}, e per la serie lunga, in Tab.\ref{tab:risultatilong50}. La validità della correlazione è verificata in tutti i casi.  
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c}
+		\toprule
+		\toprule
+		& $\bm{T}$ [K]\\
+		\midrule
+		\midrule
+		\gls{symb:Tg} & 1356 \\
+		\midrule
+		\gls{symb:Tgas} & 1387 \\
+		\midrule
+		$\Delta T_{\textit{RAD}}$ & 31 \\
+		\bottomrule
+		\bottomrule	
+	\end{tabular}
+	\caption{Calcoli per la serie corta}
+	\label{tab:risultatishort50}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c}
+		\toprule
+		\toprule
+		& $\bm{T}$ [K]\\
+		\midrule
+		\midrule
+		\gls{symb:Tg} & 1432 \\
+		\midrule
+		\gls{symb:Tgas} & 1471 \\
+		\midrule
+		$\Delta T_{\textit{RAD}}$ & 39 \\
+		\bottomrule
+		\bottomrule	
+	\end{tabular}
+	\caption{Risultati per la serie lunga}
+	\label{tab:risultatilong50}
+\end{table}
+
+Come predetto, l'aumento della velocità del flusso porta a un significativo aumento dello scambio termico convettivo, con conseguente riduzione delle perdite per irraggiamento. Questo fenomeno è confermato dall'aumento di \gls{symb:h}, i cui valori sono riportati per i 4 casi in Tab.\ref{tab:risultatih}.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c}
+		\toprule
+		\toprule
+		\textbf{Caso}& $\bm{h}$  [W/m\textsuperscript{2}] \\
+		\midrule
+		\midrule
+		Serie corta, 1 m/s & 255 \\
+		\midrule
+		Serie corta, 50 m/s & 1226 \\
+		\midrule
+		Serie lunga, 1 m/s & 259 \\
+		\midrule
+		Serie lunga, 50 m/s & 1233 \\
+		\bottomrule
+		\bottomrule	
+	\end{tabular}
+	\caption{Valori di \gls{symb:h} nei 4 casi}
+	\label{tab:risultatih}
+\end{table}
+
+\paragraph{Sensitività alla variazione di $\bm{\varepsilon}$}
+Si presenta il risultato di uno studio di sensitività alla variazione di \gls{symb:emissivita}. Questa è una delle grandezze la cui misura è complessa e affetta da errore. Lo studio è proposto per la serie corta a 1 m/s in 5 valori di \gls{symb:emissivita}.
+
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"../sperimentazione nei propulsori/varepsilon"}
+	\caption{Variazione di \gls{symb:emissivita}}
+	\label{fig:variazioneepsilon}
+\end{figure}
+
+Si osserva come una variazione modesta di \gls{symb:emissivita} porti a grandi variazioni di $\Delta T_{\textit{RAD}}$. Si sottolinea quindi la necessità di caratterizzare il suo valore con elevata precisione.
+
+\paragraph{Sensitività a variazione di $\bm{V_G}$}
+Si riportano i risultati ottenuti a varie velocità del gas. A ognuna è associata la correlazione opportuna nella forma:
+\begin{equation}
+	Nu = C Re^{n}Pr^{1/3}
+\end{equation}
+Si riportano i valori di $C$ e $n$ per vari intervalli di \gls{symb:re}. Per il caso a 1 m/s si utilizza una correlazione diversa da quella iniziale. Come in precedenza, si utilizza \gls{symb:Tf} per il calcolo delle proprietà dell'aria.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c}
+		\toprule
+		\toprule
+		\textbf{Intervallo}&  $\bm{C}$ &  $\bm{n}$\\
+		\midrule
+		\midrule
+		0.4 - 4 & 0.989 & 0.33\\
+		\midrule
+		4 - 40 & 0.911 &0.385\\
+		\midrule
+		40 - 4000 & 0.683 &0.466\\
+		\midrule
+		4000 - 40000 & 0.193 &0.618\\
+		\bottomrule
+		\bottomrule	
+	\end{tabular}
+	\caption{Indici della correlazione per vari $Re$}
+	\label{tab:RErange}
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"../sperimentazione nei propulsori/varV"}
+	\caption{Variazione di \gls{symb:Vg}}
+	\label{fig:varv}
+\end{figure}
+
+Si osserva che all'aumentare di \gls{symb:Vg} inizialmente si ottiene una significativa riduzione delle perdite radiative. All'aumentare della velocità si tende a raggiungere un valore di $\Delta T_{\textit{RAD}}$ ridotto, attorno ai 30 K. Tuttavia la velocità che deve avere il flusso per ridurre le perdite diventa rapidamente elevata, dando origine ad altre perdite, per esempio quelle legate alla temperatura di ristagno del flusso che rallenta contro la termocoppia. 
