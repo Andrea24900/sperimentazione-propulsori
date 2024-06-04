@@ -1,1 +1,82 @@
-\section{Perdite per irraggiamento}
+\section{Perdite per irraggiamento della misura di temperatura}
+\subsection{Introduzione, dati e richieste}
+La misura di temperatura del gas combusto è affetta da varie sorgenti di errore, tra cui spiccano le perdite per irraggiamento. 
+Infatti il giunto caldo, essendo a temperatura significativamente più alta dell'ambiente circostante, irradia molto calore. Pertanto la temperatura misurata al giunto caldo non è quella effettiva del gas. 
+Al fine di stimare tali perdite è possibile scrivere un bilancio energetico, che uguaglia il calore scambiato per irraggiamento a quello trasferito per convezione: 
+\begin{equation}
+	h \,(T_{\textit{GAS}}-T_G) = \sigma \varepsilon (T_G^4-T_A^4)
+\end{equation}
+dove compaiono le seguenti quantità:
+\begin{itemize}
+	\item \gls{symb:h} coefficiente di scambio termico convettivo [W/m\textsuperscript{2}];
+	\item \gls{symb:Tgas}, \gls{symb:Tg}, \gls{symb:Ta} temperature del gas, del giunto e dell'ambiente [K];
+	\item \gls{symb:sigma} costante di Stefan-Boltzmann [W/(m\textsuperscript{2}K\textsuperscript{4})];
+	\item \gls{symb:emissivita} emissività della termocoppia.
+\end{itemize}
+
+Mediante tale equazione è immediato individuare le perdite radiative della termocoppia come:
+\begin{equation}
+	\Delta T_{\textit{RAD}} = T_{\textit{GAS}} -T_G = \sigma \varepsilon (T_G^4-T_A^4) / h
+\end{equation}
+
+L'utilizzo di questa formula richiede la stima di \gls{symb:emissivita} e \gls{symb:h}: per la prima si fornisce un valore, mentre per la seconda viene fornita una correlazione semi-empirica nella forma:
+\begin{equation}
+	Nu = hD/k = CRe^nPr^m
+\end{equation}
+funzione di:
+\begin{itemize}
+	\item \gls{symb:k} conducibilità termica [W/(mK)];
+	\item \gls{symb:Dt} diametro della termocoppia (modellata come un filo immerso in flusso ortogonale ad esso) [m];
+	\item \gls{symb:re} numero di Reynolds definito come $Re = D_T V_G/\nu$, dove $\nu$ è la viscosità cinematica dell'aria [m\textsuperscript{2}/s];
+	\item \gls{symb:Pr} numero di Prandtl;
+	\item $C$, $n$, $m$ sono dei coefficienti che variano con $Re$ e $Pr$.
+\end{itemize}
+
+Vengono forniti i seguenti dati, riportati in Tab.\ref{tab:datiirr}.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c}
+		\toprule
+		\toprule
+		\textbf{Dato} & \textbf{Valore}\\
+		\midrule
+		\midrule
+		\gls{symb:Ta} & 300 K\\
+		\midrule
+		\gls{symb:Tg} serie corta & 1356 K \\
+		\midrule
+		\gls{symb:Tg} serie lunga & 1432 K \\
+		\midrule
+		\gls{symb:Dt} & 3.5e-4 m \\
+		\midrule
+		\gls{symb:sigma} & 5.67e-8 W/(m\textsuperscript{2}K\textsuperscript{4})\\
+		\midrule
+		\gls{symb:emissivita} & 0.2 \\
+		\midrule
+		\midrule
+		\textbf{Correlazione} & $ Nu = Nu(Pr,Re) $\\
+		valida per & Re 1-35 \\
+		\midrule
+		$C$ & 0.8 \\
+		$n$ & 0.384 \\
+		$m$ & 0 \\
+		\bottomrule
+		\bottomrule
+	\end{tabular}
+\caption{Dati del problema}
+\label{tab:datiirr}
+\end{table}
+
+\paragraph{Ipotesi}
+Si adottano le seguenti ipotesi:
+\begin{itemize}
+	\item Utilizzare aria calda al posto dei gas combusti.
+	\item \gls{symb:Vg} pari a 1 m/s.
+	\item le perdite conduttive sono trascurabili.
+	\item \gls{symb:Tg} è pari alla temperatura media misurata nelle due serie di campioni.
+\end{itemize}
+
+\paragraph{Richieste}
+Si chiede di stimare le perdite radiative alla velocità fornita e quindi la temperatura del gas. Si ripeta la stima per \gls{symb:Vg} pari a 50 m/s. 
+
+\subsection{Risoluzione}
