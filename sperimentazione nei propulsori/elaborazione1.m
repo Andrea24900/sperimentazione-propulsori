@@ -128,98 +128,100 @@ err_stat_short=sigmaTmean_short*t_95_short;
 err_stat_long=sigmaTmean_long*t_95_long;
 
 save errori_stat.mat err_stat_short err_stat_long
-% %% Caratterizzazione temporale dei set
-% 
-% sampling_instants_short=[0:Ts:(length(short_vector)-1)*Ts];
-% sampling_instants_long=[0:Ts:(length(long_vector)-1)*Ts];
-% 
-% %% Plot dei due data set
-% 
-% figure(6)
-% plot(sampling_instants_short,short_vector,"LineWidth",linewidth);
-% grid on
-% xlabel("$t\, [s]$","Interpreter","latex","FontSize",fontsize)
-% ylabel("$T\, [^oC]$","Interpreter","latex","FontSize",fontsize)
-% %title("Time evolution of short data set","Interpreter","latex","FontSize",fontsize)
-% 
-% figure(7)
-% plot(sampling_instants_long,long_vector,"LineWidth",linewidth);
-% grid on
-% xlabel("$t\, [s]$","Interpreter","latex","FontSize",fontsize)
-% ylabel("$T\, [^oC]$","Interpreter","latex","FontSize",fontsize)
-% %
-% % title("Time evolution of long data set","Interpreter","latex","FontSize",fontsize)
-% 
-% %% Calcolo PSD dei dataset
-% 
-% % Dataset corto
-% % Note sulla finestratura e come viene usata in pwelch
-% % - l'argomento window scalare (M) indica di dividere i dataset in M
-% %   segmenti, su ciascuno viene poi usata una finestra di Hamming
-% % - l'argomento window vettoriale (lunghezza: L) divide i dataset in
-% %   segmenti di lunghezza L e su ciascuno applica la finestra specificata
-% %   in window mediante moltiplicazione del segmento per il vettore window
-% 
-% Number_of_windows = 10; %numero di finestre usate
-% L_window = floor(length(short_vector)/Number_of_windows);   % numero di valori nella finestra:
-% %   determinato dividendo la lunghezza del dataset per in numero di
-% %   finestre desiderate. Matlab usa 8 finestre di default. 
-% %   Aumentare il numero di finestre riduce la varianza e aumenta il bias.
-% %   Ridurre in numero di finestre riduce il bias e aumenta la varianza
-% window = hamming( L_window );   % hamming window with L_window values
-% n_overlap = floor(L_window/2);   % Overlap at 50% of window length: l'overlapping 
-% %   riduce il bias ma aumenta la correlazione
-% 
-% % Plot of the window
-% figure(8)
-% plot(window,"LineWidth",linewidth)
-% grid on
-% title('Window',"Interpreter","latex","FontSize",fontsize)
-% 
-% [ p_short, freq_psd ] = pwelch( short_vector, window, n_overlap, length(short_vector), fs, 'onesided' );
-% 
-% %      L'argomento 'onesided' calcola la PSD one sided e moltiplica la potenza a tutte le frequenze
-%     %      x2 al fine di conservare la potenza totale; ricordare opzione 'power' se mai servisse.
-%     %      Osservare che il fattore di scala è dovuto a
-%     %      G_uu(one-sided)=2*S_uu(two-sided)
-% 
-% % Plot:    
-%     figure(9)
-%     plot( freq_psd, 10*log10(p_short), '-' ,"LineWidth",linewidth)
-%     % si usa 10*log10 invece che 20*log10 in quanto è insita l'operazione
-%     % di calcolo di sqrt(p_uu). Per riferimento vedere slide su "Power
-%     % Spectral Densities and Spectral Densities" di "Random+Processes".
-%     grid on;
-%     xlabel( 'Frequency [Hz]',"Interpreter","latex","FontSize",fontsize);
-%     ylabel( 'PSD [dB/Hz]' ,"Interpreter","latex","FontSize",fontsize);
-%     title('One-sided Power Spectral Density for short data set',...
-%         "Interpreter","latex","FontSize",fontsize)
-% 
-% 
-% 
-% % Dataset lungo
-% 
-% Number_of_windows = 10; 
-% L_window = floor(length(long_vector)/Number_of_windows);   
-% window = hamming( L_window );   
-% n_overlap = floor(L_window/2);   
-% 
-% 
-% 
-% [ p_long, freq_psd ] = pwelch( long_vector, window, n_overlap, length(long_vector), fs, 'onesided' );
-% 
-% %      L'argomento 'onesided' calcola la PSD one sided e moltiplica la potenza a tutte le frequenze
-%     %      x2 al fine di conservare la potenza totale; ricordare opzione 'power' se mai servisse.
-%     %      Osservare che il fattore di scala è dovuto a
-%     %      G_uu(one-sided)=2*S_uu(two-sided)
-% 
-% % Plot:    
-%     figure(10)
-%     plot( freq_psd, 10*log10(p_long), '-' ,"LineWidth",linewidth)
-%     grid on;
-%     xlabel( 'Frequency [Hz]' ,"Interpreter","latex","FontSize",fontsize)
-%     ylabel( 'PSD [dB/Hz]' ,"Interpreter","latex","FontSize",fontsize)
-%     title('One-sided Power Spectral Density for long data set',"Interpreter","latex","FontSize",fontsize)
+%% Caratterizzazione temporale dei set
+
+sampling_instants_short=[0:Ts:(length(short_vector)-1)*Ts];
+sampling_instants_long=[0:Ts:(length(long_vector)-1)*Ts];
+
+%% Plot dei due data set
+
+time_short=figure(6);
+plot(sampling_instants_short,short_vector,"LineWidth",linewidth);
+grid on
+xlabel("$t\, [s]$","Interpreter","latex","FontSize",fontsize)
+ylabel("$T\, [^oC]$","Interpreter","latex","FontSize",fontsize)
+%title("Time evolution of short data set","Interpreter","latex","FontSize",fontsize)
+exportgraphics(time_short,'time_short.png','Resolution',600)
+time_long=figure(7);
+plot(sampling_instants_long,long_vector,"LineWidth",linewidth);
+grid on
+xlabel("$t\, [s]$","Interpreter","latex","FontSize",fontsize)
+ylabel("$T\, [^oC]$","Interpreter","latex","FontSize",fontsize)
+%
+% title("Time evolution of long data set","Interpreter","latex","FontSize",fontsize)
+exportgraphics(time_long,'time_long.png','Resolution',600)
+%% Calcolo PSD dei dataset
+
+% Dataset corto
+% Note sulla finestratura e come viene usata in pwelch
+% - l'argomento window scalare (M) indica di dividere i dataset in M
+%   segmenti, su ciascuno viene poi usata una finestra di Hamming
+% - l'argomento window vettoriale (lunghezza: L) divide i dataset in
+%   segmenti di lunghezza L e su ciascuno applica la finestra specificata
+%   in window mediante moltiplicazione del segmento per il vettore window
+
+Number_of_windows = 10; %numero di finestre usate
+L_window = floor(length(short_vector)/Number_of_windows);   % numero di valori nella finestra:
+%   determinato dividendo la lunghezza del dataset per in numero di
+%   finestre desiderate. Matlab usa 8 finestre di default. 
+%   Aumentare il numero di finestre riduce la varianza e aumenta il bias.
+%   Ridurre in numero di finestre riduce il bias e aumenta la varianza
+window = hamming( L_window );   % hamming window with L_window values
+
+n_overlap = floor(L_window/2);   % Overlap at 50% of window length: l'overlapping 
+%   riduce il bias ma aumenta la correlazione
+
+% Plot of the window
+figure(8)
+plot(window,"LineWidth",linewidth)
+grid on
+title('Window',"Interpreter","latex","FontSize",fontsize)
+
+[ p_short, freq_psd ] = pwelch( short_vector, window, n_overlap, length(short_vector), fs, 'onesided' );
+
+%      L'argomento 'onesided' calcola la PSD one sided e moltiplica la potenza a tutte le frequenze
+    %      x2 al fine di conservare la potenza totale; ricordare opzione 'power' se mai servisse.
+    %      Osservare che il fattore di scala è dovuto a
+    %      G_uu(one-sided)=2*S_uu(two-sided)
+
+% Plot:    
+    freq_short=figure(9);
+    plot( freq_psd, 10*log10(p_short), '-' ,"LineWidth",linewidth)
+    % si usa 10*log10 invece che 20*log10 in quanto è insita l'operazione
+    % di calcolo di sqrt(p_uu). Per riferimento vedere slide su "Power
+    % Spectral Densities and Spectral Densities" di "Random+Processes".
+    grid on;
+    xlabel( 'Frequency [Hz]',"Interpreter","latex","FontSize",fontsize);
+    ylabel( 'PSD [dB/Hz]' ,"Interpreter","latex","FontSize",fontsize);
+ %   title('One-sided Power Spectral Density for short data set',...
+ %       "Interpreter","latex","FontSize",fontsize)
+ exportgraphics(freq_short,'freq_short.png','Resolution',600)
+
+
+% Dataset lungo
+
+Number_of_windows = 10; 
+L_window = floor(length(long_vector)/Number_of_windows);   
+window = hamming( L_window );   
+n_overlap = floor(L_window/2);   
+
+
+
+[ p_long, freq_psd ] = pwelch( long_vector, window, n_overlap, length(long_vector), fs, 'onesided' );
+
+%      L'argomento 'onesided' calcola la PSD one sided e moltiplica la potenza a tutte le frequenze
+    %      x2 al fine di conservare la potenza totale; ricordare opzione 'power' se mai servisse.
+    %      Osservare che il fattore di scala è dovuto a
+    %      G_uu(one-sided)=2*S_uu(two-sided)
+
+% Plot:    
+    freq_long=figure(10);
+    plot( freq_psd, 10*log10(p_long), '-' ,"LineWidth",linewidth)
+    grid on;
+    xlabel( 'Frequency [Hz]' ,"Interpreter","latex","FontSize",fontsize)
+    ylabel( 'PSD [dB/Hz]' ,"Interpreter","latex","FontSize",fontsize)
+    exportgraphics(freq_long,'freq_long.png','Resolution',600)
+    % title('One-sided Power Spectral Density for long data set',"Interpreter","latex","FontSize",fontsize)
 
 
 

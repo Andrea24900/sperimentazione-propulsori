@@ -126,4 +126,44 @@ dove \gls{symb:t95} è ricavato dalla distribuzione t per un intervallo di confi
 
 Da Tab.\ref{tab:errorestat} si nota come un numero elevato di campioni garantisca un errore statistico molto contenuto, che risulta minore di \gls{symb:sigmaT} di un ordine di grandezza. Questo risultato deriva dalla presenza di $\sqrt{N}$ in Eq.(\ref{eq:sigmaTmean}), il cui valore ammonta a $\sim$ 40 per la prima serie, a $\sim$ 100 per la seconda. Per quanto riguarda il valore di \gls{symb:t95}, si osserva che tende al valore asintotico ($\nu \rightarrow \infty $) di 1.960 in entrambi i casi, quindi l'influenza di tale parametro sull'errore statistico è pari per le due serie.
 
-ANALISI DI FOURIER
+\paragraph{Ulteriori analisi sui dati}
+Si riportano i risultati di una analisi della Power Spectral Density del segnale di temperatura misurato. L'evoluzione temporale delle due serie di misure (Fig.\ref{fig:timeboth}) suggerisce che ci possa essere una dinamica che influenza l'andamento della temperatura in maniera macroscopica. 
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.95\linewidth]{"../sperimentazione nei propulsori/time_short"}
+		\caption{Serie corta}
+		\label{fig:timeshort}
+	\end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+	\centering
+	\includegraphics[width=0.95\linewidth]{"../sperimentazione nei propulsori/time_long"}
+	\caption{Serie lunga}
+	\label{fig:timelong}
+\end{subfigure}
+\caption{Evoluzione temporale dei due segnali}
+\label{fig:timeboth}
+\end{figure}
+
+Viene quindi calcolata la PSD mediante il metodo di Welch, con il segnale che viene diviso in 10 intervalli, ciascuno dei quali passato attraverso una finestra di Hamming, con overlap al 50 \%. Il risultato (Fig.\ref{fig:freqboth}) mostra che il segnale contiene componenti in frequenza di entità costante, come è atteso da un segnale costante nel tempo affetto da rumore assimilabile a rumore bianco. Tuttavia compare un picco di densità di potenza a bassa frequenza, che suggerisce la presenza di oscillazioni significative a bassa frequenza, legate possibilmente a una dinamica lenta. 
+
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+	\includegraphics[width=0.95\linewidth]{"../sperimentazione nei propulsori/freq_short"}
+	\caption{Serie corta}
+	\label{fig:freqshort}
+	\end{subfigure}%
+	\begin{subfigure}{0.5\textwidth}
+	\centering
+\includegraphics[width=0.95\linewidth]{"../sperimentazione nei propulsori/freq_long"}
+\caption{Serie lunga}
+\label{fig:freqlong}
+	\end{subfigure}
+	\caption{PSD (one-sided) dei due segnali}
+	\label{fig:freqboth}
+\end{figure}
