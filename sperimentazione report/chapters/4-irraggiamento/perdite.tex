@@ -1,7 +1,7 @@
 \section{Perdite per irraggiamento della misura di temperatura}
 \subsection{Introduzione, dati e richieste}
 La misura di temperatura del gas combusto è affetta da varie sorgenti di errore, tra cui spiccano le perdite per irraggiamento. 
-Infatti il giunto caldo, essendo a temperatura significativamente più alta dell'ambiente circostante, irradia molto calore. Pertanto la temperatura misurata al giunto caldo non è quella effettiva del gas. 
+Infatti il giunto caldo, essendo a temperatura significativamente più alta dell'ambiente circostante, è affetto da significativo scambio termico radiativo. Pertanto la temperatura misurata al giunto caldo non è quella effettiva del gas. 
 Al fine di stimare tali perdite è possibile scrivere un bilancio energetico, che uguaglia il calore scambiato per irraggiamento a quello trasferito per convezione: 
 \begin{equation}
 	h \,(T_{\textit{GAS}}-T_G) = \sigma \varepsilon (T_G^4-T_A^4)
@@ -104,11 +104,11 @@ In Tab.\ref{tab:calcolishort1} si riportano integralmente i calcoli impiegati pe
 		\bottomrule
 		\bottomrule	
 	\end{tabular}
-	\caption{Risultati per la serie corta}
+	\caption{Calcoli per la serie corta}
 	\label{tab:calcolishort1}
 \end{table}
 
-In Tab.\ref{tab:risultatishort1} vengono riportati sinteticamente i risultati relativi alla serie lunga di dati, sempre a 1 m/s.
+In Tab.\ref{tab:risultatishort1} vengono riportati sinteticamente i risultati relativi alla serie corta di dati, a 1 m/s.
 
 \begin{table}[H]
 	\centering
@@ -126,7 +126,7 @@ In Tab.\ref{tab:risultatishort1} vengono riportati sinteticamente i risultati re
 		\bottomrule
 		\bottomrule	
 	\end{tabular}
-	\caption{Calcoli per la serie corta}
+	\caption{Risultati per la serie corta}
 	\label{tab:risultatishort1}
 \end{table}
 
@@ -157,7 +157,7 @@ In Tab.\ref{tab:risultatilong1} vengono riportati sinteticamente i risultati rel
 Si osserva che in entrambi i casi non si esce dall'intervallo di \gls{symb:re} per cui è valida la correlazione fornita. Inoltre si nota che le perdite radiative sono più significative quando la temperatura del giunto caldo è più alta. Si pone l'attenzione sull'elevato errore dovuto alle ingenti perdite per radiazione, che è di due ordini di grandezza superiore all'errore totale legato alla misura. 
 
 \paragraph{Risultati a 50 m/s}
-Lo stesso procedimento è seguito per individuare \gls{symb:Tgas} nel flusso a 50 m/s. Andando a utilizzare un valore iniziale di 1400 K, scelto inferiore al risultato a 1 m/s di 1506 K in quanto ci si attende che la convezione forzata sia agevolata dal flusso ad alta velocità. Utilizzando tale temperatura è calcolato un valore di \gls{symb:re} di 87 per la serie corta. La correlazione utilizzata inizialmente non è più valida. Un risultato analogo si ottiene con la serie lunga, in cui la temperatura iniziale è imposta a 1470 K e il \gls{symb:re} è pari a 80.
+Lo stesso procedimento è seguito per individuare \gls{symb:Tgas} nel flusso a 50 m/s. Si utilizza un valore iniziale di 1400 K, scelto inferiore al risultato a 1 m/s di 1506 K, in quanto ci si attende che la convezione forzata sia agevolata dal flusso ad alta velocità. Utilizzando tale temperatura è calcolato un valore di \gls{symb:re} di 87 per la serie corta. La correlazione utilizzata inizialmente non è più valida. Un risultato analogo si ottiene con la serie lunga, in cui la temperatura iniziale è imposta a 1470 K e il \gls{symb:re} è pari a 80.
 
 Si sceglie di sostituirla con la seguente correlazione (Hilpert), valida per cilindri immersi in flussi (in direzione ortogonale al corpo) con \gls{symb:re} da 40 a 4000:
 \begin{equation}
@@ -189,7 +189,7 @@ Si riportano soltanto i risultati ottenuti per la serie corta, in Tab.\ref{tab:r
 		\bottomrule
 		\bottomrule	
 	\end{tabular}
-	\caption{Calcoli per la serie corta}
+	\caption{Risultati per la serie corta}
 	\label{tab:risultatishort50}
 \end{table}
 
@@ -238,7 +238,7 @@ Come predetto, l'aumento della velocità del flusso porta a un significativo aum
 \end{table}
 
 \paragraph{Sensitività alla variazione di $\bm{\varepsilon}$}
-Si presenta il risultato di uno studio di sensitività alla variazione di \gls{symb:emissivita}. Questa è una delle grandezze la cui misura è complessa e affetta da errore. Lo studio è proposto per la serie corta a 1 m/s in 5 valori di \gls{symb:emissivita}.
+Si presenta il risultato di uno studio di sensitività alla variazione di \gls{symb:emissivita}. Questa è una delle grandezze la cui misura è complessa e affetta da significativo errore. Lo studio è proposto per la serie corta a 1 m/s in 5 valori di \gls{symb:emissivita}.
 
 \begin{figure} [H]
 	\centering
@@ -247,12 +247,12 @@ Si presenta il risultato di uno studio di sensitività alla variazione di \gls{s
 	\label{fig:variazioneepsilon}
 \end{figure}
 
-Si osserva come una variazione modesta di \gls{symb:emissivita} porti a grandi variazioni di $\Delta T_{\textit{RAD}}$. Si sottolinea quindi la necessità di caratterizzare il suo valore con elevata precisione.
+Si osserva come una variazione modesta di \gls{symb:emissivita} porti a grandi variazioni di $\Delta T_{\textit{RAD}}$. Si sottolinea quindi la necessità di caratterizzare il suo valore con elevata precisione. L'andamento osservato è lineare, quanto meno nel campo di valori studiati.
 
 \paragraph{Sensitività a variazione di $\bm{V_G}$}
 Si riportano i risultati ottenuti a varie velocità del gas. A ognuna è associata la correlazione opportuna nella forma:
 \begin{equation}
-	Nu = C Re^{n}Pr^{1/3}
+	Nu = C Re^{n}Pr^{1/3} \label{eq:corrnew}
 \end{equation}
 Si riportano i valori di $C$ e $n$ per vari intervalli di \gls{symb:re}. Per il caso a 1 m/s si utilizza una correlazione diversa da quella iniziale. Come in precedenza, si utilizza \gls{symb:Tf} per il calcolo delle proprietà dell'aria.
 
@@ -285,4 +285,4 @@ Si riportano i valori di $C$ e $n$ per vari intervalli di \gls{symb:re}. Per il 
 	\label{fig:varv}
 \end{figure}
 
-Si osserva che all'aumentare di \gls{symb:Vg} inizialmente si ottiene una significativa riduzione delle perdite radiative. All'aumentare della velocità si tende a raggiungere un valore di $\Delta T_{\textit{RAD}}$ ridotto, attorno ai 30 K. Tuttavia la velocità che deve avere il flusso per ridurre le perdite diventa rapidamente elevata, dando origine ad altre perdite, per esempio quelle legate alla temperatura di ristagno del flusso che rallenta contro la termocoppia. 
+Si osserva che all'aumentare di \gls{symb:Vg} inizialmente si ottiene una significativa riduzione delle perdite radiative. All'aumentare della velocità si tende a raggiungere un valore di $\Delta T_{\textit{RAD}}$ ridotto, pari ai 31 K precedentemente individuati. Tuttavia la velocità che deve avere il flusso per ridurre le perdite diventa rapidamente elevata, dando origine ad altro errore, per esempio quello legato agli effetti di comprimibilità. Si nota, infine, che il valore a 1 m/s con la prima correlazione è molto simile a quello a pari velocità con la correlazione di Eq.(\ref{eq:corrnew}).

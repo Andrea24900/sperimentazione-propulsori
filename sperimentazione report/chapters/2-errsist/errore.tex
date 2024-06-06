@@ -1,7 +1,7 @@
 \section{Individuazione legge calibrazione statica e stima dell'errore sistematico} \label{sec:legge}
 
 \paragraph{Dati e richieste}
-Viene fornita la tabella di calibrazione statica di una termocoppia di tipo B, riportata in Tab. \ref{tab:calibrazione statica}. Si chiede di ricavare la relazione temperatura misurata-tensione mediante analisi di regressione, di determinare l'errore associato a tale processo, nonché il grado di adattamento del modello ai dati sperimentali. Infine si richiede di determinare l'errore totale associato alle misure di temperatura delle due serie di Sez.\ref{sez:misureT}.
+Viene fornita la tabella di calibrazione statica di una termocoppia di tipo B, riportata in Tab.\ref{tab:calibrazione statica}. Si chiede di ricavare la relazione temperatura misurata-tensione mediante analisi di regressione, di determinare l'errore associato a tale processo, nonché il grado di adattamento del modello ai dati sperimentali. Infine si richiede di determinare l'errore totale associato alle misure di temperatura delle due serie di Sez.\ref{sez:misureT}.
 
 \begin{table}[H]
 	\centering
@@ -68,7 +68,7 @@ Queste osservazioni motivano uno studio di ottimizzazione, con lo scopo di trova
 Poiché le due serie di dati presentano estremi differenti, lo studio viene proposto separatamente per entrambe.
 
 
-\subsection{Risoluzione per serie corta}
+\subsection{Risoluzione per la serie corta}
 Si presenta lo studio di ottimo per la prima serie di dati, svolto con le stesse modalità anche per la seconda. Il punto di partenza sono gli estremi della serie di dati, ossia la minima e massima \gls{symb:T} misurata, che assumono rispettivamente il valore di 953 \textsuperscript{o}C e di 1193 \textsuperscript{o}C. Da Tab.\ref{tab:calibrazione statica} si ricava che il minimo intervallo di dati su cui svolgere la regressione va da 950 \textsuperscript{o}C a 1200 \textsuperscript{o}C. A ogni iterazione questo secondo intervallo viene ampliato di un valore a sinistra dell'estremo inferiore e a destra dell'estremo superiore. Il più ampio intervallo possibile va da 400 \textsuperscript{o}C a 1550 \textsuperscript{o}C. 
 
 Per ogni intervallo di dati di calibrazione sono determinati i coefficienti di regressione dal primo al quarto ordine (mediante funzione \textit{polyfit} di Matlab), poi vengono calcolate le stime $\tilde{y_i}$ per tutti gli ordini; successivamente si calcolano i $\sigma_{\varepsilon}$ e, infine, i valori di \gls{symb:errsist}. Per ogni iterazione viene selezionato l'ordine del polinomio interpolante che garantisce il minimo \gls{symb:errsist}; dopo aver ripetuto l'analisi per tutti gli intervalli si individua il miglior errore sistematico globale. 
@@ -173,7 +173,7 @@ Questo effetto è determinante nella penalizzazione della soluzione con interval
 \end{figure}
 
 \subsection{Risoluzione per la serie lunga}
-Si impiega una strategia analoga per caratterizzare la serie lunga. Quest'ultima presenta una limitata possibilità di ottimizzazione in quanto l'intervallo di temperatura da misurare è da 931 \textsuperscript{o}C a 1449 \textsuperscript{o}C: questi valori comportano l'utilizzo di gran parte della tabella di calibrazione statica. Poiché l'analisi svolta è analoga alla precedente, vengono riportati soltanto i risultati. Analogamente a prima, si osserva che l'errore sistematico ha un impatto molto limitato sull'errore totale, dominato ancora una volta dall'errore statistico.
+Si impiega una strategia analoga per caratterizzare la serie lunga. Quest'ultima presenta una limitata possibilità di ottimizzazione, in quanto l'intervallo di temperatura da misurare è da 931 \textsuperscript{o}C a 1449 \textsuperscript{o}C: questi valori comportano l'utilizzo di gran parte della tabella di calibrazione statica. Poiché l'analisi svolta è analoga alla precedente, vengono riportati soltanto i risultati. Similmente a prima, si osserva che l'errore sistematico ha un impatto molto limitato sull'errore totale, dominato ancora una volta dall'errore statistico.
 Andando a paragonare gli errori sistematici si nota che non è raggiunto il livello di ottimalità del campo di misura adottato per la serie corta di dati.  La legge di regressione che fornisce il miglior risultato è ancora quella del quarto ordine. 
 
 \begin{figure} [H]
@@ -244,16 +244,16 @@ Andando a paragonare gli errori sistematici si nota che non è raggiunto il live
 \section{Stima dell'errore di quantizzazione e totale}
 Sono fornite informazioni riguardanti l'unità di acquisizione dati utilizzata per le due serie di misure di temperatura. Si richiede di valutare l'errore di quantizzazione e di stimare l'errore totale (statistico-sistematico-quantizzazione).
 
-Il sistema di acquisizione dati prevede che il segnale in tensione in uscita dalla termocoppia venga amplificato di 100 volte e sia acquisito con un convertitore A/D a 12 bit, campo 0-10 V.
+Il sistema di acquisizione dati prevede che il segnale in tensione, in uscita dalla termocoppia, venga amplificato di 100 volte e sia acquisito con un convertitore A/D a 12 bit, campo 0-10 V.
 
 \paragraph{Risoluzione}
-Per un convertitore A/D a 12 bit ($n_{bit}$) con campo di misura 0-10 V ($\Delta V$) l'errore di quantizzazione (in V) può essere stimato con: 
+Per un convertitore A/D a 12 bit (\gls{symb:nbit}) con campo di misura 0-10 V ($\Delta V$) l'errore di quantizzazione (in V) può essere stimato con: 
 \begin{equation}
 	\epsilon_{\textit{QUANT,V}} = \frac{1}{2} \frac{\Delta V}{2^{n_{bit}}}
 \end{equation}
-Utilizzando questa espressione e passando alla tensione (\gls{symb:tens}) in mV si ottiene un valore di $	\epsilon_{\textit{QUANT,V}} $ pari a 1.221 mV. 
+Utilizzando questa espressione e passando alla tensione (\gls{symb:tens}) in mV si ottiene un valore di $\epsilon_{\textit{QUANT,V}} $ pari a 1.221 mV. 
 
-A questo valore è possibile applicare una prima correzione legata al fattore di amplificazione 100. Poi risulta necessario andare a trasformare questo valore in un errore in temperatura al fine di combinarlo con le altre sorgenti di errore. 
+A questo valore è possibile applicare una prima correzione legata al fattore di amplificazione 100. Poi risulta necessario andare a trasformare$\epsilon_{\textit{QUANT,V}}$ in un errore in temperatura al fine di combinarlo con le altre sorgenti di errore. 
 Per svolgere questi passaggi è necessario utilizzare la propagazione degli errori. Sia dato un errore $e_x$ associato a una misura $x^\star$. Si abbia una legge del tipo $y=f(x)$. Allora è possibile determinare $e_y$ come:
 \begin{equation}
 	e_y = \left. \frac{dy}{dx} \right\vert _{x=x^\star} \, e_x
@@ -364,7 +364,7 @@ Si riportano in Tab.\ref{tab:alternativa} i risultati di questa procedura. Il va
 	\caption{Risultati della procedura alternativa}
 	\label{tab:alternativa}
 \end{table}
-La procedura illustrata permette di osservare che l'utilizzo del valore di tensione corrispondente a \gls{symb:Tmean} diminuisce l'errore totale. Questo accade perché il gradiente di $T(V)$ è maggiore in corrispondenza di $V_{\overline{T}}$. Si riporta in grafico (Fig.\ref{fig:confronto}) l'andamento di tale funzione per la serie corta. Lo stesso fenomeno accade per la serie lunga. 
+La procedura illustrata permette di osservare che l'utilizzo del valore di tensione corrispondente a \gls{symb:Tmean} diminuisce l'errore totale. Questo accade perché il gradiente di $T(V)$ è minore in corrispondenza di $V_{\overline{T}}$. Si riporta in grafico (Fig.\ref{fig:confronto}) l'andamento di tale funzione per la serie corta. Lo stesso fenomeno accade per la serie lunga. 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.6\linewidth]{"../sperimentazione nei propulsori/confronto"}
