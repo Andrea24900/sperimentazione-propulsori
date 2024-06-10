@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.20)  6 JUN 2024 15:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.20)  10 JUN 2024 09:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1467,21 +1467,21 @@ ine 175.
 (pdftex.def)             Requested size: 236.01561pt x 141.86018pt.
  [34] [35 <./chapters/5-laboratorio/tabellaqmcd.png> <./chapters/5-laboratorio/
 tabelladeltapcd.png> <./chapters/5-laboratorio/tabellaTcd.png>]
-<chapters/5-laboratorio/dipendenzaRe.png, id=785, 362.3136pt x 217.7736pt>
-File: chapters/5-laboratorio/dipendenzaRe.png Graphic file (type png)
-<use chapters/5-laboratorio/dipendenzaRe.png>
-Package pdftex.def Info: chapters/5-laboratorio/dipendenzaRe.png  used on input
- line 196.
-(pdftex.def)             Requested size: 236.01561pt x 141.86018pt.
-<chapters/5-laboratorio/dipendenzama.png, id=790, 362.3136pt x 217.7736pt>
-File: chapters/5-laboratorio/dipendenzama.png Graphic file (type png)
-<use chapters/5-laboratorio/dipendenzama.png>
-Package pdftex.def Info: chapters/5-laboratorio/dipendenzama.png  used on input
- line 202.
-(pdftex.def)             Requested size: 236.01561pt x 141.86018pt.
+<chapters/5-laboratorio/dipendenzaRe2.png, id=789, 362.3136pt x 217.7736pt>
+File: chapters/5-laboratorio/dipendenzaRe2.png Graphic file (type png)
+<use chapters/5-laboratorio/dipendenzaRe2.png>
+Package pdftex.def Info: chapters/5-laboratorio/dipendenzaRe2.png  used on inpu
+t line 198.
+(pdftex.def)             Requested size: 330.42041pt x 198.60294pt.
+<chapters/5-laboratorio/dipendenzaMa2.png, id=794, 362.3136pt x 217.7736pt>
+File: chapters/5-laboratorio/dipendenzaMa2.png Graphic file (type png)
+<use chapters/5-laboratorio/dipendenzaMa2.png>
+Package pdftex.def Info: chapters/5-laboratorio/dipendenzaMa2.png  used on inpu
+t line 205.
+(pdftex.def)             Requested size: 330.42041pt x 198.60294pt.
 
-[36 <./chapters/5-laboratorio/dipendenzaRe.png> <./chapters/5-laboratorio/dipen
-denzaMa.png>]) [37] (./chapters/appendici/A1_frequenze.tex) [38
+[36 <./chapters/5-laboratorio/dipendenzaRe2.png>]) [37 <./chapters/5-laboratori
+o/dipendenzaMa2.png>] (./chapters/appendici/A1_frequenze.tex) [38
 
 ] [39]
 
@@ -1517,36 +1517,40 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37551 strings out of 474171
- 732295 string characters out of 5747753
+ 37588 strings out of 474171
+ 732947 string characters out of 5747753
  1962542 words of memory out of 5000000
- 59140 multiletter control sequences out of 15000+600000
+ 59176 multiletter control sequences out of 15000+600000
  577282 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,18n,127p,2400b,1851s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<d:/tex/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><d:
-/tex/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/tex/
-texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><d:/tex/texliv
-e/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><d:/tex/texlive/2
-023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/tex/texlive/2023/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/tex/texlive/2023/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/tex/texlive/2023/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi8.pfb><d:/tex/texlive/2023/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmib10.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1
-/public/amsfonts/cmextra/cmmib8.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr10.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr8.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsl10.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y8.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
-b><d:/tex/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb><d:/
-tex/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/
-tex/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb><d:/tex/te
-xlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (40 pages, 3033557 bytes).
+
+pdfTeX warning (dest): name{glo:symb:S} has been referenced but does not exist,
+ replaced by a fixed one
+
+<d:/tex/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><d:/t
+ex/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/tex/te
+xlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><d:/tex/texlive/
+2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><d:/tex/texlive/202
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/tex/texlive/2023/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/tex/texlive/2023/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/tex/texlive/2023/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi8.pfb><d:/tex/texlive/2023/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmib10.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1/p
+ublic/amsfonts/cmextra/cmmib8.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr8.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsl10.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
+.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+<d:/tex/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb><d:/te
+x/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/te
+x/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb><d:/tex/texl
+ive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on main.pdf (40 pages, 3033795 bytes).
 PDF statistics:
- 948 PDF objects out of 1000 (max. 8388607)
- 807 compressed objects within 9 object streams
- 193 named destinations out of 1000 (max. 500000)
+ 953 PDF objects out of 1000 (max. 8388607)
+ 812 compressed objects within 9 object streams
+ 194 named destinations out of 1000 (max. 500000)
  312 words of extra memory for PDF output out of 10000 (max. 10000000)
 

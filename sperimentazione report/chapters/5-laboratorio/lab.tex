@@ -184,25 +184,31 @@ Infine, la variazione di \gls{symb:T} misurata non porta a variazioni significat
 
 \subsection{Dipendenza da Reynolds e Mach}
 Si riportano dei grafici rappresentanti la dipendenza di \gls{symb:cd} dal numero di Reynolds (Fig.\ref{fig:dipendenzare}) e dal numero di Mach (Fig.\ref{fig:dipendenzama}). 
-Al fine di calcolare il valore di \gls{symb:mu} al variare di \gls{symb:T} viene utilizzata la legge di Sutherland nella forma:
+Al fine di calcolare il valore di \gls{symb:mu} al variare di \gls{symb:T} viene utilizzata la legge di Sutherland:
 \begin{equation}
-	\mu = \mu_{\textit{REF}} \left( \frac{T}{T_{\textit{REF}}} \right)^{1.5}
+	\mu = \mu_{\textit{REF}} \left( \frac{T}{T_{\textit{REF}}} \right)^{1.5} \frac{T_{\textit{REF}}+S}{T+S}
 \end{equation}
-con $\mu_{\textit{REF}}$ = 1.03e-5 Pa\,s e $T_{\textit{REF}}$ = 273 K.
+Mediante $\mu_{\textit{REF}}$ = 1.03e-5 Pa\,s, $T_{\textit{REF}}$ = 273 K e $\mu_{\textit{100}}$ = 1.37e-5 Pa\,s a $T$ = 373 K si calcola \gls{symb:S} per il metano.
+Infine si calcola \gls{symb:mu} al variare della temperatura. 
 La variazione di \gls{symb:mu} è molto limitata in quanto \gls{symb:T} mantiene approssimativamente lo stesso valore per tutte le misure. 
+Per il calcolo di \gls{symb:ma} si utilizza \gls{symb:gamma} pari a 1.3 al fine di calcolare la velocità del suono locale. 
 
-\begin{figure} [H]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\linewidth]{chapters/5-laboratorio/dipendenzaRe}
-	\caption{Dipendenza di \gls{symb:cd} da \gls{symb:re}}
+	\includegraphics[width=0.7\linewidth]{chapters/5-laboratorio/dipendenzaRe2}
+		\caption{Dipendenza di \gls{symb:cd} da \gls{symb:re}}
 	\label{fig:dipendenzare}
 \end{figure}
-\begin{figure} [H]
+
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\linewidth]{chapters/5-laboratorio/dipendenzama}
+	\includegraphics[width=0.7\linewidth]{chapters/5-laboratorio/dipendenzaMa2}
 	\caption{Dipendenza di \gls{symb:cd} da \gls{symb:ma}}
 	\label{fig:dipendenzama}
 \end{figure}
+
+
+
 
 Dai grafici è possibile osservare che: 
 \begin{itemize}
