@@ -194,6 +194,8 @@
 (indexentry :tkey (("mdot" "\\glossentry{symb:mdot}") ) :locref "{}{32}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("V" "\\glossentry{symb:V}") ) :locref "{}{32}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("mdot" "\\glossentry{symb:mdot}") ) :locref "{}{32}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("T" "\\glossentry{symb:T}") ) :locref "{}{32}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("pamb" "\\glossentry{symb:pamb}") ) :locref "{}{32}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("R" "\\glossentry{symb:R}") ) :locref "{}{33}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("rho" "\\glossentry{symb:rho}") ) :locref "{}{33}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("p" "\\glossentry{symb:p}") ) :locref "{}{33}" :attr "pageglsnumberformat" ) 
@@ -228,3 +230,4 @@
 (indexentry :tkey (("cd" "\\glossentry{symb:cd}") ) :locref "{}{37}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("re" "\\glossentry{symb:re}") ) :locref "{}{37}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("ma" "\\glossentry{symb:ma}") ) :locref "{}{37}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("cd" "\\glossentry{symb:cd}") ) :locref "{}{40}" :attr "pageglsnumberformat" ) 

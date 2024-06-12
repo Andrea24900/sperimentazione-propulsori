@@ -150,6 +150,38 @@ ylabel("$T\, [^oC]$","Interpreter","latex","FontSize",fontsize)
 %
 % title("Time evolution of long data set","Interpreter","latex","FontSize",fontsize)
 exportgraphics(time_long,'time_long.png','Resolution',600)
+
+%% calcolo trasformata di Fourier
+fft_short=fft(short_vector-mean_short,length(short_vector));
+fft_long=fft(long_vector-mean_long,length(long_vector));
+fft_short=fftshift(fft_short);
+fft_long=fftshift(fft_long);
+
+mag_short=abs(fft_short/length(fft_short));
+mag_short=mag_short(ceil(length(mag_short)/2):end);
+mag_short(2:end-1)=2*mag_short(2:end-1);
+mag_short(1)=1;
+mag_long=abs(fft_long/length(fft_long));
+mag_long=mag_long(ceil(length(mag_long)/2):end);
+mag_long(2:end-1)=2*mag_long(2:end-1);
+mag_long(1)=1;
+freq_vect_short=linspace(0,50,ceil(length(fft_short)/2));
+
+magplot_short=figure(30);
+semilogy(freq_vect_short,(mag_short),'LineWidth',linewidth);
+grid on
+xlabel("$f$ [Hz]","Interpreter","latex","FontSize",fontsize)
+ylabel("$|T(f)| [^oC^2]$","Interpreter","latex","FontSize",fontsize)
+exportgraphics(magplot_short,'magplot_short.png','Resolution',600)
+
+freq_vect_long=linspace(0,50,ceil(length(fft_long)/2));
+
+magplot_long=figure(40);
+semilogy(freq_vect_long,(mag_long),'LineWidth',linewidth);
+grid on
+xlabel("$f$ [Hz]","Interpreter","latex","FontSize",fontsize)
+ylabel("$|T(f)| [^oC^2]$","Interpreter","latex","FontSize",fontsize)
+exportgraphics(magplot_long,'magplot_long.png','Resolution',600)
 %% Calcolo PSD dei dataset
 
 % Dataset corto
@@ -177,7 +209,7 @@ plot(window,"LineWidth",linewidth)
 grid on
 title('Window',"Interpreter","latex","FontSize",fontsize)
 
-[ p_short, freq_psd ] = pwelch( short_vector, window, n_overlap, length(short_vector), fs, 'onesided' );
+[ p_short, freq_psd ] = pwelch( short_vector-mean_short, window, n_overlap, length(short_vector), fs, 'onesided' );
 
 %      L'argomento 'onesided' calcola la PSD one sided e moltiplica la potenza a tutte le frequenze
     %      x2 al fine di conservare la potenza totale; ricordare opzione 'power' se mai servisse.
@@ -207,7 +239,7 @@ n_overlap = floor(L_window/2);
 
 
 
-[ p_long, freq_psd ] = pwelch( long_vector, window, n_overlap, length(long_vector), fs, 'onesided' );
+[ p_long, freq_psd ] = pwelch( long_vector-mean_long, window, n_overlap, length(long_vector), fs, 'onesided' );
 
 %      L'argomento 'onesided' calcola la PSD one sided e moltiplica la potenza a tutte le frequenze
     %      x2 al fine di conservare la potenza totale; ricordare opzione 'power' se mai servisse.

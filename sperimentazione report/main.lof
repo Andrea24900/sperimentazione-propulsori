@@ -4,22 +4,24 @@
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Frequenze relative per entrambe le serie}}{8}{figure.caption.8}%
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Frequenze cumulate normalizzate per entrambe le serie}}{9}{figure.caption.9}%
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Evoluzione temporale dei due segnali}}{10}{figure.caption.12}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Autospettro (one-sided) dei due segnali}}{11}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Serie di dati della tabella di calibrazione statica}}{13}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Risultati del processo di ottimizzazione}}{14}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Curva di calibrazione statica}}{15}{figure.caption.18}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Errore sistematico della soluzione ottimale per vari ordini di regressione}}{16}{figure.caption.20}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Confronto errori per la serie 950-1200 \textsuperscript {o}C}}{16}{figure.caption.21}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Risultati del processo di ottimizzazione}}{17}{figure.caption.22}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Curva di calibrazione statica}}{17}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Confronto tra gradiente e legge di calibrazione}}{21}{figure.caption.29}%
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Variazione di \gls {symb:emissivita}}}{26}{figure.caption.37}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Variazione di \gls {symb:Vg}}}{27}{figure.caption.39}%
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Schema del banco prova}}{28}{figure.caption.40}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Schema del diaframma (Fonte: UNI EN ISO 5167-1 Figura 5)}}{28}{figure.caption.41}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Scheda tecnica del manometro}}{31}{figure.caption.44}%
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Dipendenza di \gls {symb:cd} da $q_M$}}{35}{figure.caption.48}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Dipendenza di \gls {symb:cd} da $\Delta p$}}{35}{figure.caption.49}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Dipendenza di \gls {symb:cd} da \gls {symb:T}}}{35}{figure.caption.50}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Dipendenza di \gls {symb:cd} da \gls {symb:re}}}{36}{figure.caption.51}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Dipendenza di \gls {symb:cd} da \gls {symb:ma}}}{37}{figure.caption.52}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Evoluzione temporale dei due segnali}}{10}{figure.caption.13}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Autospettro (one-sided) dei due segnali}}{11}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Serie di dati della tabella di calibrazione statica}}{13}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Risultati del processo di ottimizzazione}}{14}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Curva di calibrazione statica}}{15}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Errore sistematico della soluzione ottimale per vari ordini di regressione}}{16}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Confronto errori per la serie 950-1200 \textsuperscript {o}C}}{16}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Risultati del processo di ottimizzazione}}{17}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Curva di calibrazione statica}}{17}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Confronto tra gradiente e legge di calibrazione}}{21}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Variazione di \gls {symb:emissivita}}}{26}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Variazione di \gls {symb:Vg}}}{27}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Schema del banco prova}}{28}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Schema del diaframma (Fonte: UNI EN ISO 5167-1 Figura 5)}}{28}{figure.caption.42}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Scheda tecnica del manometro}}{31}{figure.caption.45}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Dipendenza di \gls {symb:cd} da $q_M$}}{35}{figure.caption.49}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Dipendenza di \gls {symb:cd} da $\Delta p$}}{35}{figure.caption.50}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Dipendenza di \gls {symb:cd} da \gls {symb:T}}}{35}{figure.caption.51}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Dipendenza di \gls {symb:cd} da \gls {symb:re}}}{36}{figure.caption.52}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Dipendenza di \gls {symb:cd} da \gls {symb:ma}}}{37}{figure.caption.53}%
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Schema del banco prova}}{40}{figure.caption.56}%

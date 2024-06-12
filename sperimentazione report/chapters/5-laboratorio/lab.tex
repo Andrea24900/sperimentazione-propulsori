@@ -1,7 +1,7 @@
-\section{Misura di C\textsubscript{D} al banco prova}
+\section{Misura di C\textsubscript{D} al banco prova} \label{sez:cd}
 
 \subsection{Presentazione del banco prova, dati e richieste}
-Viene realizzato un banco prova per misure di temperatura mediante termocoppia. Tale banco è alimentato da gas naturale, che passa per un misuratore di portata a galleggiante, raggiunge una camera di stanca dove se ne misura la temperatura, poi viene accelerato da un ugello in un eiettore, che fornisce la portata d'aria per permettere la combustione. Un misuratore di pressione differenziale è inserito tra camera di stanca e ambiente esterno. Infine la miscela è combusta in un bruciatore. 
+Viene realizzato un banco prova per misure di temperatura mediante termocoppia. Tale banco è alimentato da gas naturale, che passa per un misuratore di portata a galleggiante, raggiunge una camera di stanca dove se ne misura la temperatura, poi viene accelerato da un ugello in un eiettore, che fornisce la portata d'aria per permettere la combustione. Un misuratore di pressione differenziale è inserito tra camera di stanca e ambiente esterno. Infine la miscela è combusta in un bruciatore. Lo schema completo del banco prova è consultabile in App.\ref{app:banco}. 
 
 Si richiede di misurare il coefficiente di efflusso (\gls{symb:cd}) dell'ugello utilizzando le misure a disposizione, di studiare l'andamento rispetto alla portata reale e al variare della pressione differenziale; infine, studiare l'andamento al variare di \gls{symb:ma} e \gls{symb:re}.
 
@@ -37,7 +37,7 @@ Lo svolgimento della misura richiede l'assunzione di alcune ipotesi, alcune dell
 
 \begin{itemize}
 	\item Assunzione di profilo di velocità uniforme nella sezione di efflusso.
-	\item Effetti di viscosità trascurabili e flusso incomprimibile (per la validità del teorema di Bernoulli).
+	\item Effetti di viscosità trascurabili e flusso incomprimibile (per la validità del teorema di Bernoulli): tale ipotesi permette di assumere che \gls{symb:T} sia costante nel flusso e che l'ugello scarichi a \gls{symb:pamb}. 
 	\item Gas naturale considerabile come puro metano, nonché come gas perfetto.
 \end{itemize}
 
@@ -214,5 +214,5 @@ Dai grafici è possibile osservare che:
 \begin{itemize}
 	\item i primi valori di \gls{symb:cd} non sono significativi;
 	\item \gls{symb:re} varia tra 3000 e 9000; ne deriva che il flusso nell'ugello è turbolento e valgono le ipotesi di profilo di velocità uniforme e di assenza di effetti viscosi significativi;
-	\item \gls{symb:ma} è sempre ridotto, pertanto vale l'ipotesi di flusso incomprimibile.
+	\item \gls{symb:ma} è sempre ridotto, pertanto vale l'ipotesi di flusso incomprimibile: di conseguenza le perdite legate al ristagno del flusso sulla termocoppia sono considerate trascurabili. 
 \end{itemize}

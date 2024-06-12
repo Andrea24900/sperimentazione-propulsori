@@ -1,6 +1,6 @@
 \section{Misure di temperatura mediante termocoppia} \label{sez:misureT}
 \paragraph{Dati e richieste}
-Vengono fornite due serie di misure di temperatura allo scarico di una camera di combustione, eseguite mediante termocoppia di tipo B. La prima è costituita da 1599 valori ("Serie corta"), la seconda da 9999 ("Serie lunga"). Entrambe le serie sono campionate con una frequenza di campionamento di 100 Hz e vengono fornite mediante file testuale (.txt).\\
+Vengono fornite due serie di misure di temperatura allo scarico di una camera di combustione, eseguite mediante termocoppia di tipo B. Il banco prova utilizzato è mostrato in Appendice \ref{app:banco}. La prima è costituita da 1599 valori ("Serie corta"), la seconda da 9999 ("Serie lunga"). Entrambe le serie sono campionate con una frequenza di campionamento di 100 Hz e vengono fornite mediante file testuale (.txt).\\
 Si chiede di svolgere l'analisi statistica dei dati.
 \subsection{Risoluzione e analisi statistica}
 Si riportano i risultati emersi dall'elaborazione dei dati sperimentali. I calcoli sono stati svolti mediante il software \textit{Matlab} e le funzioni built-in.
@@ -101,7 +101,7 @@ Lo studio statistico delle due serie di dati si conclude con la stima dell'error
 dove \gls{symb:N} è il numero di campioni di ciascuna serie.
 Infine, il valore di \gls{symb:Estat} si ottiene con:
 \begin{equation}
-	\epsilon_{\textit{STAT}}=\sigma_{\overline{T}}\,t_{\textit{95\%}}
+	\epsilon_{\textit{STAT}}=\sigma_{\overline{T}}\,t_{\textit{95}}
 \end{equation}
 dove \gls{symb:t95} è ricavato dalla distribuzione t per un intervallo di confidenza al 95\% (dove \gls{symb:nu} = \gls{symb:N} - 1, dove 1 rappresenta il numero di gradi di libertà persi a seguito dell'introduzione di \gls{symb:Tmean}).
 \begin{table} [H]
@@ -112,7 +112,7 @@ dove \gls{symb:t95} è ricavato dalla distribuzione t per un intervallo di confi
 		\textbf{Indice} & \textbf{Serie corta}&\textbf{Serie lunga}\\
 		\midrule
 		\midrule
-		$t_{\textit{95\%}}$ &1.9614&1.9602\\
+		$t_{\textit{95}}$ &1.9614&1.9602\\
 		\midrule
 		$\nu$ & 1598 & 9998\\
 		\midrule
@@ -127,9 +127,9 @@ dove \gls{symb:t95} è ricavato dalla distribuzione t per un intervallo di confi
 Da Tab.\ref{tab:errorestat} si nota come un numero elevato di campioni garantisca un errore statistico molto contenuto, che risulta minore di \gls{symb:sigmaT} di un ordine di grandezza. Questo risultato deriva dalla presenza di $\sqrt{N}$ in Eq.(\ref{eq:sigmaTmean}), il cui valore ammonta a $\sim$ 40 per la prima serie, a $\sim$ 100 per la seconda. Per quanto riguarda il valore di \gls{symb:t95}, si osserva che tende al valore asintotico ($\nu \rightarrow \infty $) di 1.960 in entrambi i casi, quindi l'influenza di tale parametro sull'errore statistico è pari per le due serie.
 
 \paragraph{Ulteriori analisi sui dati}
-Si riportano i risultati di una analisi dell'autospettro del segnale di temperatura misurato. L'evoluzione temporale delle due serie di misure (Fig.\ref{fig:timeboth}) suggerisce che ci possa essere una dinamica che influenza l'andamento della temperatura in maniera macroscopica. 
+Si riportano i risultati di una analisi dell'autospettro del segnale di temperatura misurato. L'evoluzione temporale delle due serie di misure (Fig.\ref{fig:timeboth}) suggerisce che ci possa essere una dinamica lenta che influenza l'andamento della temperatura in maniera macroscopica oppure un drift randomico. Se questo accadesse, il valore medio di temperatura non sarebbe costante nel tempo e il fenomeno non sarebbe stazionario, rendendo impropria l'operazione di media temporale.   
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
@@ -147,10 +147,30 @@ Si riportano i risultati di una analisi dell'autospettro del segnale di temperat
 \label{fig:timeboth}
 \end{figure}
 
-Viene quindi calcolato l'autospettro mediante il metodo di Welch, con il segnale che viene diviso in 10 intervalli, ciascuno dei quali passato attraverso una finestra di Hamming, con overlap al 50 \%. Il risultato (Fig.\ref{fig:freqboth}) mostra che il segnale contiene perlopiù componenti in frequenza di entità costante, come è atteso da un segnale costante nel tempo affetto da rumore assimilabile a rumore bianco. Tuttavia compare un picco a bassa frequenza, che suggerisce la presenza di una dinamica lenta del segnale. Risulta possibile che sia presente un drift randomico della temperatura.
+In Fig.\ref{fig:ftboth} si riporta il modulo della trasformata di Fourier discreta delle due serie; ai valori è sottratta la temperatura media di ciascuna serie. 
+Si osserva che attorno a 0 Hz è presente un leggero incremento dei picchi di frequenza, ma che il resto dei contributi in frequenza ha pari intensità. 
+Questo comportamento è atteso in quanto si suppone che il valore rilevato di temperatura sia costante nel tempo e soggetto a un errore randomico modellabile come rumore bianco gaussiano a media nulla. 
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.95\linewidth]{"../sperimentazione nei propulsori/magplot_short"}
+		\caption{Serie corta}
+		\label{fig:ftshort}
+	\end{subfigure}%
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.95\linewidth]{"../sperimentazione nei propulsori/magplot_long"}
+		\caption{Serie lunga}
+		\label{fig:ftlong}
+	\end{subfigure}
+	\caption{Evoluzione temporale dei due segnali}
+	\label{fig:ftboth}
+\end{figure}
 
-
-\begin{figure}
+Viene quindi calcolato l'autospettro mediante il metodo di Welch: al segnale viene sottratto il valore medio, poi viene diviso in 10 intervalli, ciascuno dei quali passato attraverso una finestra di Hamming, con overlap al 50\,\%. Il risultato (Fig.\ref{fig:freqboth}) mostra che il segnale contiene perlopiù componenti in frequenza di entità costante, come è atteso da un segnale costante nel tempo affetto da rumore assimilabile a rumore bianco. Compare anche un picco a bassa frequenza, collegato a quanto individuato nei diagrammi del modulo.
+Potrebbero comparire delle oscillazioni a bassa frequenza legate a dinamiche lente, non completamente colte dalle misure in esame. 
+\begin{figure}[H]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
 		\centering
@@ -167,3 +187,5 @@ Viene quindi calcolato l'autospettro mediante il metodo di Welch, con il segnale
 	\caption{Autospettro (one-sided) dei due segnali}
 	\label{fig:freqboth}
 \end{figure}
+\subsection{Conclusioni}
+In conclusione, lo studio statistico delle due serie di dati mette in evidenza che l'elevato numero di valori porta a una riduzione significativa dell'errore statistico, più marcata nella serie lunga. Dall'analisi di Fourier delle due serie temporali emerge la possibile presenza di dinamiche lente che influenzano il segnale. 
