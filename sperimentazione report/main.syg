@@ -133,6 +133,7 @@
 (indexentry :tkey (("Tg" "\\glossentry{symb:Tg}") ) :locref "{}{23}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("Vg" "\\glossentry{symb:Vg}") ) :locref "{}{23}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("Tgas" "\\glossentry{symb:Tgas}") ) :locref "{}{23}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("deltaTrad" "\\glossentry{symb:deltaTrad}") ) :locref "{}{23}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("h" "\\glossentry{symb:h}") ) :locref "{}{23}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("Tgas" "\\glossentry{symb:Tgas}") ) :locref "{}{23}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("re" "\\glossentry{symb:re}") ) :locref "{}{23}" :attr "pageglsnumberformat" ) 

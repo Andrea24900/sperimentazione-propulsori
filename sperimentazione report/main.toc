@@ -30,6 +30,7 @@
 \contentsline {paragraph}{Risultati a 50 m/s}{24}{table.caption.34}%
 \contentsline {paragraph}{Sensitività alla variazione di $\bm {\varepsilon }$}{25}{table.caption.37}%
 \contentsline {paragraph}{Sensitività a variazione di $\bm {V_G}$}{26}{figure.caption.38}%
+\contentsline {subsection}{\numberline {4.3}Conclusione}{27}{subsection.4.3}%
 \contentsline {section}{\numberline {5}Misura di portata mediante diaframma}{28}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Presentazione del banco prova, dati e richieste}{28}{subsection.5.1}%
 \contentsline {paragraph}{Richieste}{29}{figure.caption.42}%

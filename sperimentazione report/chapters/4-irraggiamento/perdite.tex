@@ -19,7 +19,7 @@ Mediante tale equazione è immediato individuare le perdite radiative della term
 	\Delta T_{\textit{RAD}} = T_{\textit{GAS}} -T_G = \sigma \varepsilon (T_G^4-T_A^4) / h \label{eq:deltaT}
 \end{equation}
 
-L'utilizzo di questa formula richiede la stima di \gls{symb:emissivita} e \gls{symb:h}: per la prima si fornisce un valore, mentre per la seconda viene fornita una correlazione semi-empirica nella forma:
+L'utilizzo di questa formula richiede la stima di \gls{symb:emissivita} e \gls{symb:h}: per la prima si fornisce un valore, mentre per la seconda viene fornita una correlazione semi-empirica (per cilindri immersi in flussi trasversali) nella forma:
 \begin{equation}
 	Nu = hD/k = CRe^nPr^m
 \end{equation}
@@ -80,7 +80,7 @@ Si adottano le seguenti ipotesi:
 Si chiede di stimare le perdite radiative alla velocità fornita e quindi la temperatura del gas. Si ripeta la stima per \gls{symb:Vg} pari a 50 m/s. 
 
 \subsection{Risoluzione}
-La risoluzione del problema prevede di utilizzare Eq.(\ref{eq:deltaT}) per calcolare \gls{symb:Tgas}, da cui poi si ricava $\Delta T_{\textit{RAD}}$. Poiché \gls{symb:h} dipende da \gls{symb:Tgas} attraverso \gls{symb:re}, \gls{symb:Pr} e altre grandezze, si risolve il problema iterativamente a partire da un valore ragionevole di \gls{symb:Tgas}. Con tale valore si determinano le proprietà dell'aria e si trova un valore di \gls{symb:h}, che a sua volta permette di determinare il valore aggiornato di \gls{symb:Tgas}. Si arresta il processo quando due iterazioni successive differiscono di meno di 1 K.
+La risoluzione del problema prevede di utilizzare Eq.(\ref{eq:deltaT}) per calcolare \gls{symb:Tgas}, da cui poi si ricava \gls{symb:deltaTrad}. Poiché \gls{symb:h} dipende da \gls{symb:Tgas} attraverso \gls{symb:re}, \gls{symb:Pr} e altre grandezze, si risolve il problema iterativamente a partire da un valore ragionevole di \gls{symb:Tgas}. Con tale valore si determinano le proprietà dell'aria e si trova un valore di \gls{symb:h}, che a sua volta permette di determinare il valore aggiornato di \gls{symb:Tgas}. Si arresta il processo quando due iterazioni successive differiscono di meno di 1 K.
 Tale processo viene ripetuto analogamente per serie corta e serie lunga di dati. 
 Le proprietà dell'aria vengono ottenute per interpolazione lineare dei dati nella tabella fornita. 
 
@@ -288,3 +288,4 @@ Si riportano i valori di $C$ e $n$ per vari intervalli di \gls{symb:re}. Per il 
 Si osserva che all'aumentare di \gls{symb:Vg} inizialmente si ottiene una significativa riduzione delle perdite radiative. All'aumentare della velocità si tende a raggiungere un valore di $\Delta T_{\textit{RAD}}$ ridotto, pari ai 31 K precedentemente individuati. Tuttavia la velocità che deve avere il flusso per ridurre le perdite diventa rapidamente elevata, dando origine ad altro errore, per esempio quello legato agli effetti di comprimibilità. Si nota, infine, che il valore a 1 m/s con la prima correlazione è molto simile a quello a pari velocità con la correlazione di Eq.(\ref{eq:corrnew}).
 
 \subsection{Conclusione}
+L'impatto delle perdite radiative è stimato e si osserva che queste provocano un significativo errore nella misura di temperatura dei gas combusti. La perdita è tanto crescente quanto è più alta la temperatura del giunto caldo, la quale causa un maggiore scambio termico per irraggiamento. Le perdite radiative sono di vari ordini di grandezza superiori all'errore totale precedentemente calcolato. Si può ridurre la perdita andando ad aumentare la velcoità del flusso, se fattibile, oppure diminuendo l'emissività della termocoppia. Il metodo solitamente utilizzato prevede la schermatura dello strumento. 
