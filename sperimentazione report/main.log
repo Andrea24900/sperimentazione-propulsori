@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.20)  13 JUN 2024 09:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.20)  13 JUN 2024 11:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1187,7 +1187,7 @@ italian.ldf    See the documentation concerning the babel-italian typesetting
 italian.ldf    on input line 15.
 
 (./document settings/title.tex
-<document settings/logo_polimi_nuovo.png, id=104, 342.5598pt x 100.2144pt>
+<document settings/logo_polimi_nuovo.png, id=120, 342.5598pt x 100.2144pt>
 File: document settings/logo_polimi_nuovo.png Graphic file (type png)
 <use document settings/logo_polimi_nuovo.png>
 Package pdftex.def Info: document settings/logo_polimi_nuovo.png  used on input
@@ -1239,7 +1239,7 @@ l.24 \clearpage
 (./main.syi [5
 
 ]) [6] (./chapters/1-misureT/cap1.tex
-<../sperimentazione nei propulsori/istogrammashort.png, id=394, 369.5406pt x 29
+<../sperimentazione nei propulsori/istogrammashort.png, id=417, 369.5406pt x 29
 3.05486pt>
 File: ../sperimentazione nei propulsori/istogrammashort.png Graphic file (type 
 png)
@@ -1247,7 +1247,7 @@ png)
 Package pdftex.def Info: ../sperimentazione nei propulsori/istogrammashort.png 
  used on input line 33.
 (pdftex.def)             Requested size: 228.98618pt x 181.59373pt.
-<../sperimentazione nei propulsori/istogrammalong.png, id=395, 370.86555pt x 29
+<../sperimentazione nei propulsori/istogrammalong.png, id=418, 370.86555pt x 29
 3.05486pt>
 File: ../sperimentazione nei propulsori/istogrammalong.png Graphic file (type p
 ng)
@@ -1259,14 +1259,14 @@ used on input line 39.
 
  <../sperimentazione nei propulsori/istogrammashort.png (PNG copy)> <../sperime
 ntazione nei propulsori/istogrammalong.png (PNG copy)>]
-<../sperimentazione nei propulsori/relboth.png, id=407, 373.03365pt x 290.16405
+<../sperimentazione nei propulsori/relboth.png, id=430, 373.03365pt x 290.16405
 pt>
 File: ../sperimentazione nei propulsori/relboth.png Graphic file (type png)
 <use ../sperimentazione nei propulsori/relboth.png>
 Package pdftex.def Info: ../sperimentazione nei propulsori/relboth.png  used on
  input line 56.
 (pdftex.def)             Requested size: 330.42041pt x 257.01433pt.
-<../sperimentazione nei propulsori/cumboth.png, id=408, 367.01115pt x 290.5254p
+<../sperimentazione nei propulsori/cumboth.png, id=431, 367.01115pt x 290.5254p
 t>
 File: ../sperimentazione nei propulsori/cumboth.png Graphic file (type png)
 <use ../sperimentazione nei propulsori/cumboth.png>
@@ -1275,21 +1275,21 @@ Package pdftex.def Info: ../sperimentazione nei propulsori/cumboth.png  used on
 (pdftex.def)             Requested size: 330.42041pt x 261.56354pt.
  [8 <../sperimentazione nei propulsori/relboth.png (PNG copy)>] [9 <../sperimen
 tazione nei propulsori/cumboth.png (PNG copy)>]
-<../sperimentazione nei propulsori/time_short.png, id=438, 376.2858pt x 293.054
+<../sperimentazione nei propulsori/time_short.png, id=461, 376.2858pt x 293.054
 86pt>
 File: ../sperimentazione nei propulsori/time_short.png Graphic file (type png)
 <use ../sperimentazione nei propulsori/time_short.png>
 Package pdftex.def Info: ../sperimentazione nei propulsori/time_short.png  used
  on input line 136.
 (pdftex.def)             Requested size: 224.2141pt x 174.61797pt.
-<../sperimentazione nei propulsori/time_long.png, id=439, 379.05615pt x 293.054
+<../sperimentazione nei propulsori/time_long.png, id=462, 379.05615pt x 293.054
 86pt>
 File: ../sperimentazione nei propulsori/time_long.png Graphic file (type png)
 <use ../sperimentazione nei propulsori/time_long.png>
 Package pdftex.def Info: ../sperimentazione nei propulsori/time_long.png  used 
 on input line 142.
 (pdftex.def)             Requested size: 224.2141pt x 173.34355pt.
-<../sperimentazione nei propulsori/magplot_short.png, id=441, 373.395pt x 295.2
+<../sperimentazione nei propulsori/magplot_short.png, id=464, 373.395pt x 295.2
 2295pt>
 File: ../sperimentazione nei propulsori/magplot_short.png Graphic file (type pn
 g)
@@ -1297,7 +1297,7 @@ g)
 Package pdftex.def Info: ../sperimentazione nei propulsori/magplot_short.png  u
 sed on input line 157.
 (pdftex.def)             Requested size: 224.2141pt x 177.27477pt.
-<../sperimentazione nei propulsori/magplot_long.png, id=442, 373.395pt x 295.22
+<../sperimentazione nei propulsori/magplot_long.png, id=465, 373.395pt x 295.22
 295pt>
 File: ../sperimentazione nei propulsori/magplot_long.png Graphic file (type png
 )
@@ -1305,14 +1305,14 @@ File: ../sperimentazione nei propulsori/magplot_long.png Graphic file (type png
 Package pdftex.def Info: ../sperimentazione nei propulsori/magplot_long.png  us
 ed on input line 163.
 (pdftex.def)             Requested size: 224.2141pt x 177.27477pt.
-<../sperimentazione nei propulsori/freq_short.png, id=444, 365.08395pt x 293.05
+<../sperimentazione nei propulsori/freq_short.png, id=467, 365.08395pt x 293.05
 486pt>
 File: ../sperimentazione nei propulsori/freq_short.png Graphic file (type png)
 <use ../sperimentazione nei propulsori/freq_short.png>
 Package pdftex.def Info: ../sperimentazione nei propulsori/freq_short.png  used
  on input line 177.
 (pdftex.def)             Requested size: 224.2141pt x 179.97948pt.
-<../sperimentazione nei propulsori/freq_long.png, id=445, 365.08395pt x 293.054
+<../sperimentazione nei propulsori/freq_long.png, id=468, 365.08395pt x 293.054
 86pt>
 File: ../sperimentazione nei propulsori/freq_long.png Graphic file (type png)
 <use ../sperimentazione nei propulsori/freq_long.png>
@@ -1326,7 +1326,7 @@ ori/magplot_short.png (PNG copy)> <../sperimentazione nei propulsori/magplot_lo
 ng.png (PNG copy)>]) [11 <../sperimentazione nei propulsori/freq_short.png (PNG
  copy)> <../sperimentazione nei propulsori/freq_long.png (PNG copy)>]
 (./chapters/2-errsist/errore.tex
-<../sperimentazione nei propulsori/calibration.png, id=456, 376.16534pt x 293.0
+<../sperimentazione nei propulsori/calibration.png, id=479, 376.16534pt x 293.0
 5486pt>
 File: ../sperimentazione nei propulsori/calibration.png Graphic file (type png)
 
@@ -1338,7 +1338,7 @@ d on input line 40.
 
 {d:/tex/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [13
  <../sperimentazione nei propulsori/calibration.png (PNG copy)>]
-<../sperimentazione nei propulsori/err_sist_short.png, id=486, 387.3672pt x 294
+<../sperimentazione nei propulsori/err_sist_short.png, id=509, 387.3672pt x 294
 .8616pt>
 File: ../sperimentazione nei propulsori/err_sist_short.png Graphic file (type p
 ng)
@@ -1347,7 +1347,7 @@ Package pdftex.def Info: ../sperimentazione nei propulsori/err_sist_short.png
 used on input line 84.
 (pdftex.def)             Requested size: 283.22162pt x 215.59811pt.
  [14 <../sperimentazione nei propulsori/err_sist_short.png (PNG copy)>]
-<../sperimentazione nei propulsori/short_law.png, id=502, 373.51546pt x 293.054
+<../sperimentazione nei propulsori/short_law.png, id=524, 373.51546pt x 293.054
 86pt>
 File: ../sperimentazione nei propulsori/short_law.png Graphic file (type png)
 <use ../sperimentazione nei propulsori/short_law.png>
@@ -1355,7 +1355,7 @@ Package pdftex.def Info: ../sperimentazione nei propulsori/short_law.png  used
 on input line 123.
 (pdftex.def)             Requested size: 188.8096pt x 148.14133pt.
  [15 <../sperimentazione nei propulsori/short_law.png (PNG copy)>]
-<../sperimentazione nei propulsori/err_sist_short_best.png, id=509, 399.4122pt 
+<../sperimentazione nei propulsori/err_sist_short_best.png, id=532, 399.4122pt 
 x 290.16405pt>
 File: ../sperimentazione nei propulsori/err_sist_short_best.png Graphic file (t
 ype png)
@@ -1363,7 +1363,7 @@ ype png)
 Package pdftex.def Info: ../sperimentazione nei propulsori/err_sist_short_best.
 png  used on input line 160.
 (pdftex.def)             Requested size: 236.01561pt x 171.46095pt.
-<../sperimentazione nei propulsori/err_sist_short_test.png, id=511, 387.72855pt
+<../sperimentazione nei propulsori/err_sist_short_test.png, id=534, 387.72855pt
  x 290.16405pt>
 File: ../sperimentazione nei propulsori/err_sist_short_test.png Graphic file (t
 ype png)
@@ -1371,7 +1371,9 @@ ype png)
 Package pdftex.def Info: ../sperimentazione nei propulsori/err_sist_short_test.
 png  used on input line 170.
 (pdftex.def)             Requested size: 236.01561pt x 176.62788pt.
-<../sperimentazione nei propulsori/err_sist_long.png, id=512, 392.06474pt x 294
+[16 <../sperimentazione nei propulsori/err_sist_short_best.png (PNG copy)> <../
+sperimentazione nei propulsori/err_sist_short_test.png (PNG copy)>]
+<../sperimentazione nei propulsori/err_sist_long.png, id=539, 392.06474pt x 294
 .98206pt>
 File: ../sperimentazione nei propulsori/err_sist_long.png Graphic file (type pn
 g)
@@ -1379,9 +1381,7 @@ g)
 Package pdftex.def Info: ../sperimentazione nei propulsori/err_sist_long.png  u
 sed on input line 181.
 (pdftex.def)             Requested size: 283.22162pt x 213.08907pt.
-[16 <../sperimentazione nei propulsori/err_sist_short_best.png (PNG copy)> <../
-sperimentazione nei propulsori/err_sist_short_test.png (PNG copy)>]
-<../sperimentazione nei propulsori/long_law.png, id=517, 376.16534pt x 293.0548
+<../sperimentazione nei propulsori/long_law.png, id=540, 376.16534pt x 293.0548
 6pt>
 File: ../sperimentazione nei propulsori/long_law.png Graphic file (type png)
 <use ../sperimentazione nei propulsori/long_law.png>
@@ -1392,18 +1392,18 @@ n input line 188.
 mentazione nei propulsori/long_law.png (PNG copy)>] [18] [19
 
 ] [20]
-<../sperimentazione nei propulsori/confronto.png, id=565, 404.10976pt x 293.054
+<../sperimentazione nei propulsori/confronto.png, id=588, 404.10976pt x 293.054
 86pt>
 File: ../sperimentazione nei propulsori/confronto.png Graphic file (type png)
 <use ../sperimentazione nei propulsori/confronto.png>
 Package pdftex.def Info: ../sperimentazione nei propulsori/confronto.png  used 
-on input line 370.
+on input line 376.
 (pdftex.def)             Requested size: 283.22162pt x 205.39186pt.
 ) [21 <../sperimentazione nei propulsori/confronto.png (PNG copy)>]
 (./chapters/4-irraggiamento/perdite.tex [22
 
 ] [23] [24]
-<../sperimentazione nei propulsori/varepsilon.png, id=647, 362.3136pt x 217.773
+<../sperimentazione nei propulsori/varepsilon.png, id=670, 362.3136pt x 217.773
 6pt>
 File: ../sperimentazione nei propulsori/varepsilon.png Graphic file (type png)
 <use ../sperimentazione nei propulsori/varepsilon.png>
@@ -1411,7 +1411,7 @@ Package pdftex.def Info: ../sperimentazione nei propulsori/varepsilon.png  used
  on input line 245.
 (pdftex.def)             Requested size: 330.42041pt x 198.60294pt.
  [25]
-<../sperimentazione nei propulsori/varV.png, id=658, 370.0224pt x 217.7736pt>
+<../sperimentazione nei propulsori/varV.png, id=681, 370.0224pt x 217.7736pt>
 File: ../sperimentazione nei propulsori/varV.png Graphic file (type png)
 <use ../sperimentazione nei propulsori/varV.png>
 Package pdftex.def Info: ../sperimentazione nei propulsori/varV.png  used on in
@@ -1419,14 +1419,14 @@ put line 283.
 (pdftex.def)             Requested size: 330.42041pt x 194.47583pt.
  [26 <../sperimentazione nei propulsori/varepsilon.png>]) [27 <../sperimentazio
 ne nei propulsori/varV.png>] (./chapters/3-misuradiaframma/ciclone.tex
-<chapters/3-misuradiaframma/schemabancoprova.png, id=677, 840.13875pt x 196.484
+<chapters/3-misuradiaframma/schemabancoprova.png, id=699, 840.13875pt x 196.484
 07pt>
 File: chapters/3-misuradiaframma/schemabancoprova.png Graphic file (type png)
 <use chapters/3-misuradiaframma/schemabancoprova.png>
 Package pdftex.def Info: chapters/3-misuradiaframma/schemabancoprova.png  used 
 on input line 7.
 (pdftex.def)             Requested size: 472.03123pt x 110.39308pt.
-<chapters/3-misuradiaframma/schemadiaframma.png, id=681, 606.76688pt x 280.7990
+<chapters/3-misuradiaframma/schemadiaframma.png, id=703, 606.76688pt x 280.7990
 6pt>
 File: chapters/3-misuradiaframma/schemadiaframma.png Graphic file (type png)
 <use chapters/3-misuradiaframma/schemadiaframma.png>
@@ -1441,13 +1441,13 @@ mma/schemadiaframma.png>] [29]
 LaTeX Warning: Citation 'Cengel' on page 30 undefined on input line 109.
 
 [30]
-<chapters/3-misuradiaframma/scheda.png, id=735, 456.95718pt x 590.95781pt>
+<chapters/3-misuradiaframma/scheda.png, id=758, 456.95718pt x 590.95781pt>
 File: chapters/3-misuradiaframma/scheda.png Graphic file (type png)
 <use chapters/3-misuradiaframma/scheda.png>
 Package pdftex.def Info: chapters/3-misuradiaframma/scheda.png  used on input l
 ine 160.
 (pdftex.def)             Requested size: 236.01561pt x 305.22585pt.
-) [31 <./chapters/3-misuradiaframma/scheda.png>]
+) [31 <./chapters/3-misuradiaframma/scheda.png>] [32]
 (./chapters/5-laboratorio/lab.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1461,49 +1461,49 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 1.
 
-[32
+[33
 
-] [33]
-<chapters/5-laboratorio/tabellaqmcd.png, id=776, 362.3136pt x 217.7736pt>
+] [34]
+<chapters/5-laboratorio/tabellaqmcd.png, id=802, 362.3136pt x 217.7736pt>
 File: chapters/5-laboratorio/tabellaqmcd.png Graphic file (type png)
 <use chapters/5-laboratorio/tabellaqmcd.png>
 Package pdftex.def Info: chapters/5-laboratorio/tabellaqmcd.png  used on input 
 line 162.
-(pdftex.def)             Requested size: 236.01561pt x 141.86018pt.
-<chapters/5-laboratorio/tabelladeltapcd.png, id=779, 362.3136pt x 217.7736pt>
+(pdftex.def)             Requested size: 330.42041pt x 198.60294pt.
+<chapters/5-laboratorio/tabelladeltapcd.png, id=805, 362.3136pt x 217.7736pt>
 File: chapters/5-laboratorio/tabelladeltapcd.png Graphic file (type png)
 <use chapters/5-laboratorio/tabelladeltapcd.png>
 Package pdftex.def Info: chapters/5-laboratorio/tabelladeltapcd.png  used on in
 put line 168.
-(pdftex.def)             Requested size: 236.01561pt x 141.86018pt.
-<chapters/5-laboratorio/tabellaTcd.png, id=782, 362.3136pt x 217.7736pt>
+(pdftex.def)             Requested size: 330.42041pt x 198.60294pt.
+<chapters/5-laboratorio/tabellaTcd.png, id=808, 362.3136pt x 217.7736pt>
 File: chapters/5-laboratorio/tabellaTcd.png Graphic file (type png)
 <use chapters/5-laboratorio/tabellaTcd.png>
 Package pdftex.def Info: chapters/5-laboratorio/tabellaTcd.png  used on input l
 ine 175.
-(pdftex.def)             Requested size: 236.01561pt x 141.86018pt.
- [34] [35 <./chapters/5-laboratorio/tabellaqmcd.png> <./chapters/5-laboratorio/
-tabelladeltapcd.png> <./chapters/5-laboratorio/tabellaTcd.png>]
-<chapters/5-laboratorio/dipendenzaRe2.png, id=818, 362.3136pt x 217.7736pt>
+(pdftex.def)             Requested size: 330.42041pt x 198.60294pt.
+ [35] [36 <./chapters/5-laboratorio/tabellaqmcd.png> <./chapters/5-laboratorio/
+tabelladeltapcd.png>] [37 <./chapters/5-laboratorio/tabellaTcd.png>]
+<chapters/5-laboratorio/dipendenzaRe2.png, id=853, 362.3136pt x 217.7736pt>
 File: chapters/5-laboratorio/dipendenzaRe2.png Graphic file (type png)
 <use chapters/5-laboratorio/dipendenzaRe2.png>
 Package pdftex.def Info: chapters/5-laboratorio/dipendenzaRe2.png  used on inpu
-t line 198.
+t line 223.
 (pdftex.def)             Requested size: 330.42041pt x 198.60294pt.
-<chapters/5-laboratorio/dipendenzaMa2.png, id=823, 362.3136pt x 217.7736pt>
-File: chapters/5-laboratorio/dipendenzaMa2.png Graphic file (type png)
-<use chapters/5-laboratorio/dipendenzaMa2.png>
-Package pdftex.def Info: chapters/5-laboratorio/dipendenzaMa2.png  used on inpu
-t line 205.
-(pdftex.def)             Requested size: 330.42041pt x 198.60294pt.
+<chapters/5-laboratorio/ma3.png, id=858, 362.007pt x 217.467pt>
+File: chapters/5-laboratorio/ma3.png Graphic file (type png)
+<use chapters/5-laboratorio/ma3.png>
+Package pdftex.def Info: chapters/5-laboratorio/ma3.png  used on input line 230
+.
+(pdftex.def)             Requested size: 330.42041pt x 198.49254pt.
 
-[36 <./chapters/5-laboratorio/dipendenzaRe2.png>]) [37 <./chapters/5-laboratori
-o/dipendenzaMa2.png>] (./chapters/appendici/A1_frequenze.tex) [38
+[38 <./chapters/5-laboratorio/dipendenzaRe2.png> <./chapters/5-laboratorio/ma3.
+png>]) [39] (./chapters/appendici/A1_frequenze.tex) [40
 
-] [39]
+] [41]
 (./chapters/appendici/B_bancoprova.tex
 <D:/repositoriesgithub/sperimentazione-propulsori/sperimentazione report/chapte
-rs/appendici/banco.png, id=855, 913.91437pt x 404.26031pt>
+rs/appendici/banco.png, id=895, 913.91437pt x 404.26031pt>
 File: D:/repositoriesgithub/sperimentazione-propulsori/sperimentazione report/c
 hapters/appendici/banco.png Graphic file (type png)
 <use D:/repositoriesgithub/sperimentazione-propulsori/sperimentazione report/ch
@@ -1511,7 +1511,7 @@ apters/appendici/banco.png>
 Package pdftex.def Info: D:/repositoriesgithub/sperimentazione-propulsori/speri
 mentazione report/chapters/appendici/banco.png  used on input line 21.
 (pdftex.def)             Requested size: 472.03123pt x 208.7978pt.
-) [40
+) [42
 
  <d:/repositoriesgithub/sperimentazione-propulsori/sperimentazione report/chapt
 ers/appendici/banco.png>]
@@ -1536,14 +1536,8 @@ L3 programming layer <2024-01-04>
 
 LaTeX Warning: There were undefined references.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 63A46863EC3BA15A037107E1E8089E44;5632
-(rerunfilecheck)             After:  E80E89AF76FF29018E8567C3DFE7A0E1;5745.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 82B9430F697009AD34A98599D4853A90;6071.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                main
@@ -1554,10 +1548,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37700 strings out of 474171
- 737442 string characters out of 5747753
+ 37712 strings out of 474171
+ 737477 string characters out of 5747753
  1962542 words of memory out of 5000000
- 59272 multiletter control sequences out of 15000+600000
+ 59278 multiletter control sequences out of 15000+600000
  577282 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,18n,127p,2400b,1851s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1588,10 +1582,10 @@ cmsy10.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
 x/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/te
 x/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb><d:/tex/texl
 ive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (41 pages, 3399892 bytes).
+Output written on main.pdf (43 pages, 3438798 bytes).
 PDF statistics:
- 992 PDF objects out of 1000 (max. 8388607)
- 846 compressed objects within 9 object streams
- 202 named destinations out of 1000 (max. 500000)
- 351 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1033 PDF objects out of 1200 (max. 8388607)
+ 884 compressed objects within 9 object streams
+ 208 named destinations out of 1000 (max. 500000)
+ 383 words of extra memory for PDF output out of 10000 (max. 10000000)
 

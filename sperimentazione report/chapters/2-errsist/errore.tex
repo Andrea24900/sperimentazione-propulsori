@@ -66,7 +66,7 @@ Si evidenzia anche che il calcolo dell'errore sistematico (\gls{symb:errsist}) p
 
 Queste osservazioni motivano uno studio di ottimizzazione, con lo scopo di trovare l'ordine e il numero di coppie di dati di calibrazione che minimizzano globalmente l'errore sistematico. 
 Poiché le due serie di dati presentano estremi differenti, lo studio viene proposto separatamente per entrambe.
-
+Si noti che l'intervallo di confidenza delle soluzioni proposte è al 95\,\%.
 
 \subsection{Risoluzione per la serie corta}
 Si presenta lo studio di ottimo per la prima serie di dati, svolto con le stesse modalità anche per la seconda. Il punto di partenza sono gli estremi della serie di dati, ossia la minima e massima \gls{symb:T} misurata, che assumono rispettivamente il valore di 953 \textsuperscript{o}C e di 1193 \textsuperscript{o}C. Da Tab.\ref{tab:calibrazione statica} si ricava che il minimo intervallo di dati su cui svolgere la regressione va da 950 \textsuperscript{o}C a 1200 \textsuperscript{o}C. A ogni iterazione questo secondo intervallo viene ampliato di un valore a sinistra dell'estremo inferiore e a destra dell'estremo superiore. Il più ampio intervallo possibile va da 400 \textsuperscript{o}C a 1550 \textsuperscript{o}C. 
@@ -239,6 +239,11 @@ Andando a paragonare gli errori sistematici si nota che non è raggiunto il live
 	\caption{Coefficienti della legge di calibrazione}
 	\label{tab:coefficienti_long}
 \end{table}
+\subsection{Conclusioni}
+Mediante un processo di ottimizzazione sono individuate e caratterizzate le leggi di regressione migliori per misurare le temperature fornite. Tali leggi sono entrambe del quarto ordine. L'errore sistematico legato ai processi di regressione è molto ridotto rispetto all'errore statistico, pertanto l'errore totale è pressoché identico a quest'ultimo. 
+
+
+
 
 \clearpage
 \section{Stima dell'errore di quantizzazione e totale}
@@ -246,7 +251,7 @@ Sono fornite informazioni riguardanti l'unità di acquisizione dati utilizzata p
 
 Il sistema di acquisizione dati prevede che il segnale in tensione, in uscita dalla termocoppia, venga amplificato di 100 volte e sia acquisito con un convertitore A/D a 12 bit, campo 0-10 V.
 
-\paragraph{Risoluzione}
+\subsection{Risoluzione}
 Per un convertitore A/D a 12 bit (\gls{symb:nbit}) con campo di misura 0-10 V ($\Delta V$) l'errore di quantizzazione (in V) può essere stimato con: 
 \begin{equation}
 	\epsilon_{\textit{QUANT,V}} = \frac{1}{2} \frac{\Delta V}{2^{n_{bit}}}
@@ -307,11 +312,12 @@ I valori utilizzati e i risultati sono riportati in Tab.\ref{tab:valorierisultat
 \label{tab:valorierisultati}
 \end{table}
 
+
 Per concludere l'analisi dell'errore di misura è possibile stimare l'errore totale per le due serie mediante:
 \begin{equation}
 	\epsilon_{\textit{TOT}}=\sqrt{\epsilon_{\textit{STAT}}^2+\epsilon_{\textit{SIST}}^2+\epsilon_{\textit{QUANT}}^2}
 \end{equation}
-I risultati sono riportati in Tab.\ref{tab:risultatitot}, corredati dai risultati senza errore di quantizzazione per confronto, nonché dal valore di \gls{symb:errtot} relativo al fondo scala (indicato in Tab.\ref{tab:valorierisultati}).
+I risultati sono riportati in Tab.\ref{tab:risultatitot}, corredati dai risultati senza errore di quantizzazione per confronto, nonché dal valore di \gls{symb:errtot} relativo al fondo scala (indicato in Tab.\ref{tab:valorierisultati}), stimato con un intervallo di confidenza al 95\,\%.
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c|c|c}
@@ -340,7 +346,7 @@ Al fine di valutare questa possibile soluzione si procede come indicato:
 	\item il fattore di propagazione viene calcolato con questo valore di tensione. 
 \end{itemize} 
 
-Si riportano in Tab.\ref{tab:alternativa} i risultati di questa procedura. Il valore di $\Delta \epsilon_{\textit{TOT,\%}}$ è riferito alla stima precedente (Tab.\ref{tab:risultatitot}).
+Si riportano in Tab.\ref{tab:alternativa} i risultati di questa procedura. Il valore di $\Delta \epsilon_{\textit{TOT,\%}}$ è riferito alla stima precedente (Tab.\ref{tab:risultatitot}). Si ricorda che l'errore totale è proposto con un intervallo di confidenza al 95\,\%.
 
 \begin{table}[H]
 	\centering

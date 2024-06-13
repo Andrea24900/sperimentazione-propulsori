@@ -159,24 +159,49 @@ Da questi valori è possibile ottenere una stima del valore di \gls{symb:cd} per
 \end{table}
 \begin{figure}
 	\centering
-	\includegraphics[width=0.5\linewidth]{"chapters/5-laboratorio/tabellaqmcd"}
+	\includegraphics[width=0.7\linewidth]{"chapters/5-laboratorio/tabellaqmcd"}
 	\caption{Dipendenza di \gls{symb:cd} da $q_M$}
 	\label{fig:tabellaqmcd}
 \end{figure}
 \begin{figure}
 	\centering
-	\includegraphics[width=0.5\linewidth]{"chapters/5-laboratorio/tabelladeltapcd"}
+	\includegraphics[width=0.7\linewidth]{"chapters/5-laboratorio/tabelladeltapcd"}
 	\caption{Dipendenza di \gls{symb:cd} da $\Delta p$}
 	\label{fig:tabelladeltapcd}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.5\linewidth]{"chapters/5-laboratorio/tabellaTcd"}
+	\includegraphics[width=0.7\linewidth]{"chapters/5-laboratorio/tabellaTcd"}
 	\caption{Dipendenza di \gls{symb:cd} da \gls{symb:T}}
 	\label{fig:tabellatcd}
 \end{figure}
-Da Fig.\ref{fig:tabellaqmcd}, così come da Fig.\ref{fig:tabelladeltapcd}, si osserva che le prime due misure risultano affette da errore significativo, il quale porta a ottenere valori di \gls{symb:cd} maggiori di 1 che non hanno significato fisico. Si osserva anche che la stima di \gls{symb:cd} si assesta attorno a 0.87 a partire dalla settima misura. Tale valore viene assunto come una stima ragionevole per \gls{symb:cd}.
+Da Fig.\ref{fig:tabellaqmcd}, così come da Fig.\ref{fig:tabelladeltapcd}, si osserva che le prime due misure risultano affette da errore significativo, il quale porta a ottenere valori di \gls{symb:cd} maggiori di 1 che non hanno significato fisico. Si osserva anche che la stima di \gls{symb:cd} si assesta attorno a 0.87 a partire dalla settima misura.
+
+Al fine di individuare una stima attendibile di \gls{symb:cd} si sceglie di proporre due valori medi di due gruppi di misure: ad essi è associato l'errore statistico con intervallo di confidenza al 95\,\%. I risultati sono riportati in Tab.\ref{tab:stimacd}.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c}
+		\toprule
+		\toprule
+		& \textbf{Serie 1} & \textbf{Serie 2}  \\
+		\midrule
+		\midrule
+		Misure impiegate & da 3 a 12 & da 8 a 12 \\
+		\midrule
+		Numero misure & 10 & 5 \\
+		\midrule
+		$\overline{C_D}$ & 0.906 & 0.873 \\
+		\midrule
+		\gls{symb:errstat} & $\pm$ 0.01 & $\pm$ 0.0001 \\
+		
+		
+		\bottomrule
+		\bottomrule
+	\end{tabular}
+\caption{Stima di \gls{symb:cd}}
+\label{tab:stimacd}
+\end{table}
 
 Si nota anche che l'utilizzo di una pressione ambiente non standard ha un impatto limitato in quanto non porta a variazioni significative di \gls{symb:cd}: in media, avere \gls{symb:pamb} pari a 1 atm porta a un decremento di circa 0.35 \%.
 
@@ -202,7 +227,7 @@ Per il calcolo di \gls{symb:ma} si utilizza \gls{symb:gamma} pari a 1.3 al fine 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{chapters/5-laboratorio/dipendenzaMa2}
+	\includegraphics[width=0.7\linewidth]{chapters/5-laboratorio/ma3}
 	\caption{Dipendenza di \gls{symb:cd} da \gls{symb:ma}}
 	\label{fig:dipendenzama}
 \end{figure}
@@ -216,3 +241,7 @@ Dai grafici è possibile osservare che:
 	\item \gls{symb:re} varia tra 3000 e 9000; ne deriva che il flusso nell'ugello è turbolento e valgono le ipotesi di profilo di velocità uniforme e di assenza di effetti viscosi significativi;
 	\item \gls{symb:ma} è sempre ridotto, pertanto vale l'ipotesi di flusso incomprimibile: di conseguenza le perdite legate al ristagno del flusso sulla termocoppia sono considerate trascurabili. 
 \end{itemize}
+
+
+\subsection{Conclusioni}
+Mediante la prova sperimentale si individua una stima di \gls{symb:cd} dell'ugello, parte del banco prova. In prima analisi è possibile stimare l'errore associato alla misura. Il valore stimato di \gls{symb:cd} è compatibile con la fisica del problema e ritenuto accettabile. Dall'osservazione di \gls{symb:cd} al variare di \gls{symb:re} e \gls{symb:ma} emerge che le ipotesi utilizzate per la soluzione sono valide. 
