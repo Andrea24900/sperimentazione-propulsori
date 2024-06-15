@@ -258,7 +258,7 @@ Per un convertitore A/D a 12 bit (\gls{symb:nbit}) con campo di misura 0-10 V ($
 \end{equation}
 Utilizzando questa espressione e passando alla tensione (\gls{symb:tens}) in mV si ottiene un valore di $\epsilon_{\textit{QUANT,V}} $ pari a 1.221 mV. 
 
-A questo valore è possibile applicare una prima correzione legata al fattore di amplificazione 100. Poi risulta necessario andare a trasformare$\epsilon_{\textit{QUANT,V}}$ in un errore in temperatura al fine di combinarlo con le altre sorgenti di errore. 
+A questo valore è possibile applicare una prima correzione legata al fattore di amplificazione 100. Poi risulta necessario andare a trasformare $\epsilon_{\textit{QUANT,V}}$ in un errore in temperatura al fine di combinarlo con le altre sorgenti di errore. 
 Per svolgere questi passaggi è necessario utilizzare la propagazione degli errori. Sia dato un errore $e_x$ associato a una misura $x^\star$. Si abbia una legge del tipo $y=f(x)$. Allora è possibile determinare $e_y$ come:
 \begin{equation}
 	e_y = \left. \frac{dy}{dx} \right\vert _{x=x^\star} \, e_x
@@ -342,7 +342,7 @@ Risulta necessario osservare che questo risultato è ottenuto con una ipotesi co
 
 Al fine di valutare questa possibile soluzione si procede come indicato:
 \begin{itemize}
-	\item la legge di calibrazione statica viene utilizzata come un'equazione per ottenere la tensione associata al valore medio di temperatura (mediante inversione numerica con \textit{fsolve});
+	\item la legge di calibrazione statica viene utilizzata come un'equazione per ottenere la tensione associata al valore medio di temperatura, detta $V_{\overline{T}}$ (mediante inversione numerica con \textit{fsolve});
 	\item il fattore di propagazione viene calcolato con questo valore di tensione. 
 \end{itemize} 
 

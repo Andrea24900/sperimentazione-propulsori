@@ -51,17 +51,17 @@ delle frequenze relative (\gls{symb:f}), in Fig.\ref{fig:relboth}, e delle frequ
 
 
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{"../sperimentazione nei propulsori/relboth"}
+	\includegraphics[width=0.6\linewidth]{"../sperimentazione nei propulsori/relboth"}
 	\caption{Frequenze relative per entrambe le serie}
 	\label{fig:relboth}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{"../sperimentazione nei propulsori/cumboth"}
+	\includegraphics[width=0.6\linewidth]{"../sperimentazione nei propulsori/cumboth"}
 	\caption{Frequenze cumulate normalizzate per entrambe le serie}
 	\label{fig:cumboth}
 \end{figure}
@@ -127,7 +127,7 @@ dove \gls{symb:t95} è ricavato dalla distribuzione t per un intervallo di confi
 Da Tab.\ref{tab:errorestat} si nota come un numero elevato di campioni garantisca un errore statistico molto contenuto, che risulta minore di \gls{symb:sigmaT} di un ordine di grandezza. Questo risultato deriva dalla presenza di $\sqrt{N}$ in Eq.(\ref{eq:sigmaTmean}), il cui valore ammonta a $\sim$ 40 per la prima serie, a $\sim$ 100 per la seconda. Per quanto riguarda il valore di \gls{symb:t95}, si osserva che tende al valore asintotico ($\nu \rightarrow \infty $) di 1.960 in entrambi i casi, quindi l'influenza di tale parametro sull'errore statistico è pari per le due serie.
 
 \paragraph{Ulteriori analisi sui dati}
-Si riportano i risultati di una analisi dell'autospettro del segnale di temperatura misurato. L'evoluzione temporale delle due serie di misure (Fig.\ref{fig:timeboth}) suggerisce che ci possa essere una dinamica lenta che influenza l'andamento della temperatura in maniera macroscopica oppure un drift randomico. Se questo accadesse, il valore medio di temperatura non sarebbe costante nel tempo e il fenomeno non sarebbe stazionario, rendendo impropria l'operazione di media temporale.   
+Si riportano i risultati di una analisi in frequenza del segnale di temperatura misurato. L'evoluzione temporale delle due serie di misure (Fig.\ref{fig:timeboth}) suggerisce che ci possa essere una dinamica lenta che influenza l'andamento della temperatura in maniera macroscopica oppure un drift randomico. Se questo accadesse, il valore medio di temperatura non sarebbe costante nel tempo e il fenomeno non sarebbe stazionario, rendendo impropria l'operazione di media temporale.   
 
 \begin{figure}[H]
 	\centering
@@ -147,7 +147,7 @@ Si riportano i risultati di una analisi dell'autospettro del segnale di temperat
 \label{fig:timeboth}
 \end{figure}
 
-In Fig.\ref{fig:ftboth} si riporta il modulo della trasformata di Fourier discreta delle due serie; ai valori è sottratta la temperatura media di ciascuna serie. 
+In Fig.\ref{fig:ftboth} si riporta il modulo della trasformata di Fourier discreta delle due serie; per calcolare tale trasformata, a ciascun valore di temperatura è sottratto il valore medio della serie. 
 Si osserva che attorno a 0 Hz è presente un leggero incremento dei picchi di frequenza, ma che il resto dei contributi in frequenza ha pari intensità. 
 Questo comportamento è atteso in quanto si suppone che il valore rilevato di temperatura sia costante nel tempo e soggetto a un errore randomico modellabile come rumore bianco gaussiano a media nulla. 
 \begin{figure}[H]
@@ -168,8 +168,8 @@ Questo comportamento è atteso in quanto si suppone che il valore rilevato di te
 	\label{fig:ftboth}
 \end{figure}
 
-Viene quindi calcolato l'autospettro mediante il metodo di Welch: al segnale viene sottratto il valore medio, poi viene diviso in 10 intervalli, ciascuno dei quali passato attraverso una finestra di Hamming, con overlap al 50\,\%. Il risultato (Fig.\ref{fig:freqboth}) mostra che il segnale contiene perlopiù componenti in frequenza di entità costante, come è atteso da un segnale costante nel tempo affetto da rumore assimilabile a rumore bianco. Compare anche un picco a bassa frequenza, collegato a quanto individuato nei diagrammi del modulo.
-Potrebbero comparire delle oscillazioni a bassa frequenza legate a dinamiche lente, non completamente colte dalle misure in esame. 
+Viene quindi calcolato l'autospettro mediante il metodo di Welch: al segnale viene sottratto il valore medio, poi viene diviso in 10 intervalli, ciascuno dei quali passato attraverso una finestra di Hamming, con overlap al 50\,\%. Il risultato (Fig.\ref{fig:freqboth}) mostra che il segnale contiene perlopiù componenti in frequenza di entità costante, come è atteso da un segnale mediamente costante nel tempo affetto da rumore assimilabile a rumore bianco. Compare anche un picco a bassa frequenza, collegato a quanto individuato nei diagrammi del modulo.
+Potrebbero essere presenti delle fluttuazioni a bassa frequenza legate a dinamiche lente, non completamente colte dalle misure in esame. 
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}{0.5\textwidth}
@@ -188,4 +188,4 @@ Potrebbero comparire delle oscillazioni a bassa frequenza legate a dinamiche len
 	\label{fig:freqboth}
 \end{figure}
 \subsection{Conclusioni}
-In conclusione, lo studio statistico delle due serie di dati mette in evidenza che l'elevato numero di valori porta a una riduzione significativa dell'errore statistico, più marcata nella serie lunga. Dall'analisi di Fourier delle due serie temporali emerge la possibile presenza di dinamiche lente che influenzano il segnale. 
+In conclusione, lo studio statistico delle due serie di dati mette in evidenza che l'elevato numero di valori porta a una riduzione significativa dell'errore statistico, più marcata nella serie lunga. Dall'analisi di Fourier delle due serie temporali emerge la possibile presenza di dinamiche lente che influenzano il segnale. Si ritiene che tale presenza non vada ad invalidare le ipotesi effettuate e i dati ottenuti. 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.20)  13 JUN 2024 11:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.20)  15 JUN 2024 11:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1265,30 +1265,32 @@ File: ../sperimentazione nei propulsori/relboth.png Graphic file (type png)
 <use ../sperimentazione nei propulsori/relboth.png>
 Package pdftex.def Info: ../sperimentazione nei propulsori/relboth.png  used on
  input line 56.
-(pdftex.def)             Requested size: 330.42041pt x 257.01433pt.
+(pdftex.def)             Requested size: 283.22162pt x 220.30115pt.
 <../sperimentazione nei propulsori/cumboth.png, id=431, 367.01115pt x 290.5254p
 t>
 File: ../sperimentazione nei propulsori/cumboth.png Graphic file (type png)
 <use ../sperimentazione nei propulsori/cumboth.png>
 Package pdftex.def Info: ../sperimentazione nei propulsori/cumboth.png  used on
  input line 64.
-(pdftex.def)             Requested size: 330.42041pt x 261.56354pt.
- [8 <../sperimentazione nei propulsori/relboth.png (PNG copy)>] [9 <../sperimen
-tazione nei propulsori/cumboth.png (PNG copy)>]
-<../sperimentazione nei propulsori/time_short.png, id=461, 376.2858pt x 293.054
+(pdftex.def)             Requested size: 283.22162pt x 224.20175pt.
+ [8 <../sperimentazione nei propulsori/relboth.png (PNG copy)> <../sperimentazi
+one nei propulsori/cumboth.png (PNG copy)>]
+<../sperimentazione nei propulsori/time_short.png, id=455, 376.2858pt x 293.054
 86pt>
 File: ../sperimentazione nei propulsori/time_short.png Graphic file (type png)
 <use ../sperimentazione nei propulsori/time_short.png>
 Package pdftex.def Info: ../sperimentazione nei propulsori/time_short.png  used
  on input line 136.
 (pdftex.def)             Requested size: 224.2141pt x 174.61797pt.
-<../sperimentazione nei propulsori/time_long.png, id=462, 379.05615pt x 293.054
+<../sperimentazione nei propulsori/time_long.png, id=456, 379.05615pt x 293.054
 86pt>
 File: ../sperimentazione nei propulsori/time_long.png Graphic file (type png)
 <use ../sperimentazione nei propulsori/time_long.png>
 Package pdftex.def Info: ../sperimentazione nei propulsori/time_long.png  used 
 on input line 142.
 (pdftex.def)             Requested size: 224.2141pt x 173.34355pt.
+
+[9]
 <../sperimentazione nei propulsori/magplot_short.png, id=464, 373.395pt x 295.2
 2295pt>
 File: ../sperimentazione nei propulsori/magplot_short.png Graphic file (type pn
@@ -1319,12 +1321,11 @@ File: ../sperimentazione nei propulsori/freq_long.png Graphic file (type png)
 Package pdftex.def Info: ../sperimentazione nei propulsori/freq_long.png  used 
 on input line 183.
 (pdftex.def)             Requested size: 224.2141pt x 179.97948pt.
-
-[10 <../sperimentazione nei propulsori/time_short.png (PNG copy)> <../speriment
-azione nei propulsori/time_long.png (PNG copy)> <../sperimentazione nei propuls
-ori/magplot_short.png (PNG copy)> <../sperimentazione nei propulsori/magplot_lo
-ng.png (PNG copy)>]) [11 <../sperimentazione nei propulsori/freq_short.png (PNG
- copy)> <../sperimentazione nei propulsori/freq_long.png (PNG copy)>]
+ [10 <../sperimentazione nei propulsori/time_short.png (PNG copy)> <../sperimen
+tazione nei propulsori/time_long.png (PNG copy)> <../sperimentazione nei propul
+sori/magplot_short.png (PNG copy)> <../sperimentazione nei propulsori/magplot_l
+ong.png (PNG copy)>]) [11 <../sperimentazione nei propulsori/freq_short.png (PN
+G copy)> <../sperimentazione nei propulsori/freq_long.png (PNG copy)>]
 (./chapters/2-errsist/errore.tex
 <../sperimentazione nei propulsori/calibration.png, id=479, 376.16534pt x 293.0
 5486pt>
@@ -1438,16 +1439,16 @@ n input line 29.
  <./chapters/3-misuradiaframma/schemabancoprova.png> <./chapters/3-misuradiafra
 mma/schemadiaframma.png>] [29]
 
-LaTeX Warning: Citation 'Cengel' on page 30 undefined on input line 109.
+LaTeX Warning: Citation 'Cengel' on page 30 undefined on input line 110.
 
 [30]
 <chapters/3-misuradiaframma/scheda.png, id=758, 456.95718pt x 590.95781pt>
 File: chapters/3-misuradiaframma/scheda.png Graphic file (type png)
 <use chapters/3-misuradiaframma/scheda.png>
 Package pdftex.def Info: chapters/3-misuradiaframma/scheda.png  used on input l
-ine 160.
-(pdftex.def)             Requested size: 236.01561pt x 305.22585pt.
-) [31 <./chapters/3-misuradiaframma/scheda.png>] [32]
+ine 161.
+(pdftex.def)             Requested size: 188.8096pt x 244.16986pt.
+) [31 <./chapters/3-misuradiaframma/scheda.png>]
 (./chapters/5-laboratorio/lab.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1461,49 +1462,49 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 1.
 
-[33
+[32
 
-] [34]
-<chapters/5-laboratorio/tabellaqmcd.png, id=802, 362.3136pt x 217.7736pt>
+] [33]
+<chapters/5-laboratorio/tabellaqmcd.png, id=798, 362.3136pt x 217.7736pt>
 File: chapters/5-laboratorio/tabellaqmcd.png Graphic file (type png)
 <use chapters/5-laboratorio/tabellaqmcd.png>
 Package pdftex.def Info: chapters/5-laboratorio/tabellaqmcd.png  used on input 
 line 162.
 (pdftex.def)             Requested size: 330.42041pt x 198.60294pt.
-<chapters/5-laboratorio/tabelladeltapcd.png, id=805, 362.3136pt x 217.7736pt>
+<chapters/5-laboratorio/tabelladeltapcd.png, id=801, 362.3136pt x 217.7736pt>
 File: chapters/5-laboratorio/tabelladeltapcd.png Graphic file (type png)
 <use chapters/5-laboratorio/tabelladeltapcd.png>
 Package pdftex.def Info: chapters/5-laboratorio/tabelladeltapcd.png  used on in
 put line 168.
 (pdftex.def)             Requested size: 330.42041pt x 198.60294pt.
-<chapters/5-laboratorio/tabellaTcd.png, id=808, 362.3136pt x 217.7736pt>
+<chapters/5-laboratorio/tabellaTcd.png, id=804, 362.3136pt x 217.7736pt>
 File: chapters/5-laboratorio/tabellaTcd.png Graphic file (type png)
 <use chapters/5-laboratorio/tabellaTcd.png>
 Package pdftex.def Info: chapters/5-laboratorio/tabellaTcd.png  used on input l
 ine 175.
 (pdftex.def)             Requested size: 330.42041pt x 198.60294pt.
- [35] [36 <./chapters/5-laboratorio/tabellaqmcd.png> <./chapters/5-laboratorio/
-tabelladeltapcd.png>] [37 <./chapters/5-laboratorio/tabellaTcd.png>]
-<chapters/5-laboratorio/dipendenzaRe2.png, id=853, 362.3136pt x 217.7736pt>
+ [34] [35 <./chapters/5-laboratorio/tabellaqmcd.png> <./chapters/5-laboratorio/
+tabelladeltapcd.png>] [36 <./chapters/5-laboratorio/tabellaTcd.png>]
+<chapters/5-laboratorio/dipendenzaRe2.png, id=849, 362.3136pt x 217.7736pt>
 File: chapters/5-laboratorio/dipendenzaRe2.png Graphic file (type png)
 <use chapters/5-laboratorio/dipendenzaRe2.png>
 Package pdftex.def Info: chapters/5-laboratorio/dipendenzaRe2.png  used on inpu
 t line 223.
 (pdftex.def)             Requested size: 330.42041pt x 198.60294pt.
-<chapters/5-laboratorio/ma3.png, id=858, 362.007pt x 217.467pt>
+<chapters/5-laboratorio/ma3.png, id=854, 362.007pt x 217.467pt>
 File: chapters/5-laboratorio/ma3.png Graphic file (type png)
 <use chapters/5-laboratorio/ma3.png>
 Package pdftex.def Info: chapters/5-laboratorio/ma3.png  used on input line 230
 .
 (pdftex.def)             Requested size: 330.42041pt x 198.49254pt.
 
-[38 <./chapters/5-laboratorio/dipendenzaRe2.png> <./chapters/5-laboratorio/ma3.
-png>]) [39] (./chapters/appendici/A1_frequenze.tex) [40
+[37 <./chapters/5-laboratorio/dipendenzaRe2.png> <./chapters/5-laboratorio/ma3.
+png>]) [38] (./chapters/appendici/A1_frequenze.tex) [39
 
-] [41]
+] [40]
 (./chapters/appendici/B_bancoprova.tex
 <D:/repositoriesgithub/sperimentazione-propulsori/sperimentazione report/chapte
-rs/appendici/banco.png, id=895, 913.91437pt x 404.26031pt>
+rs/appendici/banco.png, id=891, 913.91437pt x 404.26031pt>
 File: D:/repositoriesgithub/sperimentazione-propulsori/sperimentazione report/c
 hapters/appendici/banco.png Graphic file (type png)
 <use D:/repositoriesgithub/sperimentazione-propulsori/sperimentazione report/ch
@@ -1511,7 +1512,7 @@ apters/appendici/banco.png>
 Package pdftex.def Info: D:/repositoriesgithub/sperimentazione-propulsori/speri
 mentazione report/chapters/appendici/banco.png  used on input line 21.
 (pdftex.def)             Requested size: 472.03123pt x 208.7978pt.
-) [42
+) [41
 
  <d:/repositoriesgithub/sperimentazione-propulsori/sperimentazione report/chapt
 ers/appendici/banco.png>]
@@ -1548,8 +1549,8 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37712 strings out of 474171
- 737477 string characters out of 5747753
+ 37711 strings out of 474171
+ 737470 string characters out of 5747753
  1962542 words of memory out of 5000000
  59278 multiletter control sequences out of 15000+600000
  577282 words of font info for 102 fonts, out of 8000000 for 9000
@@ -1582,10 +1583,10 @@ cmsy10.pfb><d:/tex/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
 x/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/te
 x/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb><d:/tex/texl
 ive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (43 pages, 3438798 bytes).
+Output written on main.pdf (42 pages, 3438236 bytes).
 PDF statistics:
- 1033 PDF objects out of 1200 (max. 8388607)
- 884 compressed objects within 9 object streams
- 208 named destinations out of 1000 (max. 500000)
+ 1028 PDF objects out of 1200 (max. 8388607)
+ 880 compressed objects within 9 object streams
+ 207 named destinations out of 1000 (max. 500000)
  383 words of extra memory for PDF output out of 10000 (max. 10000000)
 

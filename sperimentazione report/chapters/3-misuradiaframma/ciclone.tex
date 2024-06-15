@@ -65,23 +65,23 @@ Si riporta un riassunto sintetico dei dati del problema, convertiti in unità de
 			\midrule
 			$\gamma $ & 1.4 \\
 			\midrule
-			$q_{\textit{vN}}$ & 96 Nm\textsuperscript{3}/h	\\
+			$q_{\textit{VN}}$ & 96 Nm\textsuperscript{3}/h	\\
 			\midrule
-			$q_m$ & 0.0344 kg/s\\
+			$q_M$ & 0.0344 kg/s\\
 			\bottomrule
 			\bottomrule
 	\end{tabular}
 \end{table}
 Al fine di convertire la portata volumetrica normalizzata in una portata massica si adotta la seguente espressione: 
 \begin{equation}
-	q_m = q_{\textit{vN}}\, \rho_N / 3600 
+	q_M = q_{\textit{VN}}\, \rho_N / 3600 
 \end{equation}
 con \gls{symb:rho}\textsubscript{N} = 1.293 kg/m\textsuperscript{3} la densità dell'aria a 273.15 K e 101325 Pa.
 
 \paragraph{Svolgimento}
 La Norma fornisce una serie di equazioni da utilizzare per la misura di portata massica, al cui interno sono definite delle quantità calcolate secondo la Norma stessa. Le equazioni risolventi del problema sono le seguenti:
 \begin{equation}
-	q_m=\frac{C}{\sqrt{1-\beta^4}}\, \epsilon_2 \,\frac{\pi}{4} \, d^2 \, \sqrt{2\Delta p \rho_2} \label{eq:portatamassica}
+	q_M=\frac{C}{\sqrt{1-\beta^4}}\, \epsilon_2 \,\frac{\pi}{4} \, d^2 \, \sqrt{2\Delta p \rho_2} \label{eq:portatamassica}
 \end{equation}
 \begin{equation}
 	\epsilon_1= 1 - (0.41+0.35\beta^4) \, \frac{\Delta p}{\kappa p_1} \label{eq:epsilon1}
@@ -99,13 +99,14 @@ Le quantità qui presenti, il cui valore calcolato è riportato in Tab.\ref{tab:
 \end{itemize}
 \gls{symb:C} viene calcolato con la seguente espressione:
 \begin{equation}
-	C=0.5959+0.0312\beta^{2.1}-0.1840\beta^8+0.0029\beta^{2.5} (10^6/Re_D)^{0.75}+0.0390L_1\beta^4(1-\beta^4)^{-1}-0.0337L_2'\beta^3 \label{eq:C}
+	C=0.5959+0.0312\beta^{2.1}-0.1840\beta^8+0.0029\beta^{2.5}	
+	 (10^6/Re_D)^{0.75}+0.0390L_1\beta^4(1-\beta^4)^{-1}-0.0337L_2'\beta^3 \label{eq:C}
 \end{equation}
 dove:
 \begin{itemize}
 	\item le quantità \gls{symb:L} sono calcolate in base alla Norma (per prese di pressione sulle flange vale $L_1=L_2'=25.4/D$, con \gls{symb:D} in mm);
 	\item il coefficiente di $L_1\beta^4(1-\beta^4)^{-1}$ è modificato in quanto $D\leqslant58.62$ mm;
-	\item \gls{symb:red} $=4q_m/(\pi \mu D)$;
+	\item \gls{symb:red} $=4q_M/(\pi \mu D)$;
 	\item \gls{symb:mu} a 300 K ottenuta mediante interpolazione dei dati tabulati da Ref.\cite{Cengel}. 
 \end{itemize} 
 \begin{table}[H]
@@ -137,7 +138,7 @@ dove:
 Lo scopo dello svolgimento è determinare \gls{symb:p}\textsubscript{1}: a questo fine è possibile riscrivere le Eq.(\ref{eq:portatamassica}), (\ref{eq:epsilon1}) e (\ref{eq:epsilon2}) in funzione di $p_1$, unica incognita del problema. 
 Il risultato è:
 \begin{equation}
-	q_m-C_2(1-C_1+C_1 \frac{p_2}{p_1}) \sqrt{p_1^2-p_1 p_2}=0 \label{eq:finaleq}
+	q_M-C_2(1-C_1+C_1 \frac{p_2}{p_1}) \sqrt{p_1^2-p_1 p_2}=0 \label{eq:finaleq}
 \end{equation}
 dove $ C_1,\, C_2$ sono costanti ottenute rielaborando le equazioni e che assumono le seguenti espressioni:
 \begin{equation}
@@ -157,7 +158,7 @@ Affinchè Eq.(\ref{eq:epsilon1}) sia valida è necessario che $p_2/p_1 \geqslant
 Per misurare la pressione a cavallo del diaframma è possibile utilizzare un manometro differenziale per gas. Una possibile scelta è il manometro differenziale digitale \textit{RS PRO RS DT}, con campo di misura da -2 bar a 2 bar. Si riporta per completezza la scheda tecnica dello strumento.
 \begin{figure} [H]
 	\centering
-	\includegraphics[width=0.5\linewidth]{chapters/3-misuradiaframma/scheda}
+	\includegraphics[width=0.4\linewidth]{chapters/3-misuradiaframma/scheda}
 	\caption{Scheda tecnica del manometro}
 	\label{fig:scheda}
 \end{figure}
