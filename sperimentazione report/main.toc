@@ -47,6 +47,4 @@
 \contentsline {subsection}{\numberline {6.2}Presentazione dei valori misurati}{33}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Dipendenza da Reynolds e Mach}{36}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}Conclusioni}{38}{subsection.6.4}%
-\contentsline {section}{\numberline {A}Risultati aggiuntivi dell'analisi statistica delle serie di dati}{39}{appendix.1.Alph1}%
-\contentsline {subsection}{\numberline {A.1}Classi, frequenze relative e frequenze cumulate normalizzate}{39}{subsection.1.Alph1.1}%
-\contentsline {section}{\numberline {B}Presentazione banco prova}{41}{appendix.1.Alph2}%
+\contentsline {section}{\numberline {A}Presentazione banco prova}{39}{appendix.1.Alph1}%

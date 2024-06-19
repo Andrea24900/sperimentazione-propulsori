@@ -61,7 +61,6 @@
 (indexentry :tkey (("V" "\\glossentry{symb:V}") ) :locref "{}{6}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("Vg" "\\glossentry{symb:Vg}") ) :locref "{}{6}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("T" "\\glossentry{symb:T}") ) :locref "{}{7}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("T" "\\glossentry{symb:T}") ) :locref "{}{7}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("f" "\\glossentry{symb:f}") ) :locref "{}{8}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("F" "\\glossentry{symb:F}") ) :locref "{}{8}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("Tmean" "\\glossentry{symb:Tmean}") ) :locref "{}{9}" :attr "pageglsnumberformat" ) 
@@ -239,4 +238,4 @@
 (indexentry :tkey (("cd" "\\glossentry{symb:cd}") ) :locref "{}{38}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("re" "\\glossentry{symb:re}") ) :locref "{}{38}" :attr "pageglsnumberformat" ) 
 (indexentry :tkey (("ma" "\\glossentry{symb:ma}") ) :locref "{}{38}" :attr "pageglsnumberformat" ) 
-(indexentry :tkey (("cd" "\\glossentry{symb:cd}") ) :locref "{}{41}" :attr "pageglsnumberformat" ) 
+(indexentry :tkey (("cd" "\\glossentry{symb:cd}") ) :locref "{}{39}" :attr "pageglsnumberformat" ) 
